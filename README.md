@@ -1,2 +1,2 @@
 # CDGame
-A Pixel-Art RPG with Rogue-like Dungeons
+A Pixel-Art RPG 
