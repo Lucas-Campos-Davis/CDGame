@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample"
+
+[deps]
+
+source_file="res://Sounds/389449__lzmraul__ambiance-suburbian-forest.wav"
+dest_files=[ "res://.import/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
