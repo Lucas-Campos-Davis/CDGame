@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Textures/Player/playerShadow1.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/495894__angriestbrad__another-fire.wav" type="AudioStream" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Textures/Player/rogue_front.png" type="Texture" id=6]
 [ext_resource path="res://Textures/Campfire/campfire.png" type="Texture" id=7]
 [ext_resource path="res://Textures/grass_tileset.png" type="Texture" id=8]
+[ext_resource path="res://Textures/templeFloorTiles.png" type="Texture" id=9]
 [ext_resource path="res://Textures/Campfire/campfire2.png" type="Texture" id=11]
 [ext_resource path="res://Textures/Campfire/campfire3.png" type="Texture" id=12]
 [ext_resource path="res://Textures/Player/rogue_front2.png" type="Texture" id=13]
@@ -48,29 +49,43 @@ script/source = "extends KinematicBody2D
 export (int) var speed = 60
 
 var velocity = Vector2()
+var canMove = false
+var change = 16
+
+var wait = 400
 
 
 func get_input():
-	velocity = Vector2()
-	
-	if Input.is_action_pressed('right'):
-		velocity.x += 1
+	if canMove == true:
+		velocity = Vector2()
 		
-	if Input.is_action_pressed('left'):
-		velocity.x -= 1
-		
-	if Input.is_action_pressed('down'):
-		velocity.y += 1
-		
-	if Input.is_action_pressed('up'):
-		velocity.y -= 1
-		
-	velocity = velocity.normalized() * speed
+		if Input.is_action_pressed('right'):
+			velocity.x += 1
+			
+		if Input.is_action_pressed('left'):
+			velocity.x -= 1
+			
+		if Input.is_action_pressed('down'):
+			velocity.y += 1
+			
+		if Input.is_action_pressed('up'):
+			velocity.y -= 1
+			
+		velocity = velocity.normalized() * speed
 
 
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	
+	if wait == 0:
+		if change == 70:
+			canMove = true
+		else:
+			change += 0.25
+			position.y = change
+	else:
+		wait -= 1
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -78,6 +93,11 @@ extents = Vector2( 4.64023, 5.0552 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 26 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "walk_up",
@@ -86,11 +106,6 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "walk_down",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 26 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "walk_left",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 37 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 41 ) ],
@@ -103,32 +118,41 @@ animations = [ {
 script/source = "extends AnimatedSprite
 
 
-var front = load(\"res://rogue_front.png\");
+
 var back = load(\"res://rogue_back.png\");
 var left = load(\"res://rogue_left.png\");
 var right = load(\"res://rogue_right.png\");
+var front = load(\"res://rogue_front.png\");
+
+var canMove = false;
+var wait = 400
 
 
 func get_input():
-	if Input.is_action_pressed('up'):
-		play(\"walk_up\")
-		
-	if Input.is_action_pressed('down'):
-		play(\"walk_down\")
-
-		
-	if Input.is_action_pressed('right') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
-		play(\"walk_right\")
-		
-	if Input.is_action_pressed('left') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
-		play(\"walk_left\")
-		
-	if !Input.is_action_pressed('right') && !Input.is_action_pressed('left') && !Input.is_action_pressed('down') && !Input.is_action_pressed('up'): 
-		stop()
-		frame = 0
+	if canMove == true:
+		if Input.is_action_pressed('up'):
+			play(\"walk_up\")
+			
+		if Input.is_action_pressed('down'):
+			play(\"walk_down\")
+			
+		if Input.is_action_pressed('right') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
+			play(\"walk_right\")
+			
+		if Input.is_action_pressed('left') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
+			play(\"walk_left\")
+			
+		if !Input.is_action_pressed('right') && !Input.is_action_pressed('left') && !Input.is_action_pressed('down') && !Input.is_action_pressed('up'): 
+			stop()
+			frame = 0
 
 func _physics_process(delta):
 	get_input()
+	if wait == 0:
+		if get_parent().position.y == 70:
+			canMove = true
+	else:
+		wait -= 1
 "
 
 [sub_resource type="TileSet" id=5]
@@ -271,6 +295,78 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="TileSet" id=10]
+0/name = "templeFloorTiles.png 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "templeFloorTiles.png 1"
+1/texture = ExtResource( 9 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "templeFloorTiles.png 2"
+2/texture = ExtResource( 9 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "templeFloorTiles.png 3"
+3/texture = ExtResource( 9 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 16, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "templeFloorTiles.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 16, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
 [node name="main" type="Node2D"]
 
 [node name="YSort" type="YSort" parent="."]
@@ -361,10 +457,24 @@ attenuation = 0.392292
 position = Vector2( -16, 0 )
 z_index = 2
 frames = SubResource( 9 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="birdForestSounds" type="AudioStreamPlayer2D" parent="YSort"]
 stream = ExtResource( 5 )
 autoplay = true
 attenuation = 0.116629
+
+[node name="templeTileMap" type="TileMap" parent="YSort"]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 262151, 3, 0, 262153, 3, 0, 393223, 3, 0, 393225, 1, 0, 393226, 1, 0, 458761, 0, 0, 458762, 2, 0, 524295, 4, 0, 524297, 3, 0, 655367, 0, 0, 655368, 0, 0, 655369, 4, 0, 720903, 2, 0, 720904, 0, 0 )
+
+[node name="Light2D" type="Light2D" parent="YSort"]
+position = Vector2( 221.027, 161.039 )
+texture = ExtResource( 4 )
+texture_scale = 0.6
+color = Color( 1, 0, 0.984314, 1 )
+energy = 0.6
