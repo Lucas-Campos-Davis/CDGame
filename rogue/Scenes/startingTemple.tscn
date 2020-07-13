@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Textures/Player/rogue_right8.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Player/rogue_right5.png" type="Texture" id=2]
@@ -44,6 +44,10 @@
 [ext_resource path="res://Scenes/beamSound.gd" type="Script" id=42]
 [ext_resource path="res://Scenes/Light2D.gd" type="Script" id=43]
 [ext_resource path="res://Textures/walltilest.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/outsideLight.gd" type="Script" id=45]
+[ext_resource path="res://Scenes/doorOccluderLeft.gd" type="Script" id=46]
+[ext_resource path="res://Scenes/doorOccluderRight.gd" type="Script" id=47]
+[ext_resource path="res://Scenes/playerShadow.gd" type="Script" id=48]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends KinematicBody2D
@@ -95,14 +99,14 @@ extents = Vector2( 4.64023, 5.0552 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 29 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "walk_left",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 31 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 33 ), ExtResource( 8 ), ExtResource( 32 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "walk_up",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk_left",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 30 ) ],
@@ -157,7 +161,7 @@ func _physics_process(delta):
 		wait -= 1
 "
 
-[sub_resource type="TileSet" id=10]
+[sub_resource type="TileSet" id=5]
 0/name = "templeFloorTiles.png 0"
 0/texture = ExtResource( 21 )
 0/tex_offset = Vector2( 0, 0 )
@@ -229,13 +233,16 @@ func _physics_process(delta):
 4/shapes = [  ]
 4/z_index = 0
 
-[sub_resource type="Gradient" id=11]
+[sub_resource type="Gradient" id=6]
 colors = PoolColorArray( 0, 0.905882, 1, 1, 1, 1, 1, 1 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 158.516, 10 )
 
-[sub_resource type="TileSet" id=12]
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( -104, -32, 88, -32, 88, 32, -104, 32 )
+
+[sub_resource type="TileSet" id=9]
 0/name = "walltilest.png 0"
 0/texture = ExtResource( 44 )
 0/tex_offset = Vector2( 0, 0 )
@@ -297,7 +304,7 @@ shape = SubResource( 2 )
 
 [node name="gameCamera" type="Camera2D" parent="YSort/player"]
 current = true
-zoom = Vector2( 0.35, 0.35 )
+zoom = Vector2( 0.45, 0.45 )
 smoothing_enabled = true
 smoothing_speed = 8.0
 
@@ -305,6 +312,7 @@ smoothing_speed = 8.0
 visible = false
 position = Vector2( 0, 14.4242 )
 texture = ExtResource( 20 )
+script = ExtResource( 48 )
 
 [node name="characterAnimations" type="AnimatedSprite" parent="YSort/player"]
 z_index = 1
@@ -313,7 +321,7 @@ animation = "walk_down"
 script = SubResource( 4 )
 
 [node name="templeTileMap" type="TileMap" parent="YSort"]
-tile_set = SubResource( 10 )
+tile_set = SubResource( 5 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
@@ -341,7 +349,7 @@ emission_shape = 2
 emission_rect_extents = Vector2( 14, 14 )
 direction = Vector2( 0, -10 )
 gravity = Vector2( 0, -98 )
-color_ramp = SubResource( 11 )
+color_ramp = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="YSort/lightBeam/lightBeam"]
 position = Vector2( 0, -128 )
@@ -364,10 +372,29 @@ script = ExtResource( 42 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort"]
 position = Vector2( 144.202, -41.6222 )
 z_index = 2
-shape = SubResource( 13 )
+shape = SubResource( 7 )
+
+[node name="outsideLight" type="Light2D" parent="YSort"]
+position = Vector2( 144, 251.354 )
+texture = ExtResource( 35 )
+texture_scale = 0.75
+color = Color( 1, 0.984314, 0.823529, 1 )
+shadow_enabled = true
+shadow_filter = 5
+script = ExtResource( 45 )
+
+[node name="doorOccluderLeft" type="LightOccluder2D" parent="YSort"]
+position = Vector2( 56, 224 )
+occluder = SubResource( 8 )
+script = ExtResource( 46 )
+
+[node name="doorOccluderRight" type="LightOccluder2D" parent="YSort"]
+position = Vector2( 248, 224 )
+occluder = SubResource( 8 )
+script = ExtResource( 47 )
 
 [node name="wallTileMap" type="TileMap" parent="."]
-tile_set = SubResource( 12 )
+tile_set = SubResource( 9 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
