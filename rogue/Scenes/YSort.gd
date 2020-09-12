@@ -44,6 +44,8 @@ func _process(delta):
 				doorOccluderLeft.position.x -= 0.03
 			if doorOccluderRight.position.x < 264:
 				doorOccluderRight.position.x += 0.03
+		if player.position.y > 200:
+			get_tree().change_scene("res://Scenes/stage_1.tscn")
 
 	wait -= 1
 
