@@ -11,7 +11,7 @@ func start(pos, dir):
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		get_parent().get_node(collision.collider.name).hurt(1)
+		collision.collider.hurt(1)
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
