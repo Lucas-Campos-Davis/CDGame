@@ -8,7 +8,7 @@ onready var Muzzle = get_node("Muzzle")
 
 func shoot():
 	var b = Bullet.instance()
-	b.start(Muzzle.position, 3)
+	b.start(Muzzle.position, 3.14)
 	get_parent().add_child(b)
 
 func _process(delta):

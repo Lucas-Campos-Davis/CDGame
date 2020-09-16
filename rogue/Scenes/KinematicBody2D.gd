@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 50
+var speed =75
 var velocity = Vector2()
 
 func start(pos, dir):
@@ -11,7 +11,9 @@ func start(pos, dir):
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		collision.collider.hurt(1)
+		if collision.collider.is_in_group("player"):
+			collision.collider.hurt(1)
+			
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

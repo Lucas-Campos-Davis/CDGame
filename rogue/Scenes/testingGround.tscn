@@ -128,7 +128,7 @@ func _physics_process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 4.64023, 8.59877 )
+extents = Vector2( 4.29115, 4.96486 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -142,14 +142,14 @@ animations = [ {
 "name": "walk_up",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "walk_right",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 30 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk_left",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "walk_right",
 "speed": 8.0
 } ]
 
@@ -241,15 +241,17 @@ polygon = PoolVector2Array( 96, -224, 112, -224, 112, -240, 96, -240 )
 [node name="Muzzle" type="Position2D" parent="YSort/StaticBody2D"]
 position = Vector2( 96, -233.983 )
 
-[node name="player" type="KinematicBody2D" parent="YSort"]
+[node name="player" type="KinematicBody2D" parent="YSort" groups=[
+"player",
+]]
 position = Vector2( -48, -224 )
-z_index = 5
+z_index = 1
 collision/safe_margin = 0.001
 script = SubResource( 2 )
 health = 5
 
 [node name="hitBox" type="CollisionShape2D" parent="YSort/player"]
-position = Vector2( -1.04308e-07, 10.1776 )
+position = Vector2( -1.04308e-07, 11.1211 )
 shape = SubResource( 3 )
 
 [node name="gameCamera" type="Camera2D" parent="YSort/player"]
@@ -260,9 +262,9 @@ smoothing_speed = 8.0
 
 [node name="playerShadow" type="Sprite" parent="YSort/player"]
 position = Vector2( 0, 14.4242 )
+z_index = -1
 texture = ExtResource( 13 )
 
 [node name="characterAnimations" type="AnimatedSprite" parent="YSort/player"]
-z_index = 1
 frames = SubResource( 4 )
 animation = "walk_down"
