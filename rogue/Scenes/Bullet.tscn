@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Textures/bullet.png" type="Texture" id=2]
+[ext_resource path="res://Textures/new_light.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3, 2 )
@@ -20,3 +21,9 @@ texture = ExtResource( 2 )
 "bullet",
 ]]
 shape = SubResource( 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 0.25
+color = Color( 0.776471, 0.215686, 0.635294, 1 )
+energy = 0.5

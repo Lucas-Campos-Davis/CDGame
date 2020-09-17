@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Textures/Player/player_front10002.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Player/player_right10004.png" type="Texture" id=2]
@@ -39,6 +39,12 @@
 [ext_resource path="res://Scenes/healthContainer.gd" type="Script" id=37]
 [ext_resource path="res://Textures/turret.png" type="Texture" id=38]
 [ext_resource path="res://Scenes/StaticBody2D.gd" type="Script" id=39]
+[ext_resource path="res://Textures/decoy.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/decoy.gd" type="Script" id=41]
+[ext_resource path="res://Textures/alert.png" type="Texture" id=42]
+[ext_resource path="res://dialogueFont.tres" type="DynamicFont" id=43]
+[ext_resource path="res://interactFont.tres" type="DynamicFont" id=44]
+[ext_resource path="res://Scenes/Label.gd" type="Script" id=45]
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass_tiles.png 0"
@@ -70,18 +76,21 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=12]
 script/source = "extends KinematicBody2D
 
 export (int) var speed = 60
 
 onready var characterAnimations = get_node(\"characterAnimations\")
+var Bullet = preload(\"res://Scenes/Bullet.tscn\")
 
 var velocity = Vector2()
 
 export (int) var health = 3
 var healthCooldown = 25
 export (int) var healthCooldownMax = 25
+
+var canMove = false
 
 func hurt(var number):
 	if healthCooldown <= 0:
@@ -90,13 +99,19 @@ func hurt(var number):
 	else:
 		healthCooldown -= 1
 		
+func shoot(var dir):
+	var b = Bullet.instance()
+	b.start(position, dir)
+	get_parent().add_child(b)
+		
 func _process(delta):
 	if healthCooldown > 0:
 		healthCooldown -= 1
 		
 func get_input():
-		velocity = Vector2()
-		
+	velocity = Vector2()
+	
+	if canMove == true:
 		if Input.is_action_pressed('right'):
 			if !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
 				characterAnimations.play(\"walk_right\")
@@ -106,19 +121,22 @@ func get_input():
 			if !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
 				characterAnimations.play(\"walk_left\")
 			velocity.x -= 1
-			
+				
 		if Input.is_action_pressed('down'):
 			velocity.y += 1
 			characterAnimations.play(\"walk_down\")
-			
+				
 		if Input.is_action_pressed('up'):
 			velocity.y -= 1
 			characterAnimations.play(\"walk_up\")
-			
+				
 		if !Input.is_action_pressed('right') && !Input.is_action_pressed('left') && !Input.is_action_pressed('down') && !Input.is_action_pressed('up'): 
 			characterAnimations.stop()
 			characterAnimations.frame = 0
 		velocity = velocity.normalized() * speed
+			
+		if Input.is_action_just_pressed('attack'):
+			shoot(3.14)
 		
 
 func _physics_process(delta):
@@ -127,19 +145,19 @@ func _physics_process(delta):
 	velocity = move_and_collide(velocity*delta)
 "
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 4.29115, 4.96486 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
 "frames": [ ExtResource( 29 ), ExtResource( 16 ), ExtResource( 1 ), ExtResource( 34 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 19 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "walk_right",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 30 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 3 ) ],
@@ -147,11 +165,14 @@ animations = [ {
 "name": "walk_left",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "walk_up",
 "speed": 8.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 4.12022, 4.51292 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -167,10 +188,10 @@ stream = ExtResource( 35 )
 volume_db = 1.0
 autoplay = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 128
+[node name="playerGUI" type="CanvasLayer" parent="."]
+layer = 0
 
-[node name="healthContainer" type="GridContainer" parent="CanvasLayer"]
+[node name="healthContainer" type="GridContainer" parent="playerGUI"]
 margin_left = 10.0
 margin_top = 10.0
 custom_constants/vseparation = 0
@@ -181,7 +202,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="health1" type="TextureRect" parent="CanvasLayer/healthContainer"]
+[node name="health1" type="TextureRect" parent="playerGUI/healthContainer"]
 margin_right = 24.0
 margin_bottom = 32.0
 texture = ExtResource( 36 )
@@ -189,7 +210,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="health2" type="TextureRect" parent="CanvasLayer/healthContainer"]
+[node name="health2" type="TextureRect" parent="playerGUI/healthContainer"]
 margin_left = 27.0
 margin_right = 51.0
 margin_bottom = 32.0
@@ -198,7 +219,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="health3" type="TextureRect" parent="CanvasLayer/healthContainer"]
+[node name="health3" type="TextureRect" parent="playerGUI/healthContainer"]
 margin_left = 54.0
 margin_right = 78.0
 margin_bottom = 32.0
@@ -207,7 +228,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="health4" type="TextureRect" parent="CanvasLayer/healthContainer"]
+[node name="health4" type="TextureRect" parent="playerGUI/healthContainer"]
 margin_left = 81.0
 margin_right = 105.0
 margin_bottom = 32.0
@@ -216,7 +237,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="health5" type="TextureRect" parent="CanvasLayer/healthContainer"]
+[node name="health5" type="TextureRect" parent="playerGUI/healthContainer"]
 margin_left = 108.0
 margin_right = 132.0
 margin_bottom = 32.0
@@ -225,9 +246,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="dialogueBox" type="ColorRect" parent="playerGUI"]
+visible = false
+margin_top = 952.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.12549, 0.12549, 0.12549, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="playerGUI/dialogueBox"]
+margin_top = 16.0
+margin_right = 1920.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 43 )
+text = "Hey buddy, go fuck yourself\"
+"
+align = 1
+script = ExtResource( 45 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keyPrompt" type="Label" parent="playerGUI"]
+margin_left = 624.0
+margin_top = 880.0
+margin_right = 2032.0
+margin_bottom = 1008.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_vertical = 5
+custom_fonts/font = ExtResource( 44 )
+text = "press 'e' to interact"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+z_index = 1
 script = ExtResource( 39 )
 
 [node name="Sprite" type="Sprite" parent="YSort/StaticBody2D"]
@@ -247,18 +307,20 @@ position = Vector2( 96, -233.983 )
 position = Vector2( -48, -224 )
 z_index = 1
 collision/safe_margin = 0.001
-script = SubResource( 2 )
+script = SubResource( 12 )
 health = 5
 
 [node name="hitBox" type="CollisionShape2D" parent="YSort/player"]
 position = Vector2( -1.04308e-07, 11.1211 )
-shape = SubResource( 3 )
+shape = SubResource( 13 )
 
 [node name="gameCamera" type="Camera2D" parent="YSort/player"]
 current = true
-zoom = Vector2( 0.35, 0.35 )
+zoom = Vector2( 0.25, 0.25 )
 smoothing_enabled = true
 smoothing_speed = 8.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="playerShadow" type="Sprite" parent="YSort/player"]
 position = Vector2( 0, 14.4242 )
@@ -266,5 +328,33 @@ z_index = -1
 texture = ExtResource( 13 )
 
 [node name="characterAnimations" type="AnimatedSprite" parent="YSort/player"]
-frames = SubResource( 4 )
+frames = SubResource( 14 )
 animation = "walk_down"
+
+[node name="decoy" type="StaticBody2D" parent="YSort"]
+position = Vector2( -98.3946, -146.777 )
+z_index = 1
+script = ExtResource( 41 )
+
+[node name="Sprite" type="Sprite" parent="YSort/decoy"]
+texture = ExtResource( 40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/decoy"]
+position = Vector2( 0, 10.7042 )
+shape = SubResource( 5 )
+
+[node name="alertBox" type="TextureRect" parent="YSort/decoy"]
+margin_left = -4.0102
+margin_top = -23.997
+margin_right = 11.9898
+margin_bottom = -7.99702
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playerShadow2" type="Sprite" parent="YSort/decoy"]
+position = Vector2( 0, 14.1698 )
+z_index = -1
+texture = ExtResource( 13 )

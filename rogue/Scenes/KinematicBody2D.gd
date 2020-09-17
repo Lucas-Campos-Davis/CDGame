@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed =75
+var speed =175
 var velocity = Vector2()
 
 func start(pos, dir):
