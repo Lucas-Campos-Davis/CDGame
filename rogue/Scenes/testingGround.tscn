@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Textures/Player/player_front10002.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Player/player_right10004.png" type="Texture" id=2]
@@ -45,6 +45,8 @@
 [ext_resource path="res://dialogueFont.tres" type="DynamicFont" id=43]
 [ext_resource path="res://interactFont.tres" type="DynamicFont" id=44]
 [ext_resource path="res://Scenes/Label.gd" type="Script" id=45]
+[ext_resource path="res://Scenes/dialogueBox.gd" type="Script" id=46]
+[ext_resource path="res://continuepromptsize20.tres" type="DynamicFont" id=47]
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass_tiles.png 0"
@@ -76,7 +78,7 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="GDScript" id=12]
+[sub_resource type="GDScript" id=2]
 script/source = "extends KinematicBody2D
 
 export (int) var speed = 60
@@ -90,7 +92,7 @@ export (int) var health = 3
 var healthCooldown = 25
 export (int) var healthCooldownMax = 25
 
-var canMove = false
+var canMove = true
 
 func hurt(var number):
 	if healthCooldown <= 0:
@@ -145,19 +147,19 @@ func _physics_process(delta):
 	velocity = move_and_collide(velocity*delta)
 "
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.29115, 4.96486 )
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 29 ), ExtResource( 16 ), ExtResource( 1 ), ExtResource( 34 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 19 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "walk_up",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 30 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 3 ) ],
@@ -165,9 +167,9 @@ animations = [ {
 "name": "walk_left",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 32 ), ExtResource( 9 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 33 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "walk_right",
 "speed": 8.0
 } ]
 
@@ -252,6 +254,7 @@ margin_top = 952.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.12549, 0.12549, 0.12549, 0.752941 )
+script = ExtResource( 46 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -261,7 +264,7 @@ margin_top = 16.0
 margin_right = 1920.0
 margin_bottom = 128.0
 custom_fonts/font = ExtResource( 43 )
-text = "Hey buddy, go fuck yourself\"
+text = "
 "
 align = 1
 script = ExtResource( 45 )
@@ -269,7 +272,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="continuePrompt" type="Label" parent="playerGUI/dialogueBox"]
+visible = false
+margin_left = 864.0
+margin_top = 88.0
+margin_right = 1064.0
+margin_bottom = 138.0
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 47 )
+text = "press 'e' to continue"
+
 [node name="keyPrompt" type="Label" parent="playerGUI"]
+visible = false
 margin_left = 624.0
 margin_top = 880.0
 margin_right = 2032.0
@@ -307,12 +322,12 @@ position = Vector2( 96, -233.983 )
 position = Vector2( -48, -224 )
 z_index = 1
 collision/safe_margin = 0.001
-script = SubResource( 12 )
+script = SubResource( 2 )
 health = 5
 
 [node name="hitBox" type="CollisionShape2D" parent="YSort/player"]
 position = Vector2( -1.04308e-07, 11.1211 )
-shape = SubResource( 13 )
+shape = SubResource( 3 )
 
 [node name="gameCamera" type="Camera2D" parent="YSort/player"]
 current = true
@@ -328,10 +343,12 @@ z_index = -1
 texture = ExtResource( 13 )
 
 [node name="characterAnimations" type="AnimatedSprite" parent="YSort/player"]
-frames = SubResource( 14 )
+frames = SubResource( 4 )
 animation = "walk_down"
 
-[node name="decoy" type="StaticBody2D" parent="YSort"]
+[node name="decoy" type="StaticBody2D" parent="YSort" groups=[
+"dialogue",
+]]
 position = Vector2( -98.3946, -146.777 )
 z_index = 1
 script = ExtResource( 41 )
