@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://3iyc3ly3lh2y"]
+
+[ext_resource type="Texture2D" uid="uid://bc2ry5bs2kbhs" path="res://Textures/new_character.png" id="1_ev8ud"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-152, -95)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("1_ev8ud")

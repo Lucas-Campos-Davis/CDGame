@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://byv0efdufoaxm"]
+
+[ext_resource type="Texture2D" uid="uid://sqfoh3nmgxiw" path="res://Textures/companion/plantanalyzer.png" id="1_kklcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jenv"]
+size = Vector2(64, 15)
+
+[node name="plant_analyzer" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(0, -16)
+texture = ExtResource("1_kklcp")
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 10
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_6jenv")

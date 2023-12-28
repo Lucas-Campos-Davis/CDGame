@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwk7hyh1q5tgu"]
+
+[ext_resource type="Texture2D" uid="uid://ce12ud4mgueg3" path="res://Textures/pinktree_large.png" id="1_6vcti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr6e1"]
+size = Vector2(28, 11)
+
+[node name="pink_tree_large" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 9)
+shape = SubResource("RectangleShape2D_qr6e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_6vcti")
+offset = Vector2(0, -56)
