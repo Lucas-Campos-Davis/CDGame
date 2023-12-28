@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0srss76syu1b"]
+
+[ext_resource type="Texture2D" uid="uid://ds0mr18kvay7b" path="res://Textures/Campfire/campfire_base.png" id="1_rgmri"]
+[ext_resource type="AudioStream" uid="uid://cvad2iottboi2" path="res://Sounds/495894__angriestbrad__another-fire.wav" id="2_4g7id"]
+[ext_resource type="Texture2D" uid="uid://cymeedgkkdmkv" path="res://Textures/Campfire/campfire.png" id="3_42n3r"]
+[ext_resource type="Texture2D" uid="uid://bqkx06o16eegd" path="res://Textures/Campfire/campfire2.png" id="4_elumq"]
+[ext_resource type="Texture2D" uid="uid://bnq05kr0wu7n4" path="res://Textures/Campfire/campfire3.png" id="5_uf6bh"]
+[ext_resource type="Texture2D" uid="uid://dy110assqdynk" path="res://Textures/Campfire/camplight.png" id="6_1aouf"]
+
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(25, 12)
+
+[sub_resource type="Gradient" id="8"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.988235, 0.733333, 1)
+
+[sub_resource type="SpriteFrames" id="9"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_42n3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_elumq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uf6bh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="6"]
+script/source = "extends PointLight2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+var counter = 0;
+var camplight1 = load(\"res://Textures/Campfire/camplight.png\");
+var camplight2 = load(\"res://Textures/Campfire/camplight2.png\");
+var camplight3 = load(\"res://Textures/Campfire/camplight3.png\");
+var campfireLights = [camplight1, camplight2, camplight3];
+
+var currentFrame;
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	currentFrame = get_parent().frame;
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	if counter > rng.randi_range(12,18):
+		if currentFrame != get_parent().frame:
+			texture = campfireLights[rng.randi_range(0,2)];
+			currentFrame = get_parent().frame;
+
+		
+		#energy = rng.randf_range(0.2, 0.3)
+		counter = 0;
+	else:
+		counter = counter + 1
+"
+
+[node name="campfire" type="StaticBody2D"]
+
+[node name="hitBox" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(-15.5, 6)
+shape = SubResource("7")
+
+[node name="campfireParticles" type="CPUParticles2D" parent="."]
+z_index = 1
+position = Vector2(-17.4755, -4.43822)
+lifetime = 8.0
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, -1000)
+gravity = Vector2(0, -1.5)
+color_ramp = SubResource("8")
+
+[node name="campfireBase" type="Sprite2D" parent="."]
+light_mask = 5125
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-16, 0)
+texture = ExtResource("1_rgmri")
+
+[node name="camprfireSounds" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-17.1095, 2.63222)
+stream = ExtResource("2_4g7id")
+volume_db = 1.0
+pitch_scale = 1.19
+autoplay = true
+max_distance = 100.0
+attenuation = 0.392292
+
+[node name="fireAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 3
+position = Vector2(-16, 0)
+sprite_frames = SubResource("9")
+autoplay = "default"
+frame_progress = 0.616993
+
+[node name="campfireLight" type="PointLight2D" parent="fireAnimation"]
+position = Vector2(-1.5193, 2.60297)
+color = Color(1, 0.913725, 0.00784314, 1)
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("6_1aouf")
+script = SubResource("6")

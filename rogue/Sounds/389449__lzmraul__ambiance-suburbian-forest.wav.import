@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample"
+type="AudioStreamWAV"
+uid="uid://caqpbj5fqa88y"
+path="res://.godot/imported/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample"
 
 [deps]
 
 source_file="res://Sounds/389449__lzmraul__ambiance-suburbian-forest.wav"
-dest_files=[ "res://.import/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample" ]
+dest_files=["res://.godot/imported/389449__lzmraul__ambiance-suburbian-forest.wav-e3478e04e09941652f708f8646d5aeb2.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

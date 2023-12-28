@@ -1,0 +1,13 @@
+CollisionShape2D
+Sprite2D
+StaticBody2D
+CharacterBody2D
+Node2D
+AnimatedSprite2D
+LightOccluder2D
+TileMap
+CollisionPolygon2D
+CanvasLayer
+TextureRect
+ColorRect
+WorldEnvironment
