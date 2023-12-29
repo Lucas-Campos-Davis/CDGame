@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://wqc30g24ryt6"]
+[gd_scene load_steps=34 format=3 uid="uid://wqc30g24ryt6"]
 
 [ext_resource type="PackedScene" uid="uid://3iyc3ly3lh2y" path="res://axolotol.tscn" id="1_dx0ek"]
 [ext_resource type="Texture2D" uid="uid://cpufqqho2m8f8" path="res://Textures/path_tileset.png" id="2_c4wjw"]
@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://cgcgcgn83owi4" path="res://blue_bush.tscn" id="18_h7yxt"]
 [ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="19_4667f"]
 [ext_resource type="PackedScene" uid="uid://vq7txbngrhy2" path="res://pink_tree.tscn" id="19_ffvy4"]
+[ext_resource type="PackedScene" uid="uid://rq13f8m6yqlr" path="res://rock.tscn" id="20_8cidl"]
+[ext_resource type="PackedScene" uid="uid://123gpxa1146b" path="res://rock2.tscn" id="21_7tq4a"]
+[ext_resource type="PackedScene" uid="uid://8k56jgdiggwx" path="res://smallrock.tscn" id="22_beb75"]
 [ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="34_p1cnx"]
 
 [sub_resource type="Environment" id="Environment_2jg6i"]
@@ -808,6 +811,12 @@ position = Vector2(-64, -447)
 [node name="pink_bush" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-608, -1643)
 
+[node name="pink_bush15" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-664, -1614)
+
+[node name="pink_bush16" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-744, -1628)
+
 [node name="pink_bush2" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-568, -1627)
 
@@ -817,11 +826,17 @@ position = Vector2(-856, -1566)
 [node name="pink_bush9" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-856, -1597)
 
+[node name="pink_bush25" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-936, -1539)
+
 [node name="pink_bush10" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-822, -1695)
 
 [node name="pink_bush11" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
-position = Vector2(-650, -1705)
+position = Vector2(-648, -1689)
+
+[node name="pink_bush26" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-663, -1713)
 
 [node name="pink_bush12" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-693, -1734)
@@ -831,6 +846,30 @@ position = Vector2(-717, -1519)
 
 [node name="pink_bush14" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-480, -1627)
+
+[node name="pink_bush17" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-192, -1632)
+
+[node name="pink_bush18" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-96, -1552)
+
+[node name="pink_bush19" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-149, -1618)
+
+[node name="pink_bush20" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-134, -1631)
+
+[node name="pink_bush21" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-146, -1651)
+
+[node name="pink_bush22" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-248, -1685)
+
+[node name="pink_bush23" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-286, -1664)
+
+[node name="pink_bush24" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
+position = Vector2(-307, -1651)
 
 [node name="pink_bush4" parent="WorldEnvironment/Node2D" instance=ExtResource("18_5c0us")]
 position = Vector2(-832, -1542)
@@ -848,6 +887,7 @@ position = Vector2(-587, -1550)
 position = Vector2(-846, -1533)
 
 [node name="PointLight2D" type="PointLight2D" parent="WorldEnvironment/Node2D"]
+visible = false
 top_level = true
 light_mask = 2
 position = Vector2(-432, -1354)
@@ -855,3 +895,39 @@ color = Color(0.952941, 0, 0.952941, 1)
 energy = 0.5
 range_item_cull_mask = 2
 texture = ExtResource("19_4667f")
+
+[node name="rock" parent="WorldEnvironment/Node2D" instance=ExtResource("20_8cidl")]
+position = Vector2(40, -111)
+
+[node name="rock3" parent="WorldEnvironment/Node2D" instance=ExtResource("20_8cidl")]
+position = Vector2(-655, -1628)
+
+[node name="rock6" parent="WorldEnvironment/Node2D" instance=ExtResource("20_8cidl")]
+position = Vector2(-200, -1649)
+
+[node name="rock4" parent="WorldEnvironment/Node2D" instance=ExtResource("21_7tq4a")]
+position = Vector2(84, -71)
+
+[node name="rock2" parent="WorldEnvironment/Node2D" instance=ExtResource("21_7tq4a")]
+position = Vector2(-750, -1639)
+
+[node name="rock8" parent="WorldEnvironment/Node2D" instance=ExtResource("21_7tq4a")]
+position = Vector2(-920, -1556)
+
+[node name="rock5" parent="WorldEnvironment/Node2D" instance=ExtResource("21_7tq4a")]
+position = Vector2(-216, -1651)
+
+[node name="smallrock" parent="WorldEnvironment/Node2D" instance=ExtResource("22_beb75")]
+position = Vector2(-685, -1615)
+
+[node name="smallrock2" parent="WorldEnvironment/Node2D" instance=ExtResource("22_beb75")]
+position = Vector2(-636, -1697)
+
+[node name="smallrock3" parent="WorldEnvironment/Node2D" instance=ExtResource("22_beb75")]
+position = Vector2(-299, -1685)
+
+[node name="smallrock4" parent="WorldEnvironment/Node2D" instance=ExtResource("22_beb75")]
+position = Vector2(-824, -1526)
+
+[node name="smallrock5" parent="WorldEnvironment/Node2D" instance=ExtResource("22_beb75")]
+position = Vector2(-598, -1561)

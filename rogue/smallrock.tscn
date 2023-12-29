@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://8k56jgdiggwx"]
+
+[ext_resource type="Texture2D" uid="uid://c4bou1sqy80a2" path="res://Textures/smallrock.png" id="1_4e3nn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ud1b"]
+size = Vector2(13, 5)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_4e3nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_6ud1b")
