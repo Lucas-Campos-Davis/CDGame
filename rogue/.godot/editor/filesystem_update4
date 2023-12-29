@@ -3,13 +3,12 @@ res://CharacterBody2D.gd
 res://companionFollow.gd
 res://Scenes/testingGrounds.gdshader
 res://Scenes/testingGrounds.tscn
-res://spire_thing_flipped.tscn
-res://blue_tree.tscn
-res://pink_tree.tscn
-res://pink_tree_large.tscn
 res://tall-tree.tscn
 res://pillar.tscn
 res://player_companion.tscn
 res://campfire.tscn
 res://axolotol.tscn
 res://smallpinkbush.tscn
+res://rock.tscn
+res://rock2.tscn
+res://smallrock.tscn

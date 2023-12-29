@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://rq13f8m6yqlr"]
+
+[ext_resource type="Texture2D" uid="uid://d1ioq3fwv52dn" path="res://Textures/rock_test2.png" id="1_swpdn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8brx"]
+size = Vector2(27, 9)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_swpdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(0.5, 9.5)
+shape = SubResource("RectangleShape2D_a8brx")
