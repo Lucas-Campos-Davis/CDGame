@@ -853,5 +853,5 @@ light_mask = 2
 position = Vector2(-432, -1354)
 color = Color(0.952941, 0, 0.952941, 1)
 energy = 0.5
-range_item_cull_mask = 3
+range_item_cull_mask = 2
 texture = ExtResource("19_4667f")
