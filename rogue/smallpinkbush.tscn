@@ -13,11 +13,12 @@ position = Vector2(40, -143)
 z_index = 3
 y_sort_enabled = true
 texture = ExtResource("1_s8u02")
+offset = Vector2(0, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5.5)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_ih0qe")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 11)
 texture = ExtResource("2_6jjw7")
