@@ -1,2 +1,2 @@
-﻿60499
-D:/godot/Godot_v4.1.3-stable_mono_win64.exe
+﻿40745
+/home/gabby/Documents/Godot_v4.2.1-stable_mono_linux_x86_64/Godot_v4.2.1-stable_mono_linux.x86_64

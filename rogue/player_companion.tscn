@@ -276,6 +276,7 @@ position = Vector2(0, 14.4242)
 texture = ExtResource("1_ve2m8")
 
 [node name="player_animations" type="AnimatedSprite2D" parent="player"]
+light_mask = 2
 z_index = 1
 y_sort_enabled = true
 sprite_frames = SubResource("3")

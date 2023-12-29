@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5bxm1l88x2p7"]
+
+[ext_resource type="Texture2D" uid="uid://bmrxx1725fog6" path="res://Textures/smallpinkbush.png" id="1_s8u02"]
+[ext_resource type="Texture2D" uid="uid://bx3bpc7e1g06d" path="res://Textures/small_shadow.png" id="2_6jjw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih0qe"]
+size = Vector2(12, 5)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(40, -143)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_s8u02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_ih0qe")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+texture = ExtResource("2_6jjw7")
