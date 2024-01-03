@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://om6pi4x4gesu"]
+
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_qv6pr"]
+
+[node name="ambientLight" type="PointLight2D"]
+top_level = true
+light_mask = 3
+z_index = 3
+position = Vector2(-168, -1627)
+color = Color(0.945098, 0.858824, 0.576471, 1)
+energy = 0.35
+texture = ExtResource("1_qv6pr")
+texture_scale = 0.5

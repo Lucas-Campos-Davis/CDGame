@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4um2n5cd01r"]
+
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_aw0vr"]
+
+[node name="ambientShadow" type="PointLight2D"]
+top_level = true
+light_mask = 7
+z_index = 10
+position = Vector2(-890, -1531)
+energy = 0.75
+blend_mode = 1
+texture = ExtResource("1_aw0vr")
+texture_scale = 0.5

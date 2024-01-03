@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0srss76syu1b"]
+[gd_scene load_steps=13 format=3 uid="uid://c0srss76syu1b"]
 
 [ext_resource type="Texture2D" uid="uid://ds0mr18kvay7b" path="res://Textures/Campfire/campfire_base.png" id="1_rgmri"]
 [ext_resource type="AudioStream" uid="uid://cvad2iottboi2" path="res://Sounds/495894__angriestbrad__another-fire.wav" id="2_4g7id"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bnq05kr0wu7n4" path="res://Textures/Campfire/campfire3.png" id="5_uf6bh"]
 [ext_resource type="Texture2D" uid="uid://dy110assqdynk" path="res://Textures/Campfire/camplight.png" id="6_1aouf"]
 [ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="7_jxdwc"]
+[ext_resource type="Texture2D" uid="uid://bv1taa33dxt0f" path="res://Textures/Campfire/campfire_ground.png" id="8_7qq3q"]
 
 [sub_resource type="RectangleShape2D" id="7"]
 size = Vector2(25, 12)
@@ -103,6 +104,8 @@ max_distance = 100.0
 attenuation = 0.392292
 
 [node name="fireAnimation" type="AnimatedSprite2D" parent="."]
+light_mask = 6
+visibility_layer = 6
 z_index = 3
 position = Vector2(-16, 0)
 sprite_frames = SubResource("9")
@@ -124,3 +127,9 @@ energy = 0.5
 range_item_cull_mask = 3
 texture = ExtResource("7_jxdwc")
 texture_scale = 0.25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+z_as_relative = false
+position = Vector2(-11, 8)
+texture = ExtResource("8_7qq3q")
