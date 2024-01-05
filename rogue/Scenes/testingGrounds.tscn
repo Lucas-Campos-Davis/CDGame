@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://wqc30g24ryt6"]
+[gd_scene load_steps=34 format=3 uid="uid://wqc30g24ryt6"]
 
 [ext_resource type="PackedScene" uid="uid://3iyc3ly3lh2y" path="res://axolotol.tscn" id="1_dx0ek"]
 [ext_resource type="PackedScene" uid="uid://usjplqjafxjm" path="res://tile_maps.tscn" id="2_t376f"]
@@ -82,14 +82,11 @@ texture = ExtResource("25_7bi4k")
 sources/0 = SubResource("TileSetAtlasSource_j5ccr")
 
 [sub_resource type="Gradient" id="Gradient_yf8vg"]
-offsets = PackedFloat32Array(0.0060241, 0.240964, 0.524096, 0.73494, 1)
-colors = PackedColorArray(0.0809705, 0.0665532, 0.190333, 1, 0.41941, 0.195854, 0.461174, 1, 0.939065, 0.303118, 0.609019, 1, 0.972793, 0.528823, 0.648705, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.240964, 0.524096, 0.73494, 1)
+colors = PackedColorArray(0.160786, 0.138255, 0.333448, 1, 0.381113, 0.174407, 0.419716, 1, 0.84716, 0.180307, 0.525305, 1, 0.944327, 0.572188, 0.5118, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6dw4p"]
 gradient = SubResource("Gradient_yf8vg")
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3unrj"]
-blend_mode = 2
 
 [node name="main" type="Node2D"]
 y_sort_enabled = true
@@ -1048,7 +1045,7 @@ position = Vector2(-629, -1660)
 [node name="ambientShadow" parent="WorldEnvironment/Node2D" instance=ExtResource("26_rmj1a")]
 light_mask = 6
 z_index = 5
-position = Vector2(-911, -1531)
+position = Vector2(-982, -1546)
 
 [node name="ambientShadow4" parent="WorldEnvironment/Node2D" instance=ExtResource("26_rmj1a")]
 position = Vector2(-710, -1705)
@@ -1070,15 +1067,3 @@ z_index = 5
 position = Vector2(0, 1)
 script = ExtResource("29_o6dgu")
 gradient_texture = SubResource("GradientTexture1D_6dw4p")
-
-[node name="ColorRect" type="ColorRect" parent="WorldEnvironment"]
-visible = false
-light_mask = 0
-visibility_layer = 4
-z_index = 4
-material = SubResource("CanvasItemMaterial_3unrj")
-offset_left = -2338.0
-offset_top = -2556.0
-offset_right = 1914.0
-offset_bottom = 58.0
-color = Color(0.8, 0.968627, 0.270588, 0)
