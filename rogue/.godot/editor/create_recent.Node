@@ -1,10 +1,10 @@
-CanvasModulate
-ColorRect
-Sprite2D
 PointLight2D
-TileMap
+Sprite2D
 CollisionShape2D
 StaticBody2D
+CanvasModulate
+ColorRect
+TileMap
 CharacterBody2D
 Node2D
 AnimatedSprite2D
@@ -12,4 +12,3 @@ LightOccluder2D
 CollisionPolygon2D
 CanvasLayer
 TextureRect
-WorldEnvironment

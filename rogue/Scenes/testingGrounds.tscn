@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://wqc30g24ryt6"]
+[gd_scene load_steps=35 format=3 uid="uid://wqc30g24ryt6"]
 
 [ext_resource type="PackedScene" uid="uid://3iyc3ly3lh2y" path="res://axolotol.tscn" id="1_dx0ek"]
 [ext_resource type="PackedScene" uid="uid://usjplqjafxjm" path="res://tile_maps.tscn" id="2_t376f"]
@@ -27,17 +27,28 @@
 [ext_resource type="Texture2D" uid="uid://bt4nq6l6ny54j" path="res://Textures/mountain tileset.png" id="25_7bi4k"]
 [ext_resource type="PackedScene" uid="uid://om6pi4x4gesu" path="res://ambient_light.tscn" id="26_jnwn6"]
 [ext_resource type="PackedScene" uid="uid://du4um2n5cd01r" path="res://ambient_shadow.tscn" id="26_rmj1a"]
+[ext_resource type="PackedScene" uid="uid://cm2h1n6g1byq7" path="res://waystone.tscn" id="29_4kt63"]
 [ext_resource type="Script" path="res://Scenes/daynightCycle.gd" id="29_o6dgu"]
 
 [sub_resource type="Environment" id="Environment_2jg6i"]
 background_mode = 3
 ambient_light_color = Color(0.662745, 0.662745, 0.662745, 1)
 ambient_light_energy = 11.93
+glow_levels/1 = 2.9
+glow_levels/2 = 2.0
+glow_levels/3 = 3.25
+glow_levels/4 = 3.2
+glow_levels/5 = 2.6
+glow_levels/6 = 7.7
+glow_levels/7 = 3.3
 glow_normalized = true
-glow_intensity = 1.08
-glow_strength = 0.72
+glow_intensity = 1.58
+glow_strength = 1.15
 glow_blend_mode = 1
-glow_hdr_threshold = 0.0
+glow_hdr_threshold = 0.24
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 32.85
+glow_map_strength = 0.0
 volumetric_fog_enabled = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5ccr"]
@@ -1067,3 +1078,9 @@ z_index = 5
 position = Vector2(0, 1)
 script = ExtResource("29_o6dgu")
 gradient_texture = SubResource("GradientTexture1D_6dw4p")
+
+[node name="waystone" parent="WorldEnvironment/Node2D" instance=ExtResource("29_4kt63")]
+position = Vector2(-633, -1665)
+
+[node name="waystone2" parent="WorldEnvironment/Node2D" instance=ExtResource("29_4kt63")]
+position = Vector2(76, -88)

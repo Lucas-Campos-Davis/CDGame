@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://cm2h1n6g1byq7"]
+
+[ext_resource type="Texture2D" uid="uid://b7mlyjgimi77v" path="res://Textures/waystone.png" id="1_5duow"]
+[ext_resource type="Texture2D" uid="uid://dn3jm14pbxn3j" path="res://Textures/waystone_shadow.png" id="2_my2dg"]
+[ext_resource type="Texture2D" uid="uid://b0k6jyg2k3c84" path="res://Textures/waystone-markings.png" id="3_t4gkj"]
+[ext_resource type="Texture2D" uid="uid://ynr4a6uxvtau" path="res://Textures/waystone-light1.png" id="4_q8hns"]
+[ext_resource type="Texture2D" uid="uid://bioev6lrh83bq" path="res://Textures/waystone_light2.png" id="5_77f8a"]
+[ext_resource type="Script" path="res://light.gd" id="5_f3m1q"]
+[ext_resource type="Script" path="res://PointLight2D2.gd" id="7_l40gr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caiwn"]
+size = Vector2(12, 11.5)
+
+[node name="waystone" type="StaticBody2D"]
+position = Vector2(0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_5duow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.75)
+shape = SubResource("RectangleShape2D_caiwn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 11)
+texture = ExtResource("2_my2dg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(0, 6)
+texture = ExtResource("3_t4gkj")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 1)
+color = Color(0.14902, 0.14902, 0.14902, 0.258824)
+energy = 2.33
+texture = ExtResource("4_q8hns")
+script = ExtResource("5_f3m1q")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(0, 9)
+color = Color(0.14902, 0.14902, 0.14902, 0.258824)
+energy = 2.33
+texture = ExtResource("5_77f8a")
+script = ExtResource("7_l40gr")
