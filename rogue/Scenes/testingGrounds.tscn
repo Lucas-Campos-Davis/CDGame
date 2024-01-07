@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://wqc30g24ryt6"]
+[gd_scene load_steps=36 format=3 uid="uid://wqc30g24ryt6"]
 
 [ext_resource type="PackedScene" uid="uid://3iyc3ly3lh2y" path="res://axolotol.tscn" id="1_dx0ek"]
 [ext_resource type="PackedScene" uid="uid://usjplqjafxjm" path="res://tile_maps.tscn" id="2_t376f"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://du4um2n5cd01r" path="res://ambient_shadow.tscn" id="26_rmj1a"]
 [ext_resource type="PackedScene" uid="uid://cm2h1n6g1byq7" path="res://waystone.tscn" id="29_4kt63"]
 [ext_resource type="Script" path="res://Scenes/daynightCycle.gd" id="29_o6dgu"]
+[ext_resource type="PackedScene" uid="uid://bdqinwtaij4tq" path="res://tall_grass.tscn" id="30_ryyhq"]
 
 [sub_resource type="Environment" id="Environment_2jg6i"]
 background_mode = 3
@@ -1084,3 +1085,18 @@ position = Vector2(-633, -1665)
 
 [node name="waystone2" parent="WorldEnvironment/Node2D" instance=ExtResource("29_4kt63")]
 position = Vector2(76, -88)
+
+[node name="tallgrass" parent="WorldEnvironment/Node2D" instance=ExtResource("30_ryyhq")]
+position = Vector2(37, -269)
+
+[node name="tallgrass2" parent="WorldEnvironment/Node2D" instance=ExtResource("30_ryyhq")]
+position = Vector2(51, -255)
+
+[node name="tallgrass3" parent="WorldEnvironment/Node2D" instance=ExtResource("30_ryyhq")]
+position = Vector2(72, -269)
+
+[node name="tallgrass4" parent="WorldEnvironment/Node2D" instance=ExtResource("30_ryyhq")]
+position = Vector2(64, -260)
+
+[node name="tallgrass5" parent="WorldEnvironment/Node2D" instance=ExtResource("30_ryyhq")]
+position = Vector2(56, -281)

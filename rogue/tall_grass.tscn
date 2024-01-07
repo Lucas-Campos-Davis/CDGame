@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdqinwtaij4tq"]
+
+[ext_resource type="Texture2D" uid="uid://coxpf4yt5em66" path="res://Textures/tall_grass.png" id="1_ibf62"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_ibf62")
