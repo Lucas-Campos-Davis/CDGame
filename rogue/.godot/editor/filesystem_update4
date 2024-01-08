@@ -9,5 +9,6 @@ res://foliage_tile_map.tscn
 res://tile_maps.tscn
 res://campfire.tscn
 res://waystone.tscn
-res://tall_grass.tscn
 res://pink_tree.tscn
+res://tall_grass.tscn
+res://player_companion.tscn
