@@ -5,6 +5,7 @@ var playerBody
 var companionDirection;
 var companionDirectionCoords;
 var travelCoords;
+@export var companionSpeed = 40;
 
 
 func _ready():
@@ -14,9 +15,11 @@ func _ready():
 	
 func go_to_position(coords: Vector2):
 	velocity = Vector2.ZERO;
-	velocity += (global_position.direction_to(coords)) * (40);
-	if playerBody.get_velocity() != Vector2.ZERO:
-		velocity += (global_position.direction_to(coords)) * (20);
+	velocity += (global_position.direction_to(coords)) * companionSpeed;
+	
+	if global_position.distance_to(travelCoords) > 1:
+		velocity += (global_position.direction_to(coords))*companionSpeed;
+	
 	
 func _physics_process(delta):
 	velocity = Vector2.ZERO;
@@ -32,7 +35,7 @@ func _physics_process(delta):
 	travelCoords = companionDirectionCoords;
 	
 	if global_position.distance_to(travelCoords) < 1:
-			velocity = Vector2.ZERO;
+			velocity = playerBody.get_velocity();
 	else:
 		go_to_position(travelCoords);
 			

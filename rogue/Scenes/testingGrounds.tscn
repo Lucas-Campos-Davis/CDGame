@@ -1079,6 +1079,7 @@ z_index = 5
 position = Vector2(0, 1)
 script = ExtResource("29_o6dgu")
 gradient_texture = SubResource("GradientTexture1D_6dw4p")
+INGAME_SPEED = 2.0
 
 [node name="waystone" parent="WorldEnvironment/Node2D" instance=ExtResource("29_4kt63")]
 position = Vector2(-633, -1665)

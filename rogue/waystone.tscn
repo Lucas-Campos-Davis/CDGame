@@ -10,7 +10,7 @@ size = Vector2(12, 11.5)
 [node name="waystone" type="StaticBody2D"]
 position = Vector2(0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="stone" type="Sprite2D" parent="."]
 z_index = 3
 y_sort_enabled = true
 texture = ExtResource("1_5duow")
@@ -19,11 +19,11 @@ texture = ExtResource("1_5duow")
 position = Vector2(0, 8.75)
 shape = SubResource("RectangleShape2D_caiwn")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="shadow" type="Sprite2D" parent="."]
 position = Vector2(0, 11)
 texture = ExtResource("2_my2dg")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="markings" type="Sprite2D" parent="."]
 z_index = 3
 y_sort_enabled = true
 position = Vector2(0, 6)
