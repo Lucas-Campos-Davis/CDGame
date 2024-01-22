@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://deoeb4ogivg26"]
+
+[ext_resource type="Texture2D" uid="uid://bq508q0r4jl5n" path="res://Textures/cliff.png" id="1_hf61f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxxqg"]
+size = Vector2(32, 15)
+
+[node name="StaticBody2D3" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+texture = ExtResource("1_hf61f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_uxxqg")

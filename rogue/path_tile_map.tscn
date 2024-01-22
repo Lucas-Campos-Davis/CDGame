@@ -32,6 +32,15 @@ texture = ExtResource("1_ahsdp")
 5:5/0 = 0
 5:6/0 = 0
 5:7/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_dfjog"]
 sources/0 = SubResource("TileSetAtlasSource_pxyva")
