@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp5hbctarmjas"]
+
+[sub_resource type="Theme" id="1"]
+
+[sub_resource type="GDScript" id="2"]
+script/source = "extends Button
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+	#if pressed:
+		#get_tree().change_scene_to_file(\"res://Scenes/testingGrounds.tscn\")
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menuBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="playButton" type="Button" parent="menuBackground"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 350.0
+offset_bottom = 200.0
+theme = SubResource("1")
+text = "Play"
+script = SubResource("2")
+
+[node name="optionsButton" type="Button" parent="menuBackground"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 250.0
+offset_right = 350.0
+offset_bottom = 350.0
+text = "Options"

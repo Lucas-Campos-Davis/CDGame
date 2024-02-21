@@ -96,12 +96,12 @@ texture = ExtResource("25_7bi4k")
 [sub_resource type="TileSet" id="TileSet_sidqu"]
 sources/0 = SubResource("TileSetAtlasSource_j5ccr")
 
-[sub_resource type="Gradient" id="Gradient_yf8vg"]
+[sub_resource type="Gradient" id="Gradient_4dbbp"]
 offsets = PackedFloat32Array(0, 0.240964, 0.524096, 0.73494, 1)
 colors = PackedColorArray(0.160786, 0.138255, 0.333448, 1, 0.381113, 0.174407, 0.419716, 1, 0.84716, 0.180307, 0.525305, 1, 0.944327, 0.572188, 0.5118, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6dw4p"]
-gradient = SubResource("Gradient_yf8vg")
+gradient = SubResource("Gradient_4dbbp")
 
 [node name="main" type="Node2D"]
 y_sort_enabled = true
