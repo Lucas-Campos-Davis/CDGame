@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6ppm"]
 size = Vector2(52, 22)
 
-[node name="pink_tree_tall" type="StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D"]
 show_behind_parent = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

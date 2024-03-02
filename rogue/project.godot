@@ -28,6 +28,18 @@ mouse_cursor/custom_image="res://Textures/cursor.png"
 
 project/assembly_name="rogue"
 
+[importer_defaults]
+
+mp3={
+"loop": true
+}
+wav={
+"edit/loop_mode": 2
+}
+oggvorbisstr={
+"loop": true
+}
+
 [input]
 
 up={

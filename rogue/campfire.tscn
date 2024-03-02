@@ -96,11 +96,11 @@ texture = ExtResource("1_rgmri")
 [node name="camprfireSounds" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-17.1095, 2.63222)
 stream = ExtResource("2_4g7id")
-volume_db = 1.0
+volume_db = 5.0
 pitch_scale = 1.19
 autoplay = true
 max_distance = 100.0
-attenuation = 0.392292
+attenuation = 0.148651
 
 [node name="fireAnimation" type="AnimatedSprite2D" parent="."]
 light_mask = 6
@@ -124,7 +124,7 @@ script = SubResource("6")
 [node name="PointLight2D" type="PointLight2D" parent="fireAnimation"]
 position = Vector2(-1, 1)
 color = Color(0.921569, 0.698039, 0.376471, 1)
-energy = 0.75
+energy = 0.5
 range_item_cull_mask = 3
 texture = ExtResource("7_jxdwc")
 texture_scale = 0.25

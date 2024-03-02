@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmti5jny6fe8"]
+
+[ext_resource type="Texture2D" uid="uid://0k5t1nrqrc5x" path="res://Textures/plants/tall_grassy.png" id="1_q1241"]
+
+[node name="taller_grass" type="Sprite2D"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-52, -12)
+texture = ExtResource("1_q1241")
+offset = Vector2(0, 8)
