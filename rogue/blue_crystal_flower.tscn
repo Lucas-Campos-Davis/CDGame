@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp5pilq8xlnco"]
+
+[ext_resource type="Texture2D" uid="uid://blmbkjk4580oj" path="res://Textures/plants/blue_crystal_plant.png" id="1_cd18e"]
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="2_3ph7q"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1beq7"]
+blend_mode = 1
+
+[node name="blue_crystal_flower" type="Sprite2D"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-48, -121)
+texture = ExtResource("1_cd18e")
+offset = Vector2(0, 8)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(0, 6)
+color = Color(0.207843, 0.603922, 0.894118, 1)
+energy = 0.25
+texture = ExtResource("2_3ph7q")
+texture_scale = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.392157, 1, 1, 0.368627)
+self_modulate = Color(0.392157, 1, 1, 0.368627)
+z_index = 1
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_1beq7")
+position = Vector2(0, 6)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3ph7q")

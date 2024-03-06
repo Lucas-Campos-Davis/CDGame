@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tkml804rt1lx"]
+
+[ext_resource type="Texture2D" uid="uid://8x22vtli2jyp" path="res://Textures/plants/red_crystal_plant.png" id="1_nb5p1"]
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="2_lb6sw"]
+
+[node name="blue_crystal_flower" type="Sprite2D"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-48, -121)
+texture = ExtResource("1_nb5p1")
+offset = Vector2(0, 8)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 6)
+color = Color(0.968627, 0.313726, 0.290196, 1)
+energy = 0.25
+texture = ExtResource("2_lb6sw")
+texture_scale = 0.1

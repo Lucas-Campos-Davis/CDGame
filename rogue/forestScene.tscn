@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bjd3cr0e2vodw"]
+[gd_scene load_steps=59 format=3 uid="uid://bjd3cr0e2vodw"]
 
 [ext_resource type="Texture2D" uid="uid://dcwjta7q4eq6p" path="res://Textures/foreststairs.png" id="1_2qi5q"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="2_lxcml"]
@@ -30,6 +30,8 @@
 [ext_resource type="PackedScene" uid="uid://cvmti5jny6fe8" path="res://taller_grass.tscn" id="30_k0pw5"]
 [ext_resource type="Texture2D" uid="uid://dukds47ucjbi2" path="res://Textures/plants/small_flower_pink.png" id="31_buwuj"]
 [ext_resource type="Texture2D" uid="uid://dx0gcawcf6m8b" path="res://Textures/plants/small_flower_yellow.png" id="32_vrvs6"]
+[ext_resource type="PackedScene" uid="uid://clhv24360nspt" path="res://pink_tree-Med.tscn" id="33_6h8d6"]
+[ext_resource type="PackedScene" uid="uid://dp5pilq8xlnco" path="res://blue_crystal_flower.tscn" id="34_r0w2y"]
 [ext_resource type="AudioStream" uid="uid://caqpbj5fqa88y" path="res://Sounds/389449__lzmraul__ambiance-suburbian-forest.wav" id="35_4a1dy"]
 [ext_resource type="PackedScene" uid="uid://yje6r60kv583" path="res://red_tree_medium.tscn" id="36_lx7em"]
 
@@ -731,7 +733,7 @@ polygon = PackedVector2Array(-10, 10, -10, -62, -6, -62, 9, -56, 71, -60, 162, -
 [node name="path" type="TileMap" parent="cliff_stairs"]
 tile_set = SubResource("TileSet_rlha2")
 format = 2
-layer_0/tile_data = PackedInt32Array(458752, 589824, 9, 393215, 655360, 10, -65537, 589824, 6, -589824, 720896, 9, -393217, 786432, 6, -196609, 720896, 5, -524288, 655360, 2, -393216, 655360, 8, 393216, 786432, 10, -262144, 655360, 3, -196608, 589824, 5, -720897, 786432, 4)
+layer_0/tile_data = PackedInt32Array(458752, 589824, 9, 393215, 655360, 10, -65537, 589824, 6, -589824, 720896, 9, -393217, 786432, 6, -196609, 720896, 5, -524288, 655360, 2, -393216, 655360, 8, 393216, 786432, 10, -262144, 786432, 9, -196608, 589824, 5, -720897, 786432, 4)
 
 [node name="pillar" parent="cliff_stairs" instance=ExtResource("4_it6la")]
 position = Vector2(22, -41)
@@ -1287,9 +1289,6 @@ position = Vector2(452, 137)
 [node name="tall_rock7" parent="rocks" instance=ExtResource("12_4orjd")]
 position = Vector2(381, 451)
 
-[node name="tall_rock9" parent="rocks" instance=ExtResource("12_4orjd")]
-position = Vector2(416, 397)
-
 [node name="tall_rock8" parent="rocks" instance=ExtResource("12_4orjd")]
 position = Vector2(546, 455)
 
@@ -1417,6 +1416,11 @@ position = Vector2(-120, -48)
 color = Color(0.94902, 0.0588235, 0.666667, 1)
 energy = 0.5
 
+[node name="ambientLight6" parent="ambient_lights" instance=ExtResource("14_johos")]
+position = Vector2(0, 128)
+color = Color(0.941176, 0.219608, 0.494118, 1)
+energy = 0.5
+
 [node name="ambientLight5" parent="ambient_lights" instance=ExtResource("14_johos")]
 position = Vector2(96, -56)
 color = Color(0.341176, 0.180392, 0.870588, 1)
@@ -1535,9 +1539,6 @@ position = Vector2(-281, 121)
 [node name="pink_tree28" parent="pink_trees" instance=ExtResource("15_3omlt")]
 position = Vector2(-400, 175)
 
-[node name="pink_tree32" parent="pink_trees" instance=ExtResource("15_3omlt")]
-position = Vector2(-166, -130)
-
 [node name="pink_tree33" parent="pink_trees" instance=ExtResource("15_3omlt")]
 position = Vector2(-56, -390)
 
@@ -1597,6 +1598,9 @@ position = Vector2(140, 434)
 
 [node name="pink_tree9" parent="pink_trees" instance=ExtResource("15_3omlt")]
 position = Vector2(-298, 577)
+
+[node name="pink_tree32" parent="pink_trees" instance=ExtResource("15_3omlt")]
+position = Vector2(-74, -727)
 
 [node name="pink_tree58" parent="pink_trees" instance=ExtResource("15_3omlt")]
 position = Vector2(-235, 604)
@@ -1982,6 +1986,18 @@ position = Vector2(437, 397)
 [node name="tall_grass58" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(476, 426)
 
+[node name="tall_grass202" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(440, 352)
+
+[node name="tall_grass203" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(398, 348)
+
+[node name="tall_grass204" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(485, 325)
+
+[node name="tall_grass205" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(507, 343)
+
 [node name="tall_grass59" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(496, 434)
 
@@ -2042,6 +2058,66 @@ position = Vector2(-126, 460)
 [node name="tall_grass92" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-111, 464)
 
+[node name="tall_grass196" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(52, 478)
+
+[node name="tall_grass197" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(73, 484)
+
+[node name="tall_grass198" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(71, 473)
+
+[node name="tall_grass199" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(59, 488)
+
+[node name="tall_grass200" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(287, 453)
+
+[node name="tall_grass201" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(266, 459)
+
+[node name="tall_grass193" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(116, 598)
+
+[node name="tall_grass194" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(73, 588)
+
+[node name="tall_grass195" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(78, 530)
+
+[node name="tall_grass182" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(131, 474)
+
+[node name="tall_grass183" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(159, 462)
+
+[node name="tall_grass184" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(153, 469)
+
+[node name="tall_grass185" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(138, 450)
+
+[node name="tall_grass186" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(166, 444)
+
+[node name="tall_grass187" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(157, 481)
+
+[node name="tall_grass188" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(118, 460)
+
+[node name="tall_grass189" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(119, 539)
+
+[node name="tall_grass190" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(96, 544)
+
+[node name="tall_grass191" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(93, 525)
+
+[node name="tall_grass192" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(102, 539)
+
 [node name="tall_grass113" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-39, 309)
 
@@ -2054,11 +2130,41 @@ position = Vector2(-53, 334)
 [node name="tall_grass116" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-31, 330)
 
+[node name="tall_grass171" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(88, 393)
+
+[node name="tall_grass172" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(75, 405)
+
 [node name="tall_grass117" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-96, 347)
 
 [node name="tall_grass123" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-104, 371)
+
+[node name="tall_grass174" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-152, 356)
+
+[node name="tall_grass175" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-198, 338)
+
+[node name="tall_grass176" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-169, 367)
+
+[node name="tall_grass177" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-174, 348)
+
+[node name="tall_grass178" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-135, 339)
+
+[node name="tall_grass179" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-181, 333)
+
+[node name="tall_grass180" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-209, 358)
+
+[node name="tall_grass181" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-167, 354)
 
 [node name="tall_grass125" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-117, 391)
@@ -2109,7 +2215,7 @@ position = Vector2(-66, 440)
 position = Vector2(-50, 442)
 
 [node name="tall_grass86" parent="tall_grasses" instance=ExtResource("29_psss0")]
-position = Vector2(-79, 459)
+position = Vector2(-13, 485)
 
 [node name="tall_grass87" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-70, 452)
@@ -2200,6 +2306,9 @@ position = Vector2(-100, 188)
 
 [node name="tall_grass143" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-51, 195)
+
+[node name="tall_grass173" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-119, 217)
 
 [node name="tall_grass144" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-30, 181)
@@ -2321,6 +2430,33 @@ position = Vector2(-146, -32)
 [node name="tall_grass11" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-216, -98)
 
+[node name="tall_grass162" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-244, -74)
+
+[node name="tall_grass163" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-290, -53)
+
+[node name="tall_grass164" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-232, -45)
+
+[node name="tall_grass165" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-265, -57)
+
+[node name="tall_grass166" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-255, -39)
+
+[node name="tall_grass167" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-271, -26)
+
+[node name="tall_grass168" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-228, -88)
+
+[node name="tall_grass169" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-308, -51)
+
+[node name="tall_grass170" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-316, -64)
+
 [node name="tall_grass12" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-183, -115)
 
@@ -2429,6 +2565,9 @@ position = Vector2(-36, 321)
 [node name="taller_grass13" parent="tall_grasses" instance=ExtResource("30_k0pw5")]
 position = Vector2(-77, 442)
 
+[node name="taller_grass19" parent="tall_grasses" instance=ExtResource("30_k0pw5")]
+position = Vector2(-9, 474)
+
 [node name="taller_grass10" parent="tall_grasses" instance=ExtResource("30_k0pw5")]
 position = Vector2(-98, 523)
 
@@ -2446,6 +2585,9 @@ position = Vector2(37, -100)
 
 [node name="taller_grass3" parent="tall_grasses" instance=ExtResource("30_k0pw5")]
 position = Vector2(-180, -70)
+
+[node name="taller_grass18" parent="tall_grasses" instance=ExtResource("30_k0pw5")]
+position = Vector2(-232, -66)
 
 [node name="small_flower_pink" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
@@ -2577,6 +2719,27 @@ offset = Vector2(0, 8)
 z_index = 4
 y_sort_enabled = true
 position = Vector2(-105, 446)
+texture = ExtResource("32_vrvs6")
+offset = Vector2(0, 8)
+
+[node name="small_flower_yellow31" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(124, 464)
+texture = ExtResource("32_vrvs6")
+offset = Vector2(0, 8)
+
+[node name="small_flower_yellow32" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(164, 476)
+texture = ExtResource("32_vrvs6")
+offset = Vector2(0, 8)
+
+[node name="small_flower_yellow33" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(122, 544)
 texture = ExtResource("32_vrvs6")
 offset = Vector2(0, 8)
 
@@ -2797,6 +2960,34 @@ position = Vector2(-112, 531)
 texture = ExtResource("31_buwuj")
 offset = Vector2(0, 8)
 
+[node name="small_flower_pink25" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(85, 480)
+texture = ExtResource("31_buwuj")
+offset = Vector2(0, 8)
+
+[node name="small_flower_pink26" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(61, 474)
+texture = ExtResource("31_buwuj")
+offset = Vector2(0, 8)
+
+[node name="small_flower_pink23" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(93, 531)
+texture = ExtResource("31_buwuj")
+offset = Vector2(0, 8)
+
+[node name="small_flower_pink24" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(66, 594)
+texture = ExtResource("31_buwuj")
+offset = Vector2(0, 8)
+
 [node name="small_flower_pink6" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
@@ -2810,3 +3001,65 @@ y_sort_enabled = true
 position = Vector2(126, -86)
 texture = ExtResource("31_buwuj")
 offset = Vector2(0, 8)
+
+[node name="blue_crystal_flower2" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-253, -61)
+
+[node name="blue_crystal_flower3" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-224, -91)
+
+[node name="blue_crystal_flower4" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-231, -53)
+
+[node name="blue_crystal_flower5" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-197, 512)
+
+[node name="blue_crystal_flower6" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-174, 495)
+
+[node name="blue_crystal_flower8" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+visible = false
+position = Vector2(82, 401)
+
+[node name="blue_crystal_flower11" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-19, 481)
+
+[node name="blue_crystal_flower13" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(141, 471)
+
+[node name="blue_crystal_flower15" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(111, 536)
+
+[node name="blue_crystal_flower14" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(276, 456)
+
+[node name="blue_crystal_flower16" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(436, 348)
+
+[node name="blue_crystal_flower12" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(153, 459)
+
+[node name="blue_crystal_flower7" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-183, 437)
+
+[node name="blue_crystal_flower9" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-99, 262)
+
+[node name="blue_crystal_flower10" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
+position = Vector2(-161, 353)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("33_6h8d6")]
+z_index = 1
+position = Vector2(326, -157)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("33_6h8d6")]
+z_index = 1
+position = Vector2(-163, -139)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("33_6h8d6")]
+z_index = 1
+position = Vector2(121, -243)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("33_6h8d6")]
+z_index = 1
+position = Vector2(-69, -301)

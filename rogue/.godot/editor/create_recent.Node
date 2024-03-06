@@ -1,6 +1,7 @@
 Sprite2D
-Node2D
+PointLight2D
 StaticBody2D
+Node2D
 TileMap
 AnimatedSprite2D
 CollisionShape2D
@@ -11,4 +12,3 @@ VBoxContainer
 MarginContainer
 Camera2D
 CollisionPolygon2D
-Node

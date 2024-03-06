@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clhv24360nspt"]
+
+[ext_resource type="Texture2D" uid="uid://cu4g341d278w3" path="res://Textures/pink_tree_med.png" id="1_omj2i"]
+[ext_resource type="Texture2D" uid="uid://bc75a47p1ph80" path="res://Textures/pink_tree_shadow.png" id="2_q1e5j"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(365, -176)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(2, -1)
+texture = ExtResource("1_omj2i")
+offset = Vector2(0, -25)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+texture = ExtResource("2_q1e5j")
