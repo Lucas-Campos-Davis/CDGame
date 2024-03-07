@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bjd3cr0e2vodw"]
+[gd_scene load_steps=63 format=3 uid="uid://bjd3cr0e2vodw"]
 
 [ext_resource type="Texture2D" uid="uid://dcwjta7q4eq6p" path="res://Textures/foreststairs.png" id="1_2qi5q"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="2_lxcml"]
@@ -31,8 +31,12 @@
 [ext_resource type="Texture2D" uid="uid://dukds47ucjbi2" path="res://Textures/plants/small_flower_pink.png" id="31_buwuj"]
 [ext_resource type="Texture2D" uid="uid://dx0gcawcf6m8b" path="res://Textures/plants/small_flower_yellow.png" id="32_vrvs6"]
 [ext_resource type="PackedScene" uid="uid://clhv24360nspt" path="res://pink_tree-Med.tscn" id="33_6h8d6"]
+[ext_resource type="Texture2D" uid="uid://q0xx1kebs3m1" path="res://Textures/plants/whitefawnlily_single.png" id="34_8spxh"]
+[ext_resource type="Texture2D" uid="uid://7vahi6fo0qh" path="res://Textures/plants/whitefawnlily.png" id="34_dkino"]
 [ext_resource type="PackedScene" uid="uid://dp5pilq8xlnco" path="res://blue_crystal_flower.tscn" id="34_r0w2y"]
+[ext_resource type="Texture2D" uid="uid://cjqbf3xjececv" path="res://Textures/plants/bear_grass_single.png" id="35_2ctvq"]
 [ext_resource type="AudioStream" uid="uid://caqpbj5fqa88y" path="res://Sounds/389449__lzmraul__ambiance-suburbian-forest.wav" id="35_4a1dy"]
+[ext_resource type="Texture2D" uid="uid://odq8dt2qosfb" path="res://Textures/plants/beargrass.png" id="36_e1fwt"]
 [ext_resource type="PackedScene" uid="uid://yje6r60kv583" path="res://red_tree_medium.tscn" id="36_lx7em"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40frx"]
@@ -1302,6 +1306,7 @@ position = Vector2(189, 18)
 position = Vector2(709, 53)
 
 [node name="ambient_shadows" type="Node2D" parent="."]
+visible = false
 
 [node name="ambient_shadow" parent="ambient_shadows" instance=ExtResource("13_vgqnq")]
 light_mask = 2
@@ -1410,6 +1415,7 @@ z_index = 5
 position = Vector2(-668, 679)
 
 [node name="ambient_lights" type="Node2D" parent="."]
+visible = false
 
 [node name="ambientLight" parent="ambient_lights" instance=ExtResource("14_johos")]
 position = Vector2(-120, -48)
@@ -2505,6 +2511,12 @@ position = Vector2(17, -117)
 [node name="tall_grass31" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(55, -113)
 
+[node name="tall_grass206" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(88, -132)
+
+[node name="tall_grass207" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(99, -123)
+
 [node name="tall_grass24" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(133, -82)
 
@@ -2515,7 +2527,7 @@ position = Vector2(109, -95)
 position = Vector2(138, -131)
 
 [node name="tall_grass14" parent="tall_grasses" instance=ExtResource("29_psss0")]
-position = Vector2(128, -122)
+position = Vector2(108, -110)
 
 [node name="tall_grass15" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(113, -132)
@@ -3047,6 +3059,81 @@ position = Vector2(-99, 262)
 
 [node name="blue_crystal_flower10" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
 position = Vector2(-161, 353)
+
+[node name="whitefawnlily_single" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(121, -106)
+texture = ExtResource("34_8spxh")
+
+[node name="bear_grass_single" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-39, -118)
+texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass_single2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-68, 433)
+texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-46, -102)
+texture = ExtResource("36_e1fwt")
+
+[node name="bear_grass2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-90, 447)
+texture = ExtResource("36_e1fwt")
+
+[node name="whitefawnlily_single5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(22, 122)
+texture = ExtResource("34_8spxh")
+
+[node name="whitefawnlily_single3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(93, -103)
+texture = ExtResource("34_8spxh")
+
+[node name="whitefawnlily_single4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(77, -130)
+texture = ExtResource("34_8spxh")
+
+[node name="whitefawnlily_single2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-66, -94)
+texture = ExtResource("34_8spxh")
+
+[node name="whitefawnlily2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(119, -121)
+texture = ExtResource("34_dkino")
+offset = Vector2(0, 8)
+
+[node name="whitefawnlily5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-90, -83)
+texture = ExtResource("34_dkino")
+offset = Vector2(0, 8)
+
+[node name="whitefawnlily6" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-105, 209)
+texture = ExtResource("34_dkino")
+offset = Vector2(0, 8)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("33_6h8d6")]
 z_index = 1
