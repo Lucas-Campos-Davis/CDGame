@@ -1,7 +1,7 @@
+Node2D
 Sprite2D
 PointLight2D
 StaticBody2D
-Node2D
 TileMap
 AnimatedSprite2D
 CollisionShape2D

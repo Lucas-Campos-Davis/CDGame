@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bjd3cr0e2vodw"]
+[gd_scene load_steps=65 format=3 uid="uid://bjd3cr0e2vodw"]
 
 [ext_resource type="Texture2D" uid="uid://dcwjta7q4eq6p" path="res://Textures/foreststairs.png" id="1_2qi5q"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="2_lxcml"]
@@ -28,7 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://bs4ho57nau7vs" path="res://Textures/new_character/tiefling_lesbians.png" id="26_ylobt"]
 [ext_resource type="PackedScene" uid="uid://bdqinwtaij4tq" path="res://tall_grass.tscn" id="29_psss0"]
 [ext_resource type="PackedScene" uid="uid://cvmti5jny6fe8" path="res://taller_grass.tscn" id="30_k0pw5"]
+[ext_resource type="Texture2D" uid="uid://bn7k8tyosaha7" path="res://Textures/plants/plantain2.png" id="30_mn3ra"]
 [ext_resource type="Texture2D" uid="uid://dukds47ucjbi2" path="res://Textures/plants/small_flower_pink.png" id="31_buwuj"]
+[ext_resource type="Texture2D" uid="uid://c5tmy633fcoat" path="res://Textures/trees/paper_birch.png" id="31_knqsd"]
 [ext_resource type="Texture2D" uid="uid://dx0gcawcf6m8b" path="res://Textures/plants/small_flower_yellow.png" id="32_vrvs6"]
 [ext_resource type="PackedScene" uid="uid://clhv24360nspt" path="res://pink_tree-Med.tscn" id="33_6h8d6"]
 [ext_resource type="Texture2D" uid="uid://q0xx1kebs3m1" path="res://Textures/plants/whitefawnlily_single.png" id="34_8spxh"]
@@ -36,137 +38,16 @@
 [ext_resource type="PackedScene" uid="uid://dp5pilq8xlnco" path="res://blue_crystal_flower.tscn" id="34_r0w2y"]
 [ext_resource type="Texture2D" uid="uid://cjqbf3xjececv" path="res://Textures/plants/bear_grass_single.png" id="35_2ctvq"]
 [ext_resource type="AudioStream" uid="uid://caqpbj5fqa88y" path="res://Sounds/389449__lzmraul__ambiance-suburbian-forest.wav" id="35_4a1dy"]
+[ext_resource type="Texture2D" uid="uid://cwtmsblmim4bk" path="res://Textures/plants/beargrass_small.png" id="36_0ppm1"]
+[ext_resource type="Texture2D" uid="uid://clgqqixf76nwy" path="res://Textures/plants/beargrass_small_single.png" id="36_8q70g"]
 [ext_resource type="Texture2D" uid="uid://odq8dt2qosfb" path="res://Textures/plants/beargrass.png" id="36_e1fwt"]
 [ext_resource type="PackedScene" uid="uid://yje6r60kv583" path="res://red_tree_medium.tscn" id="36_lx7em"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40frx"]
-texture = ExtResource("2_lxcml")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-4:1/0 = 0
-4:2/0 = 0
-5:1/0 = 0
-5:2/0 = 0
-5:3/0 = 0
-5:4/0 = 0
-5:5/0 = 0
-4:5/0 = 0
-3:5/0 = 0
-2:5/0 = 0
-1:5/0 = 0
-0:5/0 = 0
-0:4/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-4:3/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
+[ext_resource type="Texture2D" uid="uid://bbud3e5khfnhh" path="res://Textures/plants/small_horsetail.png" id="38_b8r2y"]
+[ext_resource type="Texture2D" uid="uid://c4i83uaayiq63" path="res://Textures/plants/horetail_sparse.png" id="38_w1e1u"]
 
 [sub_resource type="TileSet" id="TileSet_x473h"]
-sources/0 = SubResource("TileSetAtlasSource_40frx")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8bri"]
-texture = ExtResource("4_sxb71")
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:0/0 = 0
-11:1/0 = 0
-11:2/0 = 0
-11:3/0 = 0
-11:4/0 = 0
-11:5/0 = 0
-11:6/0 = 0
-11:7/0 = 0
-11:8/0 = 0
-11:9/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-12:9/0 = 0
-12:8/0 = 0
-12:7/0 = 0
-12:6/0 = 0
-12:5/0 = 0
-12:4/0 = 0
-12:3/0 = 0
-12:2/0 = 0
-12:1/0 = 0
-12:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rlha2"]
-sources/0 = SubResource("TileSetAtlasSource_i8bri")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwovf"]
 texture = ExtResource("3_nu15j")
@@ -467,91 +348,9 @@ texture = ExtResource("3_nu15j")
 [sub_resource type="TileSet" id="TileSet_vsscl"]
 sources/0 = SubResource("TileSetAtlasSource_vep8p")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nhio"]
-texture = ExtResource("3_nu15j")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_pp6g6"]
-sources/0 = SubResource("TileSetAtlasSource_4nhio")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cjx1"]
-texture = ExtResource("2_lxcml")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jvo3j"]
-sources/0 = SubResource("TileSetAtlasSource_3cjx1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xo4yl"]
 texture = ExtResource("3_nu15j")
@@ -711,6 +510,7 @@ gradient = SubResource("Gradient_yf8vg")
 y_sort_enabled = true
 
 [node name="cliff_stairs" type="Node2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -6)
 
 [node name="background" type="Sprite2D" parent="cliff_stairs"]
@@ -740,10 +540,10 @@ format = 2
 layer_0/tile_data = PackedInt32Array(458752, 589824, 9, 393215, 655360, 10, -65537, 589824, 6, -589824, 720896, 9, -393217, 786432, 6, -196609, 720896, 5, -524288, 655360, 2, -393216, 655360, 8, 393216, 786432, 10, -262144, 786432, 9, -196608, 589824, 5, -720897, 786432, 4)
 
 [node name="pillar" parent="cliff_stairs" instance=ExtResource("4_it6la")]
-position = Vector2(22, -41)
+position = Vector2(25, -56)
 
 [node name="pillar2" parent="cliff_stairs" instance=ExtResource("4_it6la")]
-position = Vector2(-22, -41)
+position = Vector2(-24, -56)
 
 [node name="cliff_stairs2" type="Node2D" parent="."]
 position = Vector2(0, -673)
@@ -1935,6 +1735,18 @@ position = Vector2(70, -60)
 [node name="tall_grass4" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(78, -31)
 
+[node name="tall_grass231" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(109, -55)
+
+[node name="tall_grass232" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(95, -68)
+
+[node name="tall_grass233" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(115, -70)
+
+[node name="tall_grass234" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(126, -59)
+
 [node name="tall_grass48" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(407, 442)
 
@@ -2175,6 +1987,18 @@ position = Vector2(-167, 354)
 [node name="tall_grass125" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-117, 391)
 
+[node name="tall_grass215" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-253, 434)
+
+[node name="tall_grass216" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-242, 458)
+
+[node name="tall_grass217" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-223, 435)
+
+[node name="tall_grass218" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-235, 426)
+
 [node name="tall_grass126" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-168, 401)
 
@@ -2403,6 +2227,84 @@ position = Vector2(29, -50)
 [node name="tall_grass6" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-77, -55)
 
+[node name="tall_grass219" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-43, -124)
+
+[node name="tall_grass220" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-13, -107)
+
+[node name="tall_grass221" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-49, -98)
+
+[node name="tall_grass222" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-53, -110)
+
+[node name="tall_grass223" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-41, -114)
+
+[node name="tall_grass224" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-72, -125)
+
+[node name="tall_grass225" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-28, -121)
+
+[node name="tall_grass226" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-1, -38)
+
+[node name="tall_grass227" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(42, -31)
+
+[node name="tall_grass228" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(44, -73)
+
+[node name="tall_grass229" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(29, -77)
+
+[node name="plantain4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(118, -74)
+texture = ExtResource("30_mn3ra")
+offset = Vector2(0, 8)
+
+[node name="plantain5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(124, -77)
+texture = ExtResource("30_mn3ra")
+offset = Vector2(0, 8)
+
+[node name="plantain6" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(6, -127)
+texture = ExtResource("30_mn3ra")
+offset = Vector2(0, 8)
+
+[node name="plantain7" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(79, -107)
+texture = ExtResource("30_mn3ra")
+offset = Vector2(0, 8)
+
+[node name="plantain8" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(56, -124)
+texture = ExtResource("30_mn3ra")
+offset = Vector2(0, 8)
+
+[node name="paper_birch" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(453, -109)
+texture = ExtResource("31_knqsd")
+offset = Vector2(0, -110)
+
+[node name="tall_grass230" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(20, -68)
+
 [node name="tall_grass7" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-76, -91)
 
@@ -2472,6 +2374,15 @@ position = Vector2(109, -81)
 [node name="tall_grass23" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(94, -89)
 
+[node name="tall_grass212" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(142, -102)
+
+[node name="tall_grass213" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(160, -93)
+
+[node name="tall_grass214" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(127, -113)
+
 [node name="tall_grass32" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(47, -101)
 
@@ -2498,6 +2409,18 @@ position = Vector2(69, -146)
 
 [node name="tall_grass27" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(-18, -139)
+
+[node name="tall_grass208" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-36, -100)
+
+[node name="tall_grass209" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-36, -110)
+
+[node name="tall_grass210" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-64, -105)
+
+[node name="tall_grass211" parent="tall_grasses" instance=ExtResource("29_psss0")]
+position = Vector2(-57, -117)
 
 [node name="tall_grass28" parent="tall_grasses" instance=ExtResource("29_psss0")]
 position = Vector2(52, -155)
@@ -3063,14 +2986,118 @@ position = Vector2(-161, 353)
 [node name="whitefawnlily_single" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(121, -106)
+position = Vector2(-128, -91)
 texture = ExtResource("34_8spxh")
 
 [node name="bear_grass_single" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-39, -118)
+position = Vector2(-39, -120)
 texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass_single3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-58, -118)
+texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass_single5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-28, -68)
+texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass_single4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(89, -125)
+texture = ExtResource("35_2ctvq")
+
+[node name="bear_grass_small_single" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-74, -94)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-28, -144)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(74, -40)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(4, -37)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single7" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-14, -135)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single8" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-52, -100)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single6" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-40, -61)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small_single4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(46, -48)
+texture = ExtResource("36_8q70g")
+offset = Vector2(0, 4)
+
+[node name="bear_grass_small" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-22, -109)
+texture = ExtResource("36_0ppm1")
+
+[node name="bear_grass_small4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(43, -34)
+texture = ExtResource("36_0ppm1")
+
+[node name="bear_grass_small5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(19, -49)
+texture = ExtResource("36_0ppm1")
+
+[node name="bear_grass_small2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-65, -110)
+texture = ExtResource("36_0ppm1")
+
+[node name="bear_grass_small3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-42, -105)
+texture = ExtResource("36_0ppm1")
 
 [node name="bear_grass_single2" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
@@ -3078,10 +3105,100 @@ y_sort_enabled = true
 position = Vector2(-68, 433)
 texture = ExtResource("35_2ctvq")
 
+[node name="horsetail_sparse" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(184, -104)
+texture = ExtResource("38_w1e1u")
+offset = Vector2(0, 8)
+
+[node name="horsetail_sparse3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-203, 445)
+texture = ExtResource("38_w1e1u")
+offset = Vector2(0, 8)
+
+[node name="horsetail_sparse4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-304, 465)
+texture = ExtResource("38_w1e1u")
+offset = Vector2(0, 8)
+
+[node name="horsetail_sparse2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(95, -92)
+texture = ExtResource("38_w1e1u")
+offset = Vector2(0, 8)
+
+[node name="horsetail" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(132, -97)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail5" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-250, 456)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail6" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-233, 438)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail7" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-245, 432)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail8" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-184, 426)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail2" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(119, -102)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(135, -106)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
+[node name="horsetail4" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(153, -95)
+texture = ExtResource("38_b8r2y")
+offset = Vector2(0, 8)
+
 [node name="bear_grass" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-46, -102)
+position = Vector2(-40, -106)
+texture = ExtResource("36_e1fwt")
+
+[node name="bear_grass3" type="Sprite2D" parent="tall_grasses"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(107, -114)
 texture = ExtResource("36_e1fwt")
 
 [node name="bear_grass2" type="Sprite2D" parent="tall_grasses"]
@@ -3099,13 +3216,13 @@ texture = ExtResource("34_8spxh")
 [node name="whitefawnlily_single3" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(93, -103)
+position = Vector2(-153, -95)
 texture = ExtResource("34_8spxh")
 
 [node name="whitefawnlily_single4" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(77, -130)
+position = Vector2(72, -128)
 texture = ExtResource("34_8spxh")
 
 [node name="whitefawnlily_single2" type="Sprite2D" parent="tall_grasses"]
@@ -3117,14 +3234,14 @@ texture = ExtResource("34_8spxh")
 [node name="whitefawnlily2" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(119, -121)
+position = Vector2(-295, -61)
 texture = ExtResource("34_dkino")
 offset = Vector2(0, 8)
 
 [node name="whitefawnlily5" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-90, -83)
+position = Vector2(-201, -85)
 texture = ExtResource("34_dkino")
 offset = Vector2(0, 8)
 
