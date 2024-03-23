@@ -1,37 +1,39 @@
 [gd_scene load_steps=7 format=3 uid="uid://msnv7iflixw4"]
 
-[ext_resource type="Texture2D" uid="uid://cyfhps3oxpgku" path="res://Textures/companion/body.png" id="1_wc2hc"]
-[ext_resource type="Texture2D" uid="uid://du13c28pvvfmw" path="res://Textures/companion/body1.png" id="2_0gv0i"]
-[ext_resource type="Texture2D" uid="uid://curlvo27w7w3r" path="res://Textures/companion/body2.png" id="3_oyyl3"]
-[ext_resource type="Texture2D" uid="uid://d0mhlxrxqiyek" path="res://Textures/companion/body3.png" id="4_uxevi"]
-[ext_resource type="Script" path="res://companionSprite.gd" id="5_t0v41"]
+[ext_resource type="Script" path="res://companionFollow.gd" id="1_1gof1"]
+[ext_resource type="Texture2D" uid="uid://cyfhps3oxpgku" path="res://Textures/companion/body.png" id="2_5vcok"]
+[ext_resource type="Texture2D" uid="uid://du13c28pvvfmw" path="res://Textures/companion/body1.png" id="3_tu3u2"]
+[ext_resource type="Texture2D" uid="uid://curlvo27w7w3r" path="res://Textures/companion/body2.png" id="4_h3ggk"]
+[ext_resource type="Texture2D" uid="uid://d0mhlxrxqiyek" path="res://Textures/companion/body3.png" id="5_wrv8w"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r8sna"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8sahu"]
 animations = [{
 "frames": [{
-"duration": 20.0,
-"texture": ExtResource("1_wc2hc")
+"duration": 7.0,
+"texture": ExtResource("2_5vcok")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_0gv0i")
+"texture": ExtResource("3_tu3u2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_oyyl3")
+"texture": ExtResource("4_h3ggk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_uxevi")
+"texture": ExtResource("5_wrv8w")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="companion" type="CharacterBody2D"]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(30, -22)
+script = ExtResource("1_1gof1")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="companionSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(34, -22)
-sprite_frames = SubResource("SpriteFrames_r8sna")
+[node name="companionSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_8sahu")
 autoplay = "default"
-script = ExtResource("5_t0v41")
+frame_progress = 0.739829

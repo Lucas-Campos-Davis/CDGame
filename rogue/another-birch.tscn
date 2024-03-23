@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ayje1q6f5po"]
+
+[ext_resource type="Texture2D" uid="uid://b5arudjya8oal" path="res://Textures/trees/another-birch.png" id="1_q3nwc"]
+[ext_resource type="Texture2D" uid="uid://di3mh4ciklh80" path="res://Textures/trees/pink_tree_shadow_2.png" id="2_md3m5"]
+
+[node name="Sprite2D" type="Sprite2D"]
+z_index = 4
+y_sort_enabled = true
+texture = ExtResource("1_q3nwc")
+offset = Vector2(0, -110)
+
+[node name="shadow" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 116)
+texture = ExtResource("2_md3m5")
+offset = Vector2(0, -110)

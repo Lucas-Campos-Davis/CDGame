@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dygd1dt32ne1c"]
+
+[ext_resource type="Texture2D" uid="uid://dfev35rhumcas" path="res://Textures/trees/weirdfoliage.png" id="1_62taw"]
+[ext_resource type="Texture2D" uid="uid://di3mh4ciklh80" path="res://Textures/trees/pink_tree_shadow_2.png" id="2_0h45s"]
+
+[node name="paper_birch" type="Sprite2D"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-481, -203)
+texture = ExtResource("1_62taw")
+offset = Vector2(0, -110)
+
+[node name="shadow" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1, 3)
+texture = ExtResource("2_0h45s")

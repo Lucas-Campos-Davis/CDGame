@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjnmdxt5khiod"]
+
+[ext_resource type="Script" path="res://character_sprite_test.gd" id="1_gkltd"]
+[ext_resource type="Shader" path="res://Scenes/silhouette_shader.gdshader" id="1_y010j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6838"]
+shader = ExtResource("1_y010j")
+shader_parameter/silhouette_color = Color(0, 0, 0, 0.5)
+
+[node name="CharacterSprite" type="Sprite2D"]
+script = ExtResource("1_gkltd")
+
+[node name="SilhouetteSprite" type="Sprite2D" parent="."]
+z_index = 100
+material = SubResource("ShaderMaterial_p6838")
+metadata/_edit_lock_ = true
