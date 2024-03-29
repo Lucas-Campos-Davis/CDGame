@@ -1146,7 +1146,7 @@ position = Vector2(189, -217)
 [node name="ambient_shadow11" parent="ambient_shadows" instance=ExtResource("13_vgqnq")]
 light_mask = 6
 z_index = 5
-position = Vector2(215, -415)
+position = Vector2(234, -316)
 
 [node name="ambient_shadow12" parent="ambient_shadows" instance=ExtResource("13_vgqnq")]
 light_mask = 6
