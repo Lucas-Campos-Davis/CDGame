@@ -73,7 +73,6 @@ script/source = "extends CharacterBody2D
 var speed = 50
 var foliageTileMap;
 
-
 func get_input():
 	velocity = Vector2()
 	
@@ -236,29 +235,45 @@ var back = load(\"res://rogue_back.png\");
 var left = load(\"res://rogue_left.png\");
 var right = load(\"res://rogue_right.png\");
 
+
 @export var companionDirection = \"LEFT\";
 
 func get_input():
+	var player = get_parent();
 	if Input.is_action_pressed('up'):
+		stop_animation_on_stopped(player.get_real_velocity());
 		play(\"walk_up\")
+
 		
 	if Input.is_action_pressed('down'):
+		stop_animation_on_stopped(player.get_real_velocity());
 		play(\"walk_down\")
+
 		
 	if Input.is_action_pressed('right') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
+		stop_animation_on_stopped(player.get_real_velocity());
 		play(\"walk_right\")
 		companionDirection = \"RIGHT\";
+
 		
 	if Input.is_action_pressed('left') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
+		stop_animation_on_stopped(player.get_real_velocity());
 		play(\"walk_left\")
 		companionDirection = \"LEFT\";
+
 		
 	if !Input.is_action_pressed('right') && !Input.is_action_pressed('left') && !Input.is_action_pressed('down') && !Input.is_action_pressed('up'): 
-		stop()
-		frame = 0
+		if frame == 0 || frame == 4:
+			stop()
+		
+func stop_animation_on_stopped(player_velocity):
+	if player_velocity.y == 0 && player_velocity.x == 0:
+		if frame == 0 || frame == 4:
+			stop()
 
 func _physics_process(delta):
 	get_input()
+
 "
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b2xik"]

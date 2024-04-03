@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bjd3cr0e2vodw"]
+[gd_scene load_steps=74 format=3 uid="uid://bjd3cr0e2vodw"]
 
 [ext_resource type="Texture2D" uid="uid://dcwjta7q4eq6p" path="res://Textures/foreststairs.png" id="1_2qi5q"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="2_lxcml"]
@@ -49,7 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://c4i83uaayiq63" path="res://Textures/plants/horetail_sparse.png" id="38_w1e1u"]
 [ext_resource type="Texture2D" uid="uid://dv5vjy0jci7t5" path="res://Textures/new_character/faith.png" id="49_n8d1i"]
 [ext_resource type="PackedScene" uid="uid://msnv7iflixw4" path="res://companion.tscn" id="50_pakn4"]
+[ext_resource type="Texture2D" uid="uid://hgt33qlgucac" path="res://Textures/plants/small_mushes.png" id="51_c2mdy"]
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="51_o5wt7"]
+[ext_resource type="Texture2D" uid="uid://45on2m4xl6e5" path="res://Textures/plants/small_mushes2.png" id="52_sug3g"]
+[ext_resource type="Texture2D" uid="uid://b1hi6sov4yleo" path="res://Textures/plants/small_mushes3.png" id="53_wf2xt"]
 
 [sub_resource type="TileSet" id="TileSet_x473h"]
 
@@ -3311,3 +3314,251 @@ position = Vector2(17, -101)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
+
+[node name="waystone" parent="." instance=ExtResource("8_tx3jd")]
+y_sort_enabled = true
+position = Vector2(17, -1231)
+
+[node name="tall_grass181" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-47, -1224)
+
+[node name="tall_grass182" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-13, -1238)
+
+[node name="tall_grass183" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(16, -1228)
+
+[node name="tall_grass185" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-76, -1187)
+
+[node name="tall_grass186" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-30, -1112)
+
+[node name="tall_grass187" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-39, -1107)
+
+[node name="tall_grass212" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-81, -1232)
+
+[node name="tall_grass206" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(71, -1140)
+
+[node name="tall_grass207" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(79, -1128)
+
+[node name="tall_grass208" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(92, -1193)
+
+[node name="tall_grass209" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(75, -1185)
+
+[node name="tall_grass210" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(84, -1181)
+
+[node name="tall_grass189" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(97, -1161)
+
+[node name="tall_grass190" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-75, -1212)
+
+[node name="tall_grass211" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-89, -1221)
+
+[node name="tall_grass191" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-94, -1200)
+
+[node name="tall_grass192" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-103, -1195)
+
+[node name="tall_grass197" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(73, -1218)
+
+[node name="tall_grass198" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(84, -1222)
+
+[node name="tall_grass199" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(68, -1207)
+
+[node name="tall_grass200" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-81, -1122)
+
+[node name="tall_grass203" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-70, -1131)
+
+[node name="tall_grass201" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-61, -1118)
+
+[node name="tall_grass204" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(-96, -1143)
+
+[node name="tall_grass213" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(1, -1110)
+
+[node name="tall_grass202" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(32, -1116)
+
+[node name="tall_grass205" parent="." instance=ExtResource("29_psss0")]
+position = Vector2(44, -1114)
+
+[node name="taller_grass18" parent="." instance=ExtResource("30_k0pw5")]
+position = Vector2(96, -1136)
+
+[node name="mushes2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(59, -1212)
+texture = ExtResource("51_c2mdy")
+offset = Vector2(0, 8)
+
+[node name="mushes5" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(75, -1146)
+texture = ExtResource("51_c2mdy")
+offset = Vector2(0, 8)
+
+[node name="mushes4" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-63, -1132)
+texture = ExtResource("51_c2mdy")
+offset = Vector2(0, 8)
+
+[node name="mushes3" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-62, -1204)
+texture = ExtResource("51_c2mdy")
+offset = Vector2(0, 8)
+
+[node name="mushes6" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-19, -1107)
+texture = ExtResource("51_c2mdy")
+offset = Vector2(0, 8)
+
+[node name="mushes_small2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-41, -1215)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small4" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-72, -1189)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small5" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(17, -1105)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small7" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-50, -1120)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small8" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(59, -1113)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small15" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-34, -1222)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small18" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-71, -1198)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small19" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(47, -1221)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small16" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(62, -1127)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small10" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(46, -1113)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small17" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(91, -1151)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small13" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(77, -1192)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_small14" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(35, -1225)
+texture = ExtResource("52_sug3g")
+offset = Vector2(0, 8)
+
+[node name="mushes_tall2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-8, -1227)
+texture = ExtResource("53_wf2xt")
+offset = Vector2(0, 8)
+
+[node name="mushes_tall5" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(84, -1165)
+texture = ExtResource("53_wf2xt")
+offset = Vector2(0, 8)
+
+[node name="mushes_tall3" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-74, -1174)
+texture = ExtResource("53_wf2xt")
+offset = Vector2(0, 8)
+
+[node name="mushes_tall4" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-70, -1151)
+texture = ExtResource("53_wf2xt")
+offset = Vector2(0, 8)
+
+[node name="round_rock5" parent="." instance=ExtResource("9_ttg7t")]
+position = Vector2(-9, -1245)
+
+[node name="small_rock12" parent="." instance=ExtResource("11_su2ru")]
+position = Vector2(16, -1242)

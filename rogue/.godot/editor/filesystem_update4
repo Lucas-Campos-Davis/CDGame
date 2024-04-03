@@ -10,9 +10,6 @@ res://player_companion.tscn
 res://forestScene.tscn
 res://real_forest.tscn
 res://player-test.tscn
-res://birch_tree1.tscn
-res://birch_tree2.tscn
-res://birch_tree3.tscn
-res://birch_tree4.tscn
-res://shadow_sprite.tscn
 res://waystone.tscn
+res://campfire.tscn
+res://silhouette.gd
