@@ -1,7 +1,8 @@
-CPUParticles2D
-GPUParticles2D
+RichTextLabel
 Sprite2D
 PointLight2D
+GPUParticles2D
+CPUParticles2D
 SubViewport
 SubViewportContainer
 CanvasGroup
@@ -12,4 +13,3 @@ AnimationPlayer
 CharacterBody2D
 Node2D
 StaticBody2D
-TileMap

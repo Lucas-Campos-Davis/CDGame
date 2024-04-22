@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dgeybvcyfprrq"]
+[gd_scene load_steps=61 format=3 uid="uid://dgeybvcyfprrq"]
 
 [ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="1_1ljf2"]
 [ext_resource type="PackedScene" uid="uid://cm2h1n6g1byq7" path="res://waystone.tscn" id="1_bjn34"]
@@ -31,12 +31,19 @@
 [ext_resource type="Texture2D" uid="uid://5av53qfa4tw8" path="res://Textures/trees/recolored-birch.png" id="25_pwg1v"]
 [ext_resource type="Texture2D" uid="uid://45on2m4xl6e5" path="res://Textures/plants/small_mushes2.png" id="25_vmtbf"]
 [ext_resource type="Texture2D" uid="uid://b1hi6sov4yleo" path="res://Textures/plants/small_mushes3.png" id="26_xiy5p"]
+[ext_resource type="Texture2D" uid="uid://cn83xy2ue1ybc" path="res://Textures/mushrooms/red-fly-agaric-med1.png" id="27_k0grs"]
 [ext_resource type="Texture2D" uid="uid://dv5vjy0jci7t5" path="res://Textures/new_character/faith.png" id="27_rrh8i"]
+[ext_resource type="Texture2D" uid="uid://flfd6ajjtnar" path="res://Textures/mushrooms/red-fly-agaric-med2.png" id="28_u6wt2"]
 [ext_resource type="Texture2D" uid="uid://c41uyuyft00s8" path="res://Textures/Player/playerShadow1.png" id="28_yd68c"]
 [ext_resource type="Texture2D" uid="uid://bs4ho57nau7vs" path="res://Textures/new_character/tiefling_lesbians.png" id="29_10ua6"]
 [ext_resource type="Script" path="res://Scenes/daynightCycle.gd" id="30_nmd88"]
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="32_6xgue"]
+[ext_resource type="Texture2D" uid="uid://dnpu73swqs8nt" path="res://Textures/new_rock.png" id="33_1hyrk"]
 [ext_resource type="Texture2D" uid="uid://b0e6aylgwvo8r" path="res://Textures/redesign/redesign_walking_animation1.png" id="33_mmbbh"]
+[ext_resource type="Texture2D" uid="uid://b5fxk4fu8vyt" path="res://Textures/rock_shadow.png" id="34_xn4vj"]
+[ext_resource type="Texture2D" uid="uid://big1mb8le3buw" path="res://Textures/trees/small-doug_fir.png" id="36_6yodd"]
+[ext_resource type="Shader" path="res://waystone_particles.gdshader" id="40_jdcdk"]
+[ext_resource type="Script" path="res://timeteller.gd" id="44_unwhu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40frx"]
 texture = ExtResource("3_5dn4r")
@@ -244,8 +251,45 @@ colors = PackedColorArray(0.160786, 0.138255, 0.333448, 1, 0.381113, 0.174407, 0
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_tao8q"]
 gradient = SubResource("Gradient_yf8vg")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_erg5e"]
+shader = ExtResource("40_jdcdk")
+
+[sub_resource type="Curve" id="Curve_nb6q8"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.344262, 0.681319), 0.0, 0.0, 0, 0, Vector2(0.934426, 0.307692), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_3qegr"]
+curve = SubResource("Curve_nb6q8")
+
+[sub_resource type="Gradient" id="Gradient_k3sit"]
+offsets = PackedFloat32Array(0, 0.592593, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.631373, 0.882353, 0.984314, 1, 0.0352941, 0.772549, 0.721569, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0mo72"]
+gradient = SubResource("Gradient_k3sit")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fi1e7"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1.1, 0.85, 1)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 65.0
+emission_ring_inner_radius = 85.0
+direction = Vector3(0, 0, 0)
+spread = 90.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, -1, 0)
+damping_max = 0.1
+scale_min = 0.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_0mo72")
+alpha_curve = SubResource("CurveTexture_3qegr")
+
 [sub_resource type="Gradient" id="Gradient_ival3"]
-colors = PackedColorArray(0.736535, 0.707167, 0.978883, 0.666667, 0.6, 0.8, 0.976471, 0.666667)
+offsets = PackedFloat32Array(0, 0.973333)
+colors = PackedColorArray(0.823647, 0.807178, 0.986887, 1, 0.815462, 0.556671, 0.67653, 1)
 
 [sub_resource type="Gradient" id="Gradient_kgifw"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -646,7 +690,7 @@ color = Color(0.85098, 0.396078, 0.2, 1)
 energy = 0.5
 
 [node name="ambientLight2" parent="ambient_lights" instance=ExtResource("13_jnm2u")]
-position = Vector2(-463, -402)
+position = Vector2(-463, -392)
 color = Color(0.980392, 0.72549, 0.623529, 1)
 energy = 0.5
 
@@ -718,7 +762,7 @@ position = Vector2(99, 131)
 position = Vector2(123, 115)
 
 [node name="tall_grass63" parent="plants" instance=ExtResource("11_bfgoh")]
-position = Vector2(133, 125)
+position = Vector2(136, 126)
 
 [node name="tall_grass64" parent="plants" instance=ExtResource("11_bfgoh")]
 position = Vector2(88, 103)
@@ -1534,7 +1578,7 @@ texture = ExtResource("16_hjhcq")
 [node name="horsetail_sparse2" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(134, 123)
+position = Vector2(143, 139)
 texture = ExtResource("17_scoeh")
 offset = Vector2(0, 8)
 
@@ -1549,6 +1593,13 @@ offset = Vector2(0, 8)
 z_index = 4
 y_sort_enabled = true
 position = Vector2(96, 120)
+texture = ExtResource("18_4hu7y")
+offset = Vector2(0, 8)
+
+[node name="horsetail7" type="Sprite2D" parent="plants"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(132, 126)
 texture = ExtResource("18_4hu7y")
 offset = Vector2(0, 8)
 
@@ -1713,6 +1764,27 @@ position = Vector2(123, 486)
 texture = ExtResource("25_vmtbf")
 offset = Vector2(0, 8)
 
+[node name="mushes_small9" type="Sprite2D" parent="plants"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(92, 160)
+texture = ExtResource("27_k0grs")
+offset = Vector2(0, 8)
+
+[node name="mushes_small11" type="Sprite2D" parent="plants"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(100, 167)
+texture = ExtResource("28_u6wt2")
+offset = Vector2(0, 8)
+
+[node name="mushes_small12" type="Sprite2D" parent="plants"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(109, 158)
+texture = ExtResource("28_u6wt2")
+offset = Vector2(0, 8)
+
 [node name="mushes_small15" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
@@ -1817,6 +1889,12 @@ position = Vector2(-510, 121)
 [node name="round_rock4" parent="rocks" instance=ExtResource("22_7ljpl")]
 position = Vector2(-504, -330)
 
+[node name="round_rock7" parent="rocks" instance=ExtResource("22_7ljpl")]
+position = Vector2(-461, -379)
+
+[node name="round_rock6" parent="rocks" instance=ExtResource("22_7ljpl")]
+position = Vector2(-447, -368)
+
 [node name="round_rock2" parent="rocks" instance=ExtResource("22_7ljpl")]
 position = Vector2(-850, -403)
 
@@ -1864,6 +1942,9 @@ position = Vector2(-439, 106)
 
 [node name="small_rock10" parent="rocks" instance=ExtResource("24_8flp2")]
 position = Vector2(-504, -310)
+
+[node name="small_rock16" parent="rocks" instance=ExtResource("24_8flp2")]
+position = Vector2(-487, -362)
 
 [node name="small_rock9" parent="rocks" instance=ExtResource("24_8flp2")]
 position = Vector2(-703, -167)
@@ -1968,6 +2049,24 @@ position = Vector2(-572, 530)
 position = Vector2(-574, 795)
 flip_h = true
 
+[node name="new_rock" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-459, -361)
+texture = ExtResource("33_1hyrk")
+
+[node name="new_rock2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-452, -407)
+texture = ExtResource("34_xn4vj")
+
+[node name="new_rock3" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-428, -115)
+texture = ExtResource("33_1hyrk")
+
 [node name="paper_birch39" parent="." instance=ExtResource("7_lc4ib")]
 position = Vector2(-2154, -230)
 texture = ExtResource("25_pwg1v")
@@ -1999,6 +2098,13 @@ texture = ExtResource("25_pwg1v")
 [node name="paper_birch41" parent="." instance=ExtResource("7_lc4ib")]
 position = Vector2(-1799, -523)
 texture = ExtResource("25_pwg1v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-602, -435)
+texture = ExtResource("36_6yodd")
+offset = Vector2(0, -550)
 
 [node name="player_test2" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -2046,7 +2152,7 @@ gradient_texture = SubResource("GradientTexture1D_tao8q")
 INGAME_SPEED = 2.0
 
 [node name="player2" parent="." instance=ExtResource("32_6xgue")]
-position = Vector2(-503, 205)
+position = Vector2(-348, -110)
 
 [node name="gameCamera" type="Camera2D" parent="player2"]
 process_callback = 0
@@ -2059,13 +2165,41 @@ y_sort_enabled = true
 position = Vector2(-326, -41)
 texture = ExtResource("33_mmbbh")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = 6
-position = Vector2(-488, 198)
-amount = 40
-lifetime = 5.0
+material = SubResource("ShaderMaterial_erg5e")
+position = Vector2(-487, 204)
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_fi1e7")
+lifetime = 10.0
 preprocess = 10.0
 speed_scale = 0.5
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+visible = false
+z_index = 6
+position = Vector2(-568, 210)
+amount = 15
+lifetime = 4.0
+draw_order = 1
+particle_flag_align_y = true
+gravity = Vector2(0, 65)
+orbit_velocity_min = 0.25
+orbit_velocity_max = 0.25
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_ival3")
+color_initial_ramp = SubResource("Gradient_kgifw")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
+z_index = 6
+position = Vector2(-488, 198)
+amount = 30
+lifetime = 5.0
+preprocess = 10.0
+speed_scale = 0.35
+draw_order = 1
 emission_shape = 2
 emission_sphere_radius = 80.0
 gravity = Vector2(0, -2)
@@ -2075,3 +2209,14 @@ scale_amount_min = 0.5
 scale_amount_max = 1.5
 color_ramp = SubResource("Gradient_ival3")
 color_initial_ramp = SubResource("Gradient_kgifw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1000
+custom_minimum_size = Vector2(100, 50)
+offset_left = -100.0
+offset_top = -43.0
+offset_bottom = 7.0
+text = "Test stuff
+
+"
+script = ExtResource("44_unwhu")

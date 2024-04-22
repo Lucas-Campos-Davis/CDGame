@@ -1,4 +1,4 @@
-res://Scenes/menu.tscn
+res://real_forest.tscn
 res://Scenes/daynightCycle.gd
 res://CharacterBody2D.gd
 res://companionFollow.gd
@@ -6,10 +6,9 @@ res://Scenes/testingGrounds.gdshader
 res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
+res://Scenes/menu.tscn
 res://player_companion.tscn
 res://forestScene.tscn
-res://real_forest.tscn
 res://player-test.tscn
 res://waystone.tscn
 res://campfire.tscn
-res://silhouette.gd
