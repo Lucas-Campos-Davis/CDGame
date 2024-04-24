@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm2h1n6g1byq7"]
+[gd_scene load_steps=5 format=3 uid="uid://cm2h1n6g1byq7"]
 
 [ext_resource type="Texture2D" uid="uid://b7mlyjgimi77v" path="res://Textures/waystone.png" id="1_5duow"]
 [ext_resource type="Texture2D" uid="uid://dn3jm14pbxn3j" path="res://Textures/waystone_shadow.png" id="2_my2dg"]
+[ext_resource type="Texture2D" uid="uid://b0k6jyg2k3c84" path="res://Textures/waystone-markings.png" id="3_pkd20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_caiwn"]
 size = Vector2(12, 11.5)
@@ -22,3 +23,10 @@ shape = SubResource("RectangleShape2D_caiwn")
 [node name="shadow" type="Sprite2D" parent="."]
 position = Vector2(0, 7)
 texture = ExtResource("2_my2dg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(2, 2, 2, 1)
+self_modulate = Color(2, 2, 2, 1)
+z_index = 4
+position = Vector2(0, 2)
+texture = ExtResource("3_pkd20")

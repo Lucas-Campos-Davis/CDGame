@@ -1,9 +1,7 @@
-[gd_scene load_steps=61 format=3 uid="uid://dgeybvcyfprrq"]
+[gd_scene load_steps=59 format=3 uid="uid://dgeybvcyfprrq"]
 
-[ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="1_1ljf2"]
 [ext_resource type="PackedScene" uid="uid://cm2h1n6g1byq7" path="res://waystone.tscn" id="1_bjn34"]
 [ext_resource type="Texture2D" uid="uid://desgjf0jnco4s" path="res://Textures/long_cliff.png" id="2_hps8w"]
-[ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="3_5dn4r"]
 [ext_resource type="Texture2D" uid="uid://cpufqqho2m8f8" path="res://Textures/path_tileset.png" id="4_3go06"]
 [ext_resource type="PackedScene" uid="uid://dsc2up4bieuc0" path="res://pillar.tscn" id="5_gr1tm"]
 [ext_resource type="PackedScene" uid="uid://0skjjeqhq62k" path="res://paper_birch.tscn" id="7_lc4ib"]
@@ -40,56 +38,14 @@
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="32_6xgue"]
 [ext_resource type="Texture2D" uid="uid://dnpu73swqs8nt" path="res://Textures/new_rock.png" id="33_1hyrk"]
 [ext_resource type="Texture2D" uid="uid://b0e6aylgwvo8r" path="res://Textures/redesign/redesign_walking_animation1.png" id="33_mmbbh"]
+[ext_resource type="Texture2D" uid="uid://bcbihbdtueejd" path="res://Textures/trees/newest_colors.png" id="33_ne0tv"]
 [ext_resource type="Texture2D" uid="uid://b5fxk4fu8vyt" path="res://Textures/rock_shadow.png" id="34_xn4vj"]
 [ext_resource type="Texture2D" uid="uid://big1mb8le3buw" path="res://Textures/trees/small-doug_fir.png" id="36_6yodd"]
 [ext_resource type="Shader" path="res://waystone_particles.gdshader" id="40_jdcdk"]
 [ext_resource type="Script" path="res://timeteller.gd" id="44_unwhu"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40frx"]
-texture = ExtResource("3_5dn4r")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-4:1/0 = 0
-4:2/0 = 0
-5:1/0 = 0
-5:2/0 = 0
-5:3/0 = 0
-5:4/0 = 0
-5:5/0 = 0
-4:5/0 = 0
-3:5/0 = 0
-2:5/0 = 0
-1:5/0 = 0
-0:5/0 = 0
-0:4/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-4:3/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
+[ext_resource type="PackedScene" uid="uid://cg7sigx5ksg8g" path="res://fly_agaric.tscn" id="45_q3rrr"]
 
 [sub_resource type="TileSet" id="TileSet_5klya"]
-sources/0 = SubResource("TileSetAtlasSource_40frx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8bri"]
 texture = ExtResource("4_3go06")
@@ -170,86 +126,40 @@ texture = ExtResource("4_3go06")
 12:2/0 = 0
 12:1/0 = 0
 12:0/0 = 0
+13:0/0 = 0
+13:1/0 = 0
+14:2/0 = 0
+14:3/0 = 0
+14:4/0 = 0
+14:5/0 = 0
+14:6/0 = 0
+14:7/0 = 0
+14:8/0 = 0
+14:9/0 = 0
+14:10/0 = 0
+13:2/0 = 0
+13:3/0 = 0
+13:4/0 = 0
+13:5/0 = 0
+13:6/0 = 0
+13:7/0 = 0
+13:8/0 = 0
+13:9/0 = 0
+13:10/0 = 0
+14:1/0 = 0
+14:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_bqh3y"]
 sources/0 = SubResource("TileSetAtlasSource_i8bri")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nhio"]
-texture = ExtResource("1_1ljf2")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_jfte0"]
-sources/0 = SubResource("TileSetAtlasSource_4nhio")
 
-[sub_resource type="Gradient" id="Gradient_yf8vg"]
+[sub_resource type="Gradient" id="Gradient_02y8f"]
 offsets = PackedFloat32Array(0, 0.240964, 0.524096, 0.73494, 1)
 colors = PackedColorArray(0.160786, 0.138255, 0.333448, 1, 0.381113, 0.174407, 0.419716, 1, 0.84716, 0.180307, 0.525305, 1, 0.944327, 0.572188, 0.5118, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_tao8q"]
-gradient = SubResource("Gradient_yf8vg")
+gradient = SubResource("Gradient_02y8f")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_erg5e"]
 shader = ExtResource("40_jdcdk")
@@ -258,14 +168,14 @@ shader = ExtResource("40_jdcdk")
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.344262, 0.681319), 0.0, 0.0, 0, 0, Vector2(0.934426, 0.307692), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="CurveTexture" id="CurveTexture_3qegr"]
+[sub_resource type="CurveTexture" id="CurveTexture_ketyp"]
 curve = SubResource("Curve_nb6q8")
 
 [sub_resource type="Gradient" id="Gradient_k3sit"]
 offsets = PackedFloat32Array(0, 0.592593, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.631373, 0.882353, 0.984314, 1, 0.0352941, 0.772549, 0.721569, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0mo72"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e7v00"]
 gradient = SubResource("Gradient_k3sit")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fi1e7"]
@@ -284,8 +194,8 @@ gravity = Vector3(0, -1, 0)
 damping_max = 0.1
 scale_min = 0.5
 scale_max = 1.5
-color_ramp = SubResource("GradientTexture1D_0mo72")
-alpha_curve = SubResource("CurveTexture_3qegr")
+color_ramp = SubResource("GradientTexture1D_e7v00")
+alpha_curve = SubResource("CurveTexture_ketyp")
 
 [sub_resource type="Gradient" id="Gradient_ival3"]
 offsets = PackedFloat32Array(0, 0.973333)
@@ -326,7 +236,7 @@ polygon = PackedVector2Array(-10, 10, -10, -62, -6, -62, 9, -56, 71, -60, 162, -
 [node name="path" type="TileMap" parent="cliff_stairs"]
 tile_set = SubResource("TileSet_bqh3y")
 format = 2
-layer_0/tile_data = PackedInt32Array(-589824, 720896, 9, -393217, 786432, 6, -524288, 655360, 2, -393216, 655360, 8, -262144, 786432, 9, -1966081, 786432, 2, -1769473, 720896, 8, -1703937, 655360, 7, -1638401, 720896, 9, -1507329, 786432, 10, -1376257, 655360, 7, -1179649, 786432, 2, -1114113, 655360, 5, -983041, 589824, 5, -786433, 720896, 9, -589825, 786432, 4, -2097152, 786432, 7, -2031616, 720896, 8, -1703936, 655360, 5, -1441792, 655360, 1, -1114112, 786432, 4, -983040, 720896, 9, -917504, 589824, 8, -851968, 786432, 10, -786432, 786432, 1)
+layer_0/tile_data = PackedInt32Array(-589824, 720896, 9, -393217, 786432, 6, -524288, 655360, 2, -393216, 655360, 8, -262144, 786432, 9, -1966081, 786432, 2, -1769473, 720896, 8, -1703937, 655360, 7, -1638401, 720896, 9, -1507329, 786432, 10, -1376257, 655360, 7, -1179649, 786432, 2, -1114113, 655360, 5, -983041, 589824, 5, -786433, 720896, 9, -589825, 786432, 4, -2097152, 786432, 7, -2031616, 720896, 8, -1703936, 655360, 5, -1441792, 655360, 1, -1114112, 786432, 4, -983040, 720896, 9, -917504, 589824, 8, -851968, 786432, 10, -786432, 786432, 1, -655361, 917504, 10, -851969, 917504, 9)
 
 [node name="pillar" parent="cliff_stairs" instance=ExtResource("5_gr1tm")]
 position = Vector2(25, -56)
@@ -645,6 +555,7 @@ position = Vector2(-858, -59)
 position = Vector2(-687, 153)
 
 [node name="ambient_shadows" type="Node2D" parent="."]
+visible = false
 
 [node name="ambient_shadow" parent="ambient_shadows" instance=ExtResource("12_urg0e")]
 light_mask = 2
@@ -683,6 +594,7 @@ z_index = 5
 position = Vector2(-1015, -146)
 
 [node name="ambient_lights" type="Node2D" parent="."]
+visible = false
 
 [node name="ambientLight" parent="ambient_lights" instance=ExtResource("13_jnm2u")]
 position = Vector2(-371, -96)
@@ -1994,6 +1906,10 @@ position = Vector2(-209, -500)
 [node name="paper_birch60" parent="." instance=ExtResource("7_lc4ib")]
 position = Vector2(-1250, -81)
 
+[node name="paper_birch71" parent="." instance=ExtResource("7_lc4ib")]
+position = Vector2(-1174, 170)
+texture = ExtResource("33_ne0tv")
+
 [node name="paper_birch59" parent="." instance=ExtResource("7_lc4ib")]
 position = Vector2(-482, -450)
 
@@ -2152,7 +2068,7 @@ gradient_texture = SubResource("GradientTexture1D_tao8q")
 INGAME_SPEED = 2.0
 
 [node name="player2" parent="." instance=ExtResource("32_6xgue")]
-position = Vector2(-348, -110)
+position = Vector2(-810, 144)
 
 [node name="gameCamera" type="Camera2D" parent="player2"]
 process_callback = 0
@@ -2220,3 +2136,79 @@ text = "Test stuff
 
 "
 script = ExtResource("44_unwhu")
+
+[node name="Mushroom" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-864, 173)
+
+[node name="Mushroom2" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-929, 233)
+
+[node name="Mushroom7" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-968, 218)
+
+[node name="Mushroom8" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-998, 182)
+
+[node name="Mushroom9" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-1003, 144)
+
+[node name="Mushroom10" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-973, 115)
+
+[node name="Mushroom11" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-989, 133)
+
+[node name="Mushroom12" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-952, 101)
+
+[node name="Mushroom13" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-910, 100)
+
+[node name="Mushroom14" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-864, 157)
+
+[node name="Mushroom15" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-873, 199)
+
+[node name="Mushroom16" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-905, 231)
+
+[node name="Mushroom17" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-947, 227)
+
+[node name="Mushroom18" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-990, 210)
+
+[node name="Mushroom19" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-997, 168)
+
+[node name="Mushroom3" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-864, 136)
+
+[node name="Mushroom4" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-893, 108)
+
+[node name="Mushroom5" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-931, 94)
+
+[node name="Mushroom6" parent="." instance=ExtResource("45_q3rrr")]
+y_sort_enabled = false
+position = Vector2(-891, 214)

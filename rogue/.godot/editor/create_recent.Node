@@ -1,6 +1,7 @@
-RichTextLabel
 Sprite2D
+WorldEnvironment
 PointLight2D
+RichTextLabel
 GPUParticles2D
 CPUParticles2D
 SubViewport
@@ -11,5 +12,3 @@ AnimatedSprite2D
 AnimationTree
 AnimationPlayer
 CharacterBody2D
-Node2D
-StaticBody2D

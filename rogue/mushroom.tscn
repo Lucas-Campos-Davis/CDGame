@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://1fsm0afsrooi"]
+
+[ext_resource type="Script" path="res://Mushroom.gd" id="1_u45dk"]
+
+[node name="Mushroom" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_u45dk")
+
+[node name="variant_3" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+offset = Vector2(0, 12)
+
+[node name="variant_2" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+offset = Vector2(0, 12)
+
+[node name="variant_1" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+offset = Vector2(0, 12)

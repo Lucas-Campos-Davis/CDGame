@@ -6,9 +6,13 @@ res://Scenes/testingGrounds.gdshader
 res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
+res://node_2d.tscn
 res://Scenes/menu.tscn
 res://player_companion.tscn
 res://forestScene.tscn
 res://player-test.tscn
 res://waystone.tscn
 res://campfire.tscn
+res://mushroom.tscn
+res://fly_agaric.tscn
+res://glow_test.tscn

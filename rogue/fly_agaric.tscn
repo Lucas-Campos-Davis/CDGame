@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg7sigx5ksg8g"]
+
+[ext_resource type="PackedScene" uid="uid://1fsm0afsrooi" path="res://mushroom.tscn" id="1_clk6k"]
+[ext_resource type="Texture2D" uid="uid://ci15v7talh71g" path="res://Textures/mushrooms/red-fly-agaric-med3.png" id="2_u0eyo"]
+[ext_resource type="Texture2D" uid="uid://flfd6ajjtnar" path="res://Textures/mushrooms/red-fly-agaric-med2.png" id="3_nards"]
+[ext_resource type="Texture2D" uid="uid://cn83xy2ue1ybc" path="res://Textures/mushrooms/red-fly-agaric-med1.png" id="4_7f0jb"]
+
+[node name="Mushroom" instance=ExtResource("1_clk6k")]
+TYPE = "fly_agaric"
+
+[node name="variant_3" parent="." index="0"]
+texture = ExtResource("2_u0eyo")
+
+[node name="variant_2" parent="." index="1"]
+texture = ExtResource("3_nards")
+
+[node name="variant_1" parent="." index="2"]
+texture = ExtResource("4_7f0jb")

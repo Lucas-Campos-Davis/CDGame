@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bjd3cr0e2vodw"]
+[gd_scene load_steps=75 format=3 uid="uid://bjd3cr0e2vodw"]
 
 [ext_resource type="Texture2D" uid="uid://dcwjta7q4eq6p" path="res://Textures/foreststairs.png" id="1_2qi5q"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="2_lxcml"]
@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="51_o5wt7"]
 [ext_resource type="Texture2D" uid="uid://45on2m4xl6e5" path="res://Textures/plants/small_mushes2.png" id="52_sug3g"]
 [ext_resource type="Texture2D" uid="uid://b1hi6sov4yleo" path="res://Textures/plants/small_mushes3.png" id="53_wf2xt"]
+[ext_resource type="Texture2D" uid="uid://bcbihbdtueejd" path="res://Textures/trees/newest_colors.png" id="54_ptcbm"]
 
 [sub_resource type="TileSet" id="TileSet_x473h"]
 
@@ -1123,6 +1124,7 @@ position = Vector2(189, 18)
 position = Vector2(709, 53)
 
 [node name="ambient_shadows" type="Node2D" parent="."]
+visible = false
 
 [node name="ambient_shadow" parent="ambient_shadows" instance=ExtResource("13_vgqnq")]
 light_mask = 2
@@ -1231,6 +1233,7 @@ z_index = 5
 position = Vector2(-668, 679)
 
 [node name="ambient_lights" type="Node2D" parent="."]
+visible = false
 
 [node name="ambientLight" parent="ambient_lights" instance=ExtResource("14_johos")]
 position = Vector2(-120, -48)
@@ -3562,3 +3565,7 @@ position = Vector2(-9, -1245)
 
 [node name="small_rock12" parent="." instance=ExtResource("11_su2ru")]
 position = Vector2(16, -1242)
+
+[node name="paper_birch71" parent="." instance=ExtResource("12_xp5e0")]
+position = Vector2(270, -218)
+texture = ExtResource("54_ptcbm")
