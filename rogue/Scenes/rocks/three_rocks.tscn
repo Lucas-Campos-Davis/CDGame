@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd1a5gnyd23r2"]
+
+[ext_resource type="PackedScene" uid="uid://bmdltie10mfth" path="res://Scenes/rocks/rock.tscn" id="1_3mcqv"]
+[ext_resource type="Texture2D" uid="uid://w3ft5fw65tdc" path="res://Textures/rocks/three_rocks.png" id="2_hf6fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pbqt"]
+size = Vector2(26, 10)
+
+[node name="three_rocks" instance=ExtResource("1_3mcqv")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(1, 11)
+shape = SubResource("RectangleShape2D_3pbqt")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_hf6fw")
+offset = Vector2(0, 2)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxl2x6dnj1k1k"]
+
+[ext_resource type="PackedScene" uid="uid://bmdltie10mfth" path="res://Scenes/rocks/rock.tscn" id="1_01aak"]
+[ext_resource type="Texture2D" uid="uid://djncy2xvf2lpj" path="res://Textures/rocks/round_rock.png" id="2_r3jg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u32du"]
+size = Vector2(27, 13)
+
+[node name="round_rock" instance=ExtResource("1_01aak")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_u32du")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -4)
+texture = ExtResource("2_r3jg1")
+offset = Vector2(0, 4)

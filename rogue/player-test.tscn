@@ -425,9 +425,9 @@ animation = &"walk_down"
 script = SubResource("4")
 
 [node name="silhouette" type="AnimatedSprite2D" parent="player_animations"]
-modulate = Color(0.521569, 0.52549, 0.521569, 0.588235)
-self_modulate = Color(0.521569, 0.521569, 0.521569, 0.588235)
-z_index = 100
+modulate = Color(0.898039, 0.898039, 0.898039, 0.588235)
+self_modulate = Color(0.898039, 0.898039, 0.898039, 0.588235)
+z_index = 4096
 material = SubResource("CanvasItemMaterial_b2xik")
 sprite_frames = SubResource("SpriteFrames_a1xjr")
 animation = &"walk_down"

@@ -1589,7 +1589,6 @@ layer_0/tile_data = PackedInt32Array(-4, 262144, 4, -5, 458752, 0, -7, 65536, 4,
 position = Vector2(470, 196)
 
 [node name="waystone" parent="waystones" instance=ExtResource("8_tx3jd")]
-z_index = 1
 y_sort_enabled = true
 position = Vector2(-17, -22)
 

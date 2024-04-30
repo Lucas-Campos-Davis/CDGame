@@ -1,5 +1,6 @@
 extends Node2D
 @export var TYPE = "";
+@onready var VARIANTS = get_children();
 @onready var VARIANT_1 = find_child("variant_1");
 @onready var VARIANT_2 = find_child("variant_2");
 @onready var VARIANT_3 = find_child("variant_3");

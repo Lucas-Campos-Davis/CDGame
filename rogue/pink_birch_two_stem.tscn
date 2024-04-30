@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clq11pxhv6dvc"]
+
+[ext_resource type="Texture2D" uid="uid://dse0w1mm1weqc" path="res://Textures/trees/pink_birch/pink_birch_two_stem.png" id="1_qamw6"]
+
+[node name="pink_birch_two_stem" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qamw6")
+offset = Vector2(0, -110)

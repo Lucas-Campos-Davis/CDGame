@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnciybwl5ioy4"]
+
+[ext_resource type="PackedScene" uid="uid://bwlke7ksltloe" path="res://Scenes/trees/tree.tscn" id="1_q7i8f"]
+[ext_resource type="Texture2D" uid="uid://d3aduhw2jk2rb" path="res://Textures/trees/paper_birch/paper_birch_two_stem.png" id="2_353vg"]
+[ext_resource type="Texture2D" uid="uid://hlcu58gym8q2" path="res://Textures/trees/paper_birch/two_stem_shadow.png" id="3_22ubj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7afcn"]
+size = Vector2(11, 6)
+
+[node name="paper_birch_two_stem" instance=ExtResource("1_q7i8f")]
+
+[node name="tree" parent="." index="0"]
+texture = ExtResource("2_353vg")
+offset = Vector2(0, -110)
+
+[node name="shadow" parent="tree" index="0"]
+texture = ExtResource("3_22ubj")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-0.5, 12)
+shape = SubResource("RectangleShape2D_7afcn")

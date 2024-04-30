@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c81fhgu778vd4"]
+
+[ext_resource type="PackedScene" uid="uid://bmdltie10mfth" path="res://Scenes/rocks/rock.tscn" id="1_xa7fb"]
+[ext_resource type="Texture2D" uid="uid://cuwym8y4yphcu" path="res://Textures/rocks/cool_rock.png" id="2_e5m3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf21j"]
+size = Vector2(27, 12)
+
+[node name="cool_rock" instance=ExtResource("1_xa7fb")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0.5, 9)
+shape = SubResource("RectangleShape2D_vf21j")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_e5m3s")

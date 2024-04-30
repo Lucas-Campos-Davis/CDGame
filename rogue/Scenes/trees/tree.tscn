@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwlke7ksltloe"]
+
+[ext_resource type="Script" path="res://Scenes/trees/tree.gd" id="1_mb2es"]
+
+[node name="TreeNode" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_mb2es")
+
+[node name="tree" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+
+[node name="shadow" type="Sprite2D" parent="tree"]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(0, 12)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
