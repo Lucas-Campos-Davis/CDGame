@@ -3326,7 +3326,6 @@ energy = 0.75
 texture_scale = 0.25
 
 [node name="ambientLight4" parent="Node2D/lights_n_shadows" instance=ExtResource("15_r0j4k")]
-visible = false
 position = Vector2(1495, 285)
 color = Color(0.86599, 0.222054, 0.642239, 1)
 energy = 0.75
@@ -3340,7 +3339,7 @@ texture_scale = 0.25
 
 [node name="ambientLight3" parent="Node2D/lights_n_shadows" instance=ExtResource("15_r0j4k")]
 position = Vector2(185, 178)
-color = Color(0.141176, 0.576471, 1, 1)
+color = Color(0.506989, 0.311115, 0.113619, 1)
 energy = 0.75
 texture_scale = 0.25
 

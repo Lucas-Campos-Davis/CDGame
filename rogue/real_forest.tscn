@@ -2153,7 +2153,7 @@ position = Vector2(-559, -42)
 [node name="Sprite2D" type="Sprite2D" parent="player_test"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(5, -4)
+position = Vector2(0, -19)
 texture = ExtResource("29_10ua6")
 
 [node name="playerShadow" type="Sprite2D" parent="player_test/Sprite2D"]
