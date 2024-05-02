@@ -1452,7 +1452,7 @@ offset = Vector2(0, 4)
 [node name="bear_grass_small_single18" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-416, -186)
+position = Vector2(-416, -185)
 texture = ExtResource("14_yppbj")
 offset = Vector2(0, 4)
 

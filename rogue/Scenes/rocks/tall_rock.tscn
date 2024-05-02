@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk1y23tab68ai"]
+
+[ext_resource type="PackedScene" uid="uid://bmdltie10mfth" path="res://Scenes/rocks/rock.tscn" id="1_hnhye"]
+[ext_resource type="Texture2D" uid="uid://bsl4kmix0mx3v" path="res://Textures/rocks/tall_rock.png" id="2_yoc1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnjki"]
+size = Vector2(26, 11)
+
+[node name="tall_rock" instance=ExtResource("1_hnhye")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(1, 7.5)
+shape = SubResource("RectangleShape2D_lnjki")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_yoc1t")
+offset = Vector2(0, -24)
