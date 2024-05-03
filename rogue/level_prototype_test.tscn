@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://chlyini2oshnv"]
+[gd_scene load_steps=71 format=3 uid="uid://chlyini2oshnv"]
 
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="1_6cmni"]
 [ext_resource type="Script" path="res://WorldScript.gd" id="1_b2085"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cjqbf3xjececv" path="res://Textures/plants/bear_grass_single.png" id="6_ciei3"]
 [ext_resource type="Texture2D" uid="uid://clgqqixf76nwy" path="res://Textures/plants/beargrass_small_single.png" id="6_m8hbp"]
 [ext_resource type="Texture2D" uid="uid://cwtmsblmim4bk" path="res://Textures/plants/beargrass_small.png" id="6_nuudn"]
+[ext_resource type="Texture2D" uid="uid://bsp0oxxw053di" path="res://Textures/plants/daisy.png" id="6_s3g6r"]
 [ext_resource type="Texture2D" uid="uid://odq8dt2qosfb" path="res://Textures/plants/beargrass.png" id="6_soyx6"]
 [ext_resource type="Texture2D" uid="uid://t5h3470c0qd2" path="res://Textures/plants/tulip_red.png" id="7_0b5f0"]
 [ext_resource type="Texture2D" uid="uid://bghmobuncrvq5" path="res://Textures/plants/tulip_purple.png" id="7_e01si"]
@@ -26,17 +27,27 @@
 [ext_resource type="PackedScene" uid="uid://om6pi4x4gesu" path="res://ambient_light.tscn" id="15_r0j4k"]
 [ext_resource type="PackedScene" uid="uid://2h0rbvycit7f" path="res://ambient_light_sprite.tscn" id="16_h3q3y"]
 [ext_resource type="PackedScene" uid="uid://bukv7tdqgtpao" path="res://Scenes/rocks/small_rock.tscn" id="16_upe3o"]
+[ext_resource type="Texture2D" uid="uid://c4i83uaayiq63" path="res://Textures/plants/horetail_sparse.png" id="17_0c0gk"]
 [ext_resource type="PackedScene" uid="uid://c81fhgu778vd4" path="res://Scenes/rocks/cool_rock.tscn" id="17_gop2g"]
 [ext_resource type="PackedScene" uid="uid://dk1y23tab68ai" path="res://Scenes/rocks/tall_rock.tscn" id="17_w50rl"]
+[ext_resource type="Texture2D" uid="uid://bbud3e5khfnhh" path="res://Textures/plants/small_horsetail.png" id="18_4ktjo"]
 [ext_resource type="PackedScene" uid="uid://dxl2x6dnj1k1k" path="res://Scenes/rocks/round_rock.tscn" id="18_gxxdv"]
 [ext_resource type="PackedScene" uid="uid://jd8cbbrtqxsw" path="res://Scenes/trees/pink_birch/pink_birch_small.tscn" id="18_qoknr"]
 [ext_resource type="PackedScene" uid="uid://raygj32uipk" path="res://Scenes/trees/pink_birch/pink_birch_tall.tscn" id="19_mmcyy"]
 [ext_resource type="PackedScene" uid="uid://cd1a5gnyd23r2" path="res://Scenes/rocks/three_rocks.tscn" id="19_rjri6"]
+[ext_resource type="Texture2D" uid="uid://bn7k8tyosaha7" path="res://Textures/plants/plantain2.png" id="19_w8pkj"]
 [ext_resource type="PackedScene" uid="uid://bukhx6uen2pat" path="res://Scenes/trees/pink_birch/pink_birch_large.tscn" id="20_h27p2"]
+[ext_resource type="Texture2D" uid="uid://7vahi6fo0qh" path="res://Textures/plants/whitefawnlily.png" id="20_nd1ni"]
 [ext_resource type="PackedScene" uid="uid://1t82fgvi3bor" path="res://Scenes/trees/paper_birch/paper_birch_large.tscn" id="21_01exv"]
+[ext_resource type="Texture2D" uid="uid://q0xx1kebs3m1" path="res://Textures/plants/whitefawnlily_single.png" id="21_5lyn7"]
 [ext_resource type="PackedScene" uid="uid://bnciybwl5ioy4" path="res://Scenes/trees/paper_birch/paper_birch_two_stem.tscn" id="22_gocxn"]
+[ext_resource type="Texture2D" uid="uid://flfd6ajjtnar" path="res://Textures/mushrooms/red-fly-agaric-med2.png" id="22_uvu4r"]
+[ext_resource type="Texture2D" uid="uid://cn83xy2ue1ybc" path="res://Textures/mushrooms/red-fly-agaric-med1.png" id="22_yoyj0"]
+[ext_resource type="Texture2D" uid="uid://ca23dbikwvswv" path="res://Textures/mushrooms/yellow-fly-agaric-med2.png" id="23_fvsva"]
 [ext_resource type="PackedScene" uid="uid://bmfuunfs7k512" path="res://Scenes/trees/paper_birch/paper_birch_small.tscn" id="23_riaav"]
 [ext_resource type="PackedScene" uid="uid://bsv3wvd33fu1" path="res://Scenes/trees/pink_birch/pink_birch_two_stem.tscn" id="24_crwlf"]
+[ext_resource type="Texture2D" uid="uid://cdn60tk785vp" path="res://Textures/mushrooms/yellow-fly-agaric-med1.png" id="24_lusf3"]
+[ext_resource type="Texture2D" uid="uid://ci15v7talh71g" path="res://Textures/mushrooms/red-fly-agaric-med3.png" id="24_ogwei"]
 [ext_resource type="PackedScene" uid="uid://de6b3nwfqw535" path="res://Scenes/trees/paper_birch/paper_birch_tall.tscn" id="24_p4meb"]
 [ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="26_kxdku"]
 [ext_resource type="Texture2D" uid="uid://cpufqqho2m8f8" path="res://Textures/path_tileset.png" id="27_lx81n"]
@@ -51,10 +62,11 @@ glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_yf8vg"]
 offsets = PackedFloat32Array(0, 0.0833333, 0.175926, 0.421296, 0.550926, 1)
-colors = PackedColorArray(0.0256436, 7.02107e-06, 0.162323, 1, 0.280542, 0.0288447, 0.352033, 1, 0.484549, 0.00430031, 0.316524, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.280542, 0.0288447, 0.352033, 1, 0.484549, 0.00430031, 0.316524, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
 gradient = SubResource("Gradient_yf8vg")
+use_hdr = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eo4ds"]
 shader = ExtResource("13_v1c6u")
@@ -325,7 +337,7 @@ script = ExtResource("1_b2085")
 [node name="DayNightCycleUI" parent="Node2D/CanvasLayer" instance=ExtResource("3_cmh4h")]
 
 [node name="player" parent="Node2D" instance=ExtResource("1_6cmni")]
-position = Vector2(413, 742)
+position = Vector2(960, 155)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 process_callback = 0
@@ -344,6 +356,7 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("2_7rach")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
+INGAME_SPEED = 1.0
 
 [node name="tall_flowers" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -359,8 +372,15 @@ offset = Vector2(0, 8)
 [node name="small_flower_yellow19" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1263, 321)
+position = Vector2(-1264, 318)
 texture = ExtResource("3_ds20y")
+offset = Vector2(0, 8)
+
+[node name="small_flower_daisy" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1243, 317)
+texture = ExtResource("6_s3g6r")
 offset = Vector2(0, 8)
 
 [node name="small_flower_yellow20" type="Sprite2D" parent="Node2D/tall_flowers"]
@@ -772,21 +792,21 @@ offset = Vector2(0, 8)
 [node name="small_flower_pink5" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1293, 324)
+position = Vector2(-1284, 318)
 texture = ExtResource("4_tl0uc")
 offset = Vector2(0, 8)
 
 [node name="small_flower_blue_bonnet" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1316, 325)
+position = Vector2(-1307, 319)
 texture = ExtResource("5_lyrgm")
 offset = Vector2(0, 8)
 
 [node name="small_flower_tulip_purple" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1423, 329)
+position = Vector2(-1331, 320)
 texture = ExtResource("7_e01si")
 offset = Vector2(0, 8)
 
@@ -842,7 +862,7 @@ offset = Vector2(0, 8)
 [node name="small_flower_tulip_red" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1446, 330)
+position = Vector2(-1353, 321)
 texture = ExtResource("7_0b5f0")
 offset = Vector2(0, 8)
 
@@ -933,7 +953,7 @@ offset = Vector2(0, 8)
 [node name="small_flower_tulip_pink" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1468, 330)
+position = Vector2(-1375, 321)
 texture = ExtResource("8_s7614")
 offset = Vector2(0, 8)
 
@@ -1080,7 +1100,7 @@ offset = Vector2(0, 8)
 [node name="small_flower_tulip_yellow" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1490, 329)
+position = Vector2(-1397, 320)
 texture = ExtResource("9_sulyy")
 offset = Vector2(0, 8)
 
@@ -1367,27 +1387,103 @@ offset = Vector2(0, 8)
 [node name="bear_grass_single7" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1400, 328)
+position = Vector2(-1360, 295)
 texture = ExtResource("6_ciei3")
 
 [node name="bear_grass_small11" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1375, 328)
+position = Vector2(-1335, 295)
 texture = ExtResource("6_nuudn")
 
 [node name="bear_grass8" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1353, 327)
+position = Vector2(-1313, 294)
 texture = ExtResource("6_soyx6")
 
 [node name="bear_grass_small_single15" type="Sprite2D" parent="Node2D/tall_flowers"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-1335, 330)
+position = Vector2(-1295, 297)
 texture = ExtResource("6_m8hbp")
 offset = Vector2(0, 4)
+
+[node name="horsetail_sparse2" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1271, 294)
+texture = ExtResource("17_0c0gk")
+offset = Vector2(0, 8)
+
+[node name="horsetail4" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1245, 294)
+texture = ExtResource("18_4ktjo")
+offset = Vector2(0, 8)
+
+[node name="plantain7" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1375, 297)
+texture = ExtResource("19_w8pkj")
+offset = Vector2(0, 8)
+
+[node name="whitefawnlily5" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1396, 297)
+texture = ExtResource("20_nd1ni")
+offset = Vector2(0, 8)
+
+[node name="whitefawnlily_single" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1424, 305)
+texture = ExtResource("21_5lyn7")
+
+[node name="mushes_small11" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1442, 325)
+texture = ExtResource("22_yoyj0")
+offset = Vector2(0, 8)
+
+[node name="mushes_small14" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1439, 304)
+texture = ExtResource("23_fvsva")
+offset = Vector2(0, 8)
+
+[node name="mushes_small15" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1452, 297)
+texture = ExtResource("24_lusf3")
+offset = Vector2(0, 8)
+
+[node name="mushes_small12" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1449, 319)
+texture = ExtResource("22_uvu4r")
+offset = Vector2(0, 8)
+
+[node name="mushes_small13" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1455, 325)
+texture = ExtResource("24_ogwei")
+offset = Vector2(0, 8)
+
+[node name="mushes" type="Sprite2D" parent="Node2D/tall_flowers"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-1422, 322)
+texture = ExtResource("7_vikax")
+offset = Vector2(0, 8)
 
 [node name="tall_grass" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -1583,7 +1679,7 @@ position = Vector2(-194, -339)
 position = Vector2(-203, -331)
 
 [node name="tall_grass222" parent="Node2D/tall_grass" instance=ExtResource("5_ho7fc")]
-position = Vector2(-2128, -492)
+position = Vector2(-2141, -488)
 
 [node name="tall_grass283" parent="Node2D/tall_grass" instance=ExtResource("5_ho7fc")]
 position = Vector2(-1271, -506)
@@ -2881,7 +2977,7 @@ y_sort_enabled = true
 
 [node name="small_rock" parent="Node2D/rocks" instance=ExtResource("16_upe3o")]
 y_sort_enabled = false
-position = Vector2(-490, 206)
+position = Vector2(-505, 205)
 
 [node name="small_rock11" parent="Node2D/rocks" instance=ExtResource("16_upe3o")]
 y_sort_enabled = false
@@ -2967,7 +3063,7 @@ position = Vector2(360, -258)
 position = Vector2(568, 675)
 
 [node name="tall_rock" parent="Node2D/rocks" instance=ExtResource("17_w50rl")]
-position = Vector2(-451, 210)
+position = Vector2(-476, 207)
 
 [node name="tall_rock2" parent="Node2D/rocks" instance=ExtResource("17_w50rl")]
 position = Vector2(576, 767)

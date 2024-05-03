@@ -1,14 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsb1wquko776f"]
+[gd_scene load_steps=8 format=3 uid="uid://dsb1wquko776f"]
 
 [ext_resource type="Script" path="res://Scenes/daynightcycle_ui.gd" id="1_qn4yb"]
+[ext_resource type="Texture2D" uid="uid://blpim344mvhef" path="res://Textures/ui/rock_ui.png" id="2_gwub4"]
+[ext_resource type="FontFile" uid="uid://dvxhn4bcvb25" path="res://rainyhearts.ttf" id="2_rswf7"]
 [ext_resource type="Texture2D" uid="uid://0fd87ugvxa7u" path="res://Textures/ui/arrow.png" id="2_rxtaj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhbnj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xwu1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5isbm"]
-region = Rect2(1, 1, 73, 43)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14tbr"]
 
@@ -27,20 +26,21 @@ material = SubResource("ShaderMaterial_8xwu1")
 layout_mode = 0
 offset_right = 73.0
 offset_bottom = 43.0
-texture = SubResource("AtlasTexture_5isbm")
+texture = ExtResource("2_gwub4")
 
 [node name="CenterContainerDay" type="CenterContainer" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 9.0
+offset_top = 8.0
 offset_right = 50.0
-offset_bottom = 21.0
+offset_bottom = 20.0
 
 [node name="DayLabelBackground" type="Label" parent="CenterContainerDay"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.898039, 0.576471, 0.419608, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.08688, 0.044255, 0.229151, 1)
+theme_override_fonts/font = ExtResource("2_rswf7")
+theme_override_font_sizes/font_size = 12
 text = "Day 13"
 metadata/_edit_lock_ = true
 
@@ -50,23 +50,25 @@ layout_mode = 2
 offset_top = -1.0
 offset_right = 33.0
 offset_bottom = 10.0
-theme_override_colors/font_color = Color(0.490196, 0.219608, 0.2, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.980393, 0.749587, 0.856561, 1)
+theme_override_fonts/font = ExtResource("2_rswf7")
+theme_override_font_sizes/font_size = 12
 text = "Day 13"
 metadata/_edit_lock_ = true
 
 [node name="CenterContainerTime" type="CenterContainer" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 29.0
+offset_top = 28.0
 offset_right = 51.0
 offset_bottom = 40.0
 
 [node name="TimeLabelBackground" type="Label" parent="CenterContainerTime"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.898039, 0.576471, 0.419608, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.0862745, 0.0431373, 0.227451, 1)
+theme_override_fonts/font = ExtResource("2_rswf7")
+theme_override_font_sizes/font_size = 12
 text = "12:00 am"
 metadata/_edit_lock_ = true
 
@@ -76,8 +78,9 @@ layout_mode = 2
 offset_top = -1.0
 offset_right = 41.0
 offset_bottom = 10.0
-theme_override_colors/font_color = Color(0.490196, 0.219608, 0.2, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.980392, 0.74902, 0.854902, 1)
+theme_override_fonts/font = ExtResource("2_rswf7")
+theme_override_font_sizes/font_size = 12
 text = "12:00 am"
 metadata/_edit_lock_ = true
 
@@ -86,10 +89,10 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_14tbr")
 layout_mode = 0
 offset_left = 51.0
-offset_top = 19.0
+offset_top = 20.0
 offset_right = 91.0
-offset_bottom = 59.0
+offset_bottom = 60.0
 rotation = -1.60047
 pivot_offset = Vector2(1, 2.5)
 texture = ExtResource("2_rxtaj")
-stretch_mode = 2
+stretch_mode = 4

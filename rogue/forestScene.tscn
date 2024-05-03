@@ -2301,13 +2301,6 @@ position = Vector2(6, -127)
 texture = ExtResource("30_mn3ra")
 offset = Vector2(0, 8)
 
-[node name="plantain7" type="Sprite2D" parent="tall_grasses"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(79, -107)
-texture = ExtResource("30_mn3ra")
-offset = Vector2(0, 8)
-
 [node name="plantain8" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
@@ -3003,12 +2996,6 @@ position = Vector2(-99, 262)
 [node name="blue_crystal_flower10" parent="tall_grasses" instance=ExtResource("34_r0w2y")]
 position = Vector2(-161, 353)
 
-[node name="whitefawnlily_single" type="Sprite2D" parent="tall_grasses"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(-128, -91)
-texture = ExtResource("34_8spxh")
-
 [node name="bear_grass_single" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
@@ -3128,7 +3115,7 @@ texture = ExtResource("35_2ctvq")
 [node name="horsetail_sparse" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(184, -104)
+position = Vector2(212, -99)
 texture = ExtResource("38_w1e1u")
 offset = Vector2(0, 8)
 
@@ -3156,7 +3143,7 @@ offset = Vector2(0, 8)
 [node name="horsetail" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(132, -97)
+position = Vector2(170, -96)
 texture = ExtResource("38_b8r2y")
 offset = Vector2(0, 8)
 
@@ -3184,7 +3171,7 @@ offset = Vector2(0, 8)
 [node name="horsetail8" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(-184, 426)
+position = Vector2(-185, 426)
 texture = ExtResource("38_b8r2y")
 offset = Vector2(0, 8)
 
@@ -3198,14 +3185,7 @@ offset = Vector2(0, 8)
 [node name="horsetail3" type="Sprite2D" parent="tall_grasses"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(135, -106)
-texture = ExtResource("38_b8r2y")
-offset = Vector2(0, 8)
-
-[node name="horsetail4" type="Sprite2D" parent="tall_grasses"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(153, -95)
+position = Vector2(182, -76)
 texture = ExtResource("38_b8r2y")
 offset = Vector2(0, 8)
 
@@ -3255,13 +3235,6 @@ texture = ExtResource("34_8spxh")
 z_index = 4
 y_sort_enabled = true
 position = Vector2(-295, -61)
-texture = ExtResource("34_dkino")
-offset = Vector2(0, 8)
-
-[node name="whitefawnlily5" type="Sprite2D" parent="tall_grasses"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(-201, -85)
 texture = ExtResource("34_dkino")
 offset = Vector2(0, 8)
 

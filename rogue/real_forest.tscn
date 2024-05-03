@@ -1605,13 +1605,6 @@ y_sort_enabled = true
 position = Vector2(-405, -59)
 texture = ExtResource("16_hjhcq")
 
-[node name="horsetail_sparse2" type="Sprite2D" parent="plants"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(143, 139)
-texture = ExtResource("17_scoeh")
-offset = Vector2(0, 8)
-
 [node name="horsetail_sparse3" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
@@ -1629,7 +1622,7 @@ offset = Vector2(0, 8)
 [node name="horsetail7" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(132, 126)
+position = Vector2(153, 106)
 texture = ExtResource("18_4hu7y")
 offset = Vector2(0, 8)
 
@@ -1643,7 +1636,7 @@ offset = Vector2(0, 8)
 [node name="horsetail6" type="Sprite2D" parent="plants"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(112, 115)
+position = Vector2(127, 90)
 texture = ExtResource("18_4hu7y")
 offset = Vector2(0, 8)
 
@@ -1708,13 +1701,6 @@ z_index = 4
 y_sort_enabled = true
 position = Vector2(132, 152)
 texture = ExtResource("20_13m67")
-offset = Vector2(0, 8)
-
-[node name="mushes" type="Sprite2D" parent="plants"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(260, 168)
-texture = ExtResource("24_3ia2c")
 offset = Vector2(0, 8)
 
 [node name="mushes2" type="Sprite2D" parent="plants"]
@@ -1799,13 +1785,6 @@ z_index = 4
 y_sort_enabled = true
 position = Vector2(92, 160)
 texture = ExtResource("27_k0grs")
-offset = Vector2(0, 8)
-
-[node name="mushes_small11" type="Sprite2D" parent="plants"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(100, 167)
-texture = ExtResource("28_u6wt2")
 offset = Vector2(0, 8)
 
 [node name="mushes_small12" type="Sprite2D" parent="plants"]
