@@ -60,12 +60,12 @@
 background_mode = 3
 glow_enabled = true
 
-[sub_resource type="Gradient" id="Gradient_yf8vg"]
-offsets = PackedFloat32Array(0, 0.0833333, 0.175926, 0.421296, 0.550926, 1)
+[sub_resource type="Gradient" id="Gradient_mb5vo"]
+offsets = PackedFloat32Array(0, 0.0833333, 0.189815, 0.421296, 0.550926, 1)
 colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.280542, 0.0288447, 0.352033, 1, 0.484549, 0.00430031, 0.316524, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
-gradient = SubResource("Gradient_yf8vg")
+gradient = SubResource("Gradient_mb5vo")
 use_hdr = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eo4ds"]
@@ -356,7 +356,7 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("2_7rach")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
-INGAME_SPEED = 1.0
+INGAME_SPEED = 25.0
 
 [node name="tall_flowers" type="Node2D" parent="Node2D"]
 y_sort_enabled = true

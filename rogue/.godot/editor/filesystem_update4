@@ -1,4 +1,4 @@
-res://level_prototype_test.tscn
+res://Scenes/menu.tscn
 res://Scenes/daynightCycle.gd
 res://CharacterBody2D.gd
 res://companionFollow.gd
@@ -6,11 +6,11 @@ res://Scenes/testingGrounds.gdshader
 res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
-res://Scenes/menu.tscn
 res://forestScene.tscn
 res://real_forest.tscn
 res://player-test.tscn
 res://Scenes/trees/tree.tscn
+res://level_prototype_test.tscn
 res://Scenes/trees/paper_birch/paper_birch_two_stem.tscn
 res://Scenes/trees/paper_birch/paper_birch_small.tscn
 res://Scenes/trees/paper_birch/paper_birch_tall.tscn
