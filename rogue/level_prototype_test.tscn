@@ -1,7 +1,9 @@
-[gd_scene load_steps=58 format=3 uid="uid://chlyini2oshnv"]
+[gd_scene load_steps=60 format=3 uid="uid://chlyini2oshnv"]
 
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="1_6cmni"]
+[ext_resource type="Script" path="res://WorldScript.gd" id="1_b2085"]
 [ext_resource type="Script" path="res://Scenes/daynightCycle.gd" id="2_7rach"]
+[ext_resource type="PackedScene" uid="uid://dsb1wquko776f" path="res://Scenes/daynightcycle_ui.tscn" id="3_cmh4h"]
 [ext_resource type="Texture2D" uid="uid://dx0gcawcf6m8b" path="res://Textures/plants/small_flower_yellow.png" id="3_ds20y"]
 [ext_resource type="Texture2D" uid="uid://dukds47ucjbi2" path="res://Textures/plants/small_flower_pink.png" id="4_tl0uc"]
 [ext_resource type="PackedScene" uid="uid://bdqinwtaij4tq" path="res://tall_grass.tscn" id="5_ho7fc"]
@@ -48,8 +50,8 @@ background_mode = 3
 glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_yf8vg"]
-offsets = PackedFloat32Array(0, 0.226852, 0.342593, 0.722222, 0.850962, 1)
-colors = PackedColorArray(0.0338533, 0.0338533, 0.0338533, 1, 0.280542, 0.0288447, 0.352033, 1, 0.484549, 0.00430031, 0.316524, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.0833333, 0.175926, 0.421296, 0.550926, 1)
+colors = PackedColorArray(0.0256436, 7.02107e-06, 0.162323, 1, 0.280542, 0.0288447, 0.352033, 1, 0.484549, 0.00430031, 0.316524, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
 gradient = SubResource("Gradient_yf8vg")
@@ -316,9 +318,14 @@ environment = SubResource("Environment_3vivn")
 
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
+script = ExtResource("1_b2085")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+
+[node name="DayNightCycleUI" parent="Node2D/CanvasLayer" instance=ExtResource("3_cmh4h")]
 
 [node name="player" parent="Node2D" instance=ExtResource("1_6cmni")]
-position = Vector2(1511, 288)
+position = Vector2(413, 742)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 process_callback = 0
@@ -329,13 +336,14 @@ limit_bottom = 1080
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Node2D"]
 z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("2_7rach")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
-INGAME_SPEED = 2.0
 
 [node name="tall_flowers" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
