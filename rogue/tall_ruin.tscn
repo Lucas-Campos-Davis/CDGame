@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://btwjtsttn76e"]
+
+[ext_resource type="Texture2D" uid="uid://v1dihsjhsl8m" path="res://Textures/tallruin.png" id="1_0l66p"]
+[ext_resource type="Texture2D" uid="uid://blhx5us4a854r" path="res://Textures/tallruin_shadow.png" id="2_1ej3p"]
+
+[node name="tall_ruin" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+texture = ExtResource("1_0l66p")
+offset = Vector2(0, -22)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+z_index = -1
+position = Vector2(0, 2)
+texture = ExtResource("2_1ej3p")

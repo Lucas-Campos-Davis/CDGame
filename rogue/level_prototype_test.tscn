@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://chlyini2oshnv"]
+[gd_scene load_steps=72 format=3 uid="uid://chlyini2oshnv"]
 
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="1_6cmni"]
 [ext_resource type="Script" path="res://WorldScript.gd" id="1_b2085"]
@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://desgjf0jnco4s" path="res://Textures/long_cliff.png" id="29_i1db6"]
 [ext_resource type="Texture2D" uid="uid://bsc2ny2anvnsx" path="res://Textures/foreststairs7.png" id="30_5jiw1"]
 [ext_resource type="PackedScene" uid="uid://c0srss76syu1b" path="res://campfire.tscn" id="32_xxfot"]
+[ext_resource type="PackedScene" uid="uid://btwjtsttn76e" path="res://tall_ruin.tscn" id="56_h4ylu"]
 
 [sub_resource type="Environment" id="Environment_3vivn"]
 background_mode = 3
@@ -337,7 +338,7 @@ script = ExtResource("1_b2085")
 [node name="DayNightCycleUI" parent="Node2D/CanvasLayer" instance=ExtResource("3_cmh4h")]
 
 [node name="player" parent="Node2D" instance=ExtResource("1_6cmni")]
-position = Vector2(960, 155)
+position = Vector2(1029, 801)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 process_callback = 0
@@ -356,7 +357,7 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("2_7rach")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
-INGAME_SPEED = 25.0
+INGAME_SPEED = 2.0
 
 [node name="tall_flowers" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -3513,6 +3514,9 @@ texture = ExtResource("30_5jiw1")
 z_index = 1
 y_sort_enabled = true
 position = Vector2(976, 186)
+
+[node name="tall_ruin" parent="Node2D" instance=ExtResource("56_h4ylu")]
+position = Vector2(1082, 772)
 
 [node name="Node2D2" type="Node2D" parent="."]
 z_index = 1

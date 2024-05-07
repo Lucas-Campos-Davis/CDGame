@@ -1,7 +1,7 @@
-CanvasLayer
 Sprite2D
-CollisionShape2D
 StaticBody2D
+CanvasLayer
+CollisionShape2D
 Node2D
 WorldEnvironment
 TileMap
@@ -12,4 +12,3 @@ RichTextLabel
 GPUParticles2D
 CPUParticles2D
 SubViewport
-SubViewportContainer
