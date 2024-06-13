@@ -1,9 +1,10 @@
+Marker2D
+Node2D
+WorldEnvironment
 Sprite2D
 StaticBody2D
 CanvasLayer
 CollisionShape2D
-Node2D
-WorldEnvironment
 TileMap
 Node
 ColorRect

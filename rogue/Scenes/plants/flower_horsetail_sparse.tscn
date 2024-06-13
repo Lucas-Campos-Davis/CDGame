@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcb0hjoua8ft0"]
+
+[ext_resource type="PackedScene" uid="uid://dwc7h7ap7b7p3" path="res://Scenes/plants/plant.tscn" id="1_gsxfg"]
+[ext_resource type="Texture2D" uid="uid://c4i83uaayiq63" path="res://Textures/plants/horetail_sparse.png" id="2_4vlpy"]
+
+[node name="flower_horsetail_sparse" instance=ExtResource("1_gsxfg")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4vlpy")

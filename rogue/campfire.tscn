@@ -120,11 +120,12 @@ autoplay = "default"
 frame_progress = 0.616993
 
 [node name="campfireLight" type="PointLight2D" parent="fireAnimation"]
-light_mask = 2
-visibility_layer = 2
+z_index = -1
+y_sort_enabled = true
 position = Vector2(-1.5193, 2.60297)
 color = Color(1, 0.913725, 0.00784314, 1)
 energy = 0.2
+range_z_max = 3
 shadow_enabled = true
 texture = ExtResource("6_1aouf")
 script = SubResource("6")

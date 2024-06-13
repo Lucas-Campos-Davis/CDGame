@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://chlyini2oshnv"]
+[gd_scene load_steps=73 format=3 uid="uid://chlyini2oshnv"]
 
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="1_6cmni"]
 [ext_resource type="Script" path="res://WorldScript.gd" id="1_b2085"]
@@ -56,6 +56,7 @@
 [ext_resource type="Texture2D" uid="uid://bsc2ny2anvnsx" path="res://Textures/foreststairs7.png" id="30_5jiw1"]
 [ext_resource type="PackedScene" uid="uid://c0srss76syu1b" path="res://campfire.tscn" id="32_xxfot"]
 [ext_resource type="PackedScene" uid="uid://btwjtsttn76e" path="res://tall_ruin.tscn" id="56_h4ylu"]
+[ext_resource type="Texture2D" uid="uid://bwwwbqd8v1vfb" path="res://Textures/rocky-rocks.png" id="57_fole4"]
 
 [sub_resource type="Environment" id="Environment_3vivn"]
 background_mode = 3
@@ -338,7 +339,7 @@ script = ExtResource("1_b2085")
 [node name="DayNightCycleUI" parent="Node2D/CanvasLayer" instance=ExtResource("3_cmh4h")]
 
 [node name="player" parent="Node2D" instance=ExtResource("1_6cmni")]
-position = Vector2(1029, 801)
+position = Vector2(459, 730)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 process_callback = 0
@@ -357,7 +358,7 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("2_7rach")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
-INGAME_SPEED = 2.0
+INGAME_SPEED = 1.0
 
 [node name="tall_flowers" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -2994,7 +2995,7 @@ position = Vector2(315, 183)
 
 [node name="small_rock2" parent="Node2D/rocks" instance=ExtResource("16_upe3o")]
 y_sort_enabled = false
-position = Vector2(746, 749)
+position = Vector2(818, 822)
 
 [node name="small_rock12" parent="Node2D/rocks" instance=ExtResource("16_upe3o")]
 y_sort_enabled = false
@@ -3224,7 +3225,7 @@ position = Vector2(-60, -28)
 position = Vector2(-499, 482)
 
 [node name="paper_birch_small14" parent="Node2D/trees" instance=ExtResource("23_riaav")]
-position = Vector2(-148, 395)
+position = Vector2(-124, 463)
 
 [node name="paper_birch_small9" parent="Node2D/trees" instance=ExtResource("23_riaav")]
 position = Vector2(-454, 140)
@@ -3326,10 +3327,10 @@ position = Vector2(-756, 548)
 position = Vector2(-378, 514)
 
 [node name="paper_birch_tall24" parent="Node2D/trees" instance=ExtResource("24_p4meb")]
-position = Vector2(-48, 371)
+position = Vector2(-79, 295)
 
 [node name="paper_birch_tall25" parent="Node2D/trees" instance=ExtResource("24_p4meb")]
-position = Vector2(-48, 371)
+position = Vector2(117, 553)
 
 [node name="paper_birch_tall10" parent="Node2D/trees" instance=ExtResource("24_p4meb")]
 position = Vector2(-1495, 60)
@@ -3517,6 +3518,14 @@ position = Vector2(976, 186)
 
 [node name="tall_ruin" parent="Node2D" instance=ExtResource("56_h4ylu")]
 position = Vector2(1082, 772)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(1789, 260)
+texture = ExtResource("57_fole4")
+offset = Vector2(0, -60)
+flip_h = true
 
 [node name="Node2D2" type="Node2D" parent="."]
 z_index = 1

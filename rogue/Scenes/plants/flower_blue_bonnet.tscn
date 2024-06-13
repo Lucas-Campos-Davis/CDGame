@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://blyrlbrca6maq"]
+
+[ext_resource type="PackedScene" uid="uid://dwc7h7ap7b7p3" path="res://Scenes/plants/plant.tscn" id="1_ujnn1"]
+[ext_resource type="Texture2D" uid="uid://crd6ya08vej8r" path="res://Textures/plants/blue_bonnet.png" id="2_d5w3y"]
+
+[node name="flower_blue_bonnet" instance=ExtResource("1_ujnn1")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_d5w3y")

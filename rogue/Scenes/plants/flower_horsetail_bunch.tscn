@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgeeuwve37w6n"]
+
+[ext_resource type="PackedScene" uid="uid://dwc7h7ap7b7p3" path="res://Scenes/plants/plant.tscn" id="1_wu8rp"]
+[ext_resource type="Texture2D" uid="uid://bbud3e5khfnhh" path="res://Textures/plants/small_horsetail.png" id="2_petgc"]
+
+[node name="flower_horsetail_bunch" instance=ExtResource("1_wu8rp")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_petgc")

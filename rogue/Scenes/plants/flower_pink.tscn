@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ukn803b13xfi"]
+
+[ext_resource type="PackedScene" uid="uid://dwc7h7ap7b7p3" path="res://Scenes/plants/plant.tscn" id="1_lj5xs"]
+[ext_resource type="Texture2D" uid="uid://dukds47ucjbi2" path="res://Textures/plants/small_flower_pink.png" id="2_g8lhg"]
+
+[node name="flower_tulip_pink" instance=ExtResource("1_lj5xs")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_g8lhg")
