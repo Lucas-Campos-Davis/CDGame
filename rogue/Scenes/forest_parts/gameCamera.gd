@@ -17,12 +17,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	for n in range(points.size()):
-		if player.global_position.distance_to(points[n].global_position) < 85:
-			if cameraTarget.name != points[n].name:
-				camera.global_position = points[n].global_position;
-				camera.align();
-			camera.global_position = cameraTarget.global_position;
-	if cameraTarget.name == "player":
+		if player.global_position.distance_to(points[n].global_position) < points[n].range:
+			isCloseToPoint = true;
+			camera.global_position = points[n].global_position;
+			camera.align();
+		else:
+			isCloseToPoint = false;
+	if isCloseToPoint == false:
 		camera.global_position = player.global_position;
 		camera.align();
 	

@@ -31,3 +31,5 @@ res://Scenes/trees/paper_birch/paper_birch_two_stem.tscn
 res://ambient_light.tscn
 res://Scenes/forest_parts/basic_room.tscn
 res://Scenes/forest_parts/gameCamera.gd
+res://Scenes/forest_parts/campfire_marker.gd
+res://Scenes/rocks/round_rock.tscn
