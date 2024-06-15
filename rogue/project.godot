@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="rogue"
-run/main_scene="res://Scenes/menu.tscn"
+run/main_scene="res://Scenes/forest_parts/forest_start.tscn"
 config/features=PackedStringArray("4.2")
+boot_splash/image="res://Textures/ui/spalsh.png"
 
 [display]
 

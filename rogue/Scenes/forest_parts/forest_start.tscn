@@ -343,7 +343,7 @@ range = 125
 
 [node name="player" parent="Node2D" instance=ExtResource("3_3d1b4")]
 unique_name_in_owner = true
-position = Vector2(1520, 379)
+position = Vector2(1163, 465)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 unique_name_in_owner = true
@@ -363,7 +363,7 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("4_l7a3l")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
-INGAME_SPEED = 10.0
+INGAME_SPEED = 1.0
 
 [node name="waytstone_area" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
@@ -1943,6 +1943,78 @@ position = Vector2(1377, 258)
 [node name="grass182" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
 position = Vector2(1372, 251)
 
+[node name="grass301" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1405, 234)
+
+[node name="grass302" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1396, 228)
+
+[node name="grass303" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1390, 232)
+
+[node name="grass304" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1354, 239)
+
+[node name="grass305" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1349, 234)
+
+[node name="grass306" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1283, 234)
+
+[node name="grass307" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1275, 230)
+
+[node name="grass308" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1258, 241)
+
+[node name="grass309" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1487, 224)
+
+[node name="grass310" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1479, 228)
+
+[node name="grass311" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1438, 222)
+
+[node name="grass312" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1444, 226)
+
+[node name="grass313" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1591, 222)
+
+[node name="grass314" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1582, 227)
+
+[node name="grass315" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1573, 221)
+
+[node name="grass316" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1564, 226)
+
+[node name="grass317" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1588, 232)
+
+[node name="grass318" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1658, 235)
+
+[node name="grass319" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1668, 227)
+
+[node name="grass320" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1634, 222)
+
+[node name="grass321" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1703, 226)
+
+[node name="grass322" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1710, 228)
+
+[node name="grass323" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1746, 223)
+
+[node name="grass324" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
+position = Vector2(1755, 232)
+
 [node name="grass183" parent="Node2D/plants" instance=ExtResource("35_7brgg")]
 position = Vector2(1387, 250)
 
@@ -2590,6 +2662,33 @@ position = Vector2(1336, 274)
 
 [node name="flower_yellow11" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
 position = Vector2(1384, 253)
+
+[node name="flower_yellow34" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1348, 237)
+
+[node name="flower_yellow35" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1393, 230)
+
+[node name="flower_yellow36" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1429, 231)
+
+[node name="flower_yellow37" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1438, 225)
+
+[node name="flower_yellow38" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1487, 227)
+
+[node name="flower_yellow39" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1572, 225)
+
+[node name="flower_yellow40" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1641, 222)
+
+[node name="flower_yellow41" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1661, 231)
+
+[node name="flower_yellow42" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
+position = Vector2(1704, 231)
 
 [node name="flower_yellow12" parent="Node2D/plants" instance=ExtResource("37_dtkmh")]
 position = Vector2(1289, 309)
