@@ -7,6 +7,10 @@ res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
 res://Scenes/forest_parts/forest_start.tscn
-res://Scenes/daynightcycle_ui.tscn
-res://Scenes/plants/flower_pink.tscn
-res://Scenes/rocks/round_rock.tscn
+res://forestScene.tscn
+res://Scenes/town_parts/basic_town_room.tscn
+res://player-test.tscn
+res://room_exit.tscn
+res://Scenes/forest_parts/forest_start_alt.tscn
+res://Scenes/rocks/rock.tscn
+res://bench.tscn

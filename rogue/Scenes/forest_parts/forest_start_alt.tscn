@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhhldxht0xbve"]
+
+[ext_resource type="PackedScene" uid="uid://bywtlrh0ufs8b" path="res://Scenes/forest_parts/basic_room.tscn" id="1_mk6fo"]
+
+[node name="WorldEnvironment" instance=ExtResource("1_mk6fo")]

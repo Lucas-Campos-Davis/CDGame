@@ -30,10 +30,10 @@
 [ext_resource type="PackedScene" uid="uid://dk1y23tab68ai" path="res://Scenes/rocks/tall_rock.tscn" id="38_7la4k"]
 [ext_resource type="PackedScene" uid="uid://dgeeuwve37w6n" path="res://Scenes/plants/flower_horsetail_bunch.tscn" id="38_ucpkl"]
 [ext_resource type="PackedScene" uid="uid://1t82fgvi3bor" path="res://Scenes/trees/paper_birch/paper_birch_large.tscn" id="43_3hnaa"]
+[ext_resource type="PackedScene" uid="uid://ctn07wuwgf0xx" path="res://room_exit.tscn" id="43_7unev"]
 [ext_resource type="PackedScene" uid="uid://bnciybwl5ioy4" path="res://Scenes/trees/paper_birch/paper_birch_two_stem.tscn" id="44_gb8u7"]
 [ext_resource type="PackedScene" uid="uid://bmfuunfs7k512" path="res://Scenes/trees/paper_birch/paper_birch_small.tscn" id="45_yat37"]
 [ext_resource type="PackedScene" uid="uid://de6b3nwfqw535" path="res://Scenes/trees/paper_birch/paper_birch_tall.tscn" id="46_nh0dg"]
-[ext_resource type="PackedScene" uid="uid://du4um2n5cd01r" path="res://ambient_shadow.tscn" id="47_ubmeq"]
 [ext_resource type="PackedScene" uid="uid://om6pi4x4gesu" path="res://ambient_light.tscn" id="48_kbcjx"]
 [ext_resource type="PackedScene" uid="uid://2h0rbvycit7f" path="res://ambient_light_sprite.tscn" id="49_kgn7w"]
 [ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="50_32l0n"]
@@ -343,7 +343,7 @@ range = 125
 
 [node name="player" parent="Node2D" instance=ExtResource("3_3d1b4")]
 unique_name_in_owner = true
-position = Vector2(1163, 465)
+position = Vector2(963, 91)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 unique_name_in_owner = true
@@ -874,90 +874,6 @@ position = Vector2(-149, 722)
 [node name="lights_n_shadows" type="Node2D" parent="Node2D"]
 position = Vector2(1567, 797)
 
-[node name="ambient_shadow" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(207, 599)
-
-[node name="ambient_shadow2" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(502, 612)
-
-[node name="ambient_shadow3" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(231, 797)
-
-[node name="ambient_shadow4" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(417, 888)
-
-[node name="ambient_shadow5" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(652, 830)
-
-[node name="ambient_shadow6" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(784, 611)
-
-[node name="ambient_shadow7" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(766, 408)
-
-[node name="ambient_shadow8" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(287, 316)
-
-[node name="ambient_shadow9" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(519, 325)
-
-[node name="ambient_shadow10" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(781, -46)
-
-[node name="ambient_shadow11" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(1208, -43)
-
-[node name="ambient_shadow12" parent="Node2D/lights_n_shadows" instance=ExtResource("47_ubmeq")]
-visible = false
-light_mask = 2
-visibility_layer = 1
-z_index = 5
-position = Vector2(1240, 328)
-
 [node name="ambientLight" parent="Node2D/lights_n_shadows" instance=ExtResource("48_kbcjx")]
 position = Vector2(1272, 831)
 color = Color(0.468949, 0.269942, 0.893158, 1)
@@ -988,10 +904,40 @@ color = Color(0.565295, 0.209047, 0.429837, 1)
 energy = 0.75
 texture_scale = 0.25
 
-[node name="ambient_light_sprite" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
-visible = false
-modulate = Color(0.282353, 0, 0.556863, 0.478431)
-position = Vector2(-1151, -63)
+[node name="ambient_shadow_sprite" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-755, -108)
+
+[node name="ambient_shadow_sprite2" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-965, -222)
+
+[node name="ambient_shadow_sprite3" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-756, -487)
+
+[node name="ambient_shadow_sprite4" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-490, -126)
+
+[node name="ambient_shadow_sprite5" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-190, -156)
+
+[node name="ambient_shadow_sprite6" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-447, 131)
+
+[node name="ambient_shadow_sprite7" parent="Node2D/lights_n_shadows" instance=ExtResource("49_kgn7w")]
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+position = Vector2(-134, 139)
 
 [node name="ground_left" type="TileMap" parent="Node2D"]
 z_index = -1
@@ -2698,3 +2644,13 @@ position = Vector2(930, 469)
 
 [node name="flower_horsetail_bunch" parent="Node2D/plants" instance=ExtResource("38_ucpkl")]
 position = Vector2(958, 460)
+
+[node name="room_exit" parent="Node2D" groups=["room_exits"] instance=ExtResource("43_7unev")]
+go_to_room = "res://Scenes/forest_parts/basic_room.tscn"
+
+[node name="room_exit2" parent="Node2D" groups=["room_exits"] instance=ExtResource("43_7unev")]
+position = Vector2(960, 1101)
+go_to_room = "res://Scenes/menu.tscn"
+
+[connection signal="body_entered" from="Node2D/room_exit" to="Node2D/player" method="_on_room_exit_body_entered"]
+[connection signal="body_entered" from="Node2D/room_exit2" to="Node2D/player" method="_on_room_exit_body_entered"]

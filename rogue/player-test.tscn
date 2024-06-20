@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://b2muwyvvkvt0o"]
+[gd_scene load_steps=74 format=3 uid="uid://b2muwyvvkvt0o"]
 
 [ext_resource type="Texture2D" uid="uid://c41uyuyft00s8" path="res://Textures/Player/playerShadow1.png" id="1_k0sx0"]
 [ext_resource type="Texture2D" uid="uid://b0e6aylgwvo8r" path="res://Textures/redesign/redesign_walking_animation1.png" id="2_wjp2l"]
@@ -102,6 +102,12 @@ func _physics_process(delta):
 	set_velocity(velocity)
 	move_and_slide()
 	velocity = velocity
+
+
+func _on_room_exit_body_entered(body):
+	for n in get_tree().get_nodes_in_group(\"room_exits\"):
+		if(n.global_position.distance_to(%player.global_position) < 50):
+			get_tree().change_scene_to_file(n.go_to_room);
 "
 
 [sub_resource type="RectangleShape2D" id="2"]
@@ -397,6 +403,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah33q"]
+size = Vector2(34, 20)
+
 [node name="player" type="CharacterBody2D"]
 z_index = 4
 y_sort_enabled = true
@@ -432,3 +441,8 @@ material = SubResource("CanvasItemMaterial_b2xik")
 sprite_frames = SubResource("SpriteFrames_a1xjr")
 animation = &"walk_down"
 script = ExtResource("51_qkpew")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ah33q")

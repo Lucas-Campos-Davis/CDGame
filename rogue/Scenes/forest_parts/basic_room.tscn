@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bywtlrh0ufs8b"]
+[gd_scene load_steps=17 format=3 uid="uid://bywtlrh0ufs8b"]
 
 [ext_resource type="Script" path="res://WorldScript.gd" id="1_1umlc"]
 [ext_resource type="PackedScene" uid="uid://dsb1wquko776f" path="res://Scenes/daynightcycle_ui.tscn" id="2_kvd36"]
 [ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="3_c7ggv"]
 [ext_resource type="Script" path="res://Scenes/daynightCycle.gd" id="4_7r1un"]
-[ext_resource type="PackedScene" uid="uid://om6pi4x4gesu" path="res://ambient_light.tscn" id="19_nnkcs"]
 [ext_resource type="Texture2D" uid="uid://bep617e36rfjv" path="res://Textures/grass_tileset2.png" id="21_fdcox"]
 [ext_resource type="Texture2D" uid="uid://cpufqqho2m8f8" path="res://Textures/path_tileset.png" id="22_mw75h"]
 [ext_resource type="Texture2D" uid="uid://c1dlbaav0vvvj" path="res://Textures/foliage_tileset.png" id="23_j8svd"]
@@ -274,18 +273,13 @@ z_index = 4096
 position = Vector2(535, -103)
 script = ExtResource("4_7r1un")
 gradient_texture = SubResource("GradientTexture1D_cevbu")
+INGAME_SPEED = 1.0
 
 [node name="trees" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
 position = Vector2(0, -1)
 
 [node name="lights_n_shadows" type="Node2D" parent="Node2D"]
-
-[node name="ambientLight" parent="Node2D/lights_n_shadows" instance=ExtResource("19_nnkcs")]
-position = Vector2(986, 529)
-color = Color(0.468949, 0.269942, 0.893158, 1)
-energy = 0.75
-texture_scale = 0.25
 
 [node name="ground_left" type="TileMap" parent="Node2D"]
 z_index = -1

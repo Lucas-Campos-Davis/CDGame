@@ -3,11 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_gk5rr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fbef4"]
-blend_mode = 1
 
 [node name="ambient_shadow_sprite" type="Sprite2D"]
-modulate = Color(1, 1, 1, 0.498039)
-self_modulate = Color(1, 1, 1, 0.498039)
+modulate = Color(0.121569, 0.0666667, 0.145098, 1)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 1)
 z_index = 1000
 material = SubResource("CanvasItemMaterial_fbef4")
 scale = Vector2(0.5, 0.5)

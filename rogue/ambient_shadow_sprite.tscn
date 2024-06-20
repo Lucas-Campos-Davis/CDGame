@@ -1,14 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfoujmrwmx4vi"]
 
-[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_bohxp"]
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_dlplg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fbef4"]
-blend_mode = 2
 
 [node name="ambient_shadow_sprite" type="Sprite2D"]
-modulate = Color(0.447059, 0.447059, 0.447059, 0.498039)
-self_modulate = Color(0.447059, 0.447059, 0.447059, 0.498039)
+modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
+self_modulate = Color(0.121569, 0.0666667, 0.145098, 0.752941)
 z_index = 1000
 material = SubResource("CanvasItemMaterial_fbef4")
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_bohxp")
+texture = ExtResource("1_dlplg")
