@@ -343,7 +343,7 @@ range = 125
 
 [node name="player" parent="Node2D" instance=ExtResource("3_3d1b4")]
 unique_name_in_owner = true
-position = Vector2(963, 91)
+position = Vector2(1498, 390)
 
 [node name="gameCamera" type="Camera2D" parent="Node2D/player"]
 unique_name_in_owner = true
