@@ -3285,11 +3285,6 @@ position = Vector2(47, -123)
 [node name="player" parent="." instance=ExtResource("51_o5wt7")]
 position = Vector2(17, -101)
 
-[node name="gameCamera" type="Camera2D" parent="player"]
-process_callback = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 6.0
-
 [node name="waystone" parent="." instance=ExtResource("8_tx3jd")]
 y_sort_enabled = true
 position = Vector2(17, -1231)

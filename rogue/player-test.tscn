@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://b2muwyvvkvt0o"]
+[gd_scene load_steps=76 format=3 uid="uid://b2muwyvvkvt0o"]
 
 [ext_resource type="Texture2D" uid="uid://c41uyuyft00s8" path="res://Textures/Player/playerShadow1.png" id="1_k0sx0"]
 [ext_resource type="Texture2D" uid="uid://b0e6aylgwvo8r" path="res://Textures/redesign/redesign_walking_animation1.png" id="2_wjp2l"]
@@ -66,11 +66,13 @@
 [ext_resource type="Texture2D" uid="uid://dv12tm8kbka4c" path="res://Textures/redesign/redesign_walking_up_silhouette8.png" id="34_7ervr"]
 [ext_resource type="Texture2D" uid="uid://dwles8tm5ommv" path="res://Textures/redesign/redesign_walking_up8.png" id="34_dqs3u"]
 [ext_resource type="Script" path="res://silhouette.gd" id="51_qkpew"]
+[ext_resource type="Script" path="res://Scenes/forest_parts/gameCamera.gd" id="67_c0p7s"]
+[ext_resource type="AudioStream" uid="uid://bcmhwuuqfgeu5" path="res://Sounds/Retro FootStep Grass 01.wav" id="68_pvxfj"]
 
 [sub_resource type="GDScript" id="1"]
 script/source = "extends CharacterBody2D
 
-var speed = 50
+var speed = 40
 var foliageTileMap;
 
 func get_input():
@@ -90,24 +92,36 @@ func get_input():
 		
 	velocity = velocity.normalized() * speed
 
-func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_E:
-			foliageTileMap = get_parent().find_child(\"foliageTileMap\",true, false)
-			foliageTileMap.set_cell(0, foliageTileMap.local_to_map(position), 0, Vector2i(2,1), 0);
-
-
+#func _unhandled_input(event):
 func _physics_process(delta):
 	get_input()
 	set_velocity(velocity)
 	move_and_slide()
 	velocity = velocity
-
+	if PlayerVariables.is_scene_change == true:
+		isSceneChange();
+	
+func isSceneChange():
+	global_position = PlayerVariables.player_pos;
+	PlayerVariables.is_scene_change = false;
 
 func _on_room_exit_body_entered(body):
 	for n in get_tree().get_nodes_in_group(\"room_exits\"):
-		if(n.global_position.distance_to(%player.global_position) < 50):
+		if(n.global_position.distance_to(global_position) < 50):
+			PlayerVariables.is_scene_change = true;
+			PlayerVariables.player_pos = n.new_player_pos;
 			get_tree().change_scene_to_file(n.go_to_room);
+			
+
+
+func _on_room_exit_2_body_entered(body):
+		for n in get_tree().get_nodes_in_group(\"room_exits\"):
+			if(n.global_position.distance_to(global_position) < 50):
+				PlayerVariables.is_scene_change = true;
+				PlayerVariables.player_pos = n.new_player_pos;
+				get_tree().change_scene_to_file(n.go_to_room);
+			
+
 "
 
 [sub_resource type="RectangleShape2D" id="2"]
@@ -142,7 +156,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -171,7 +185,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -200,7 +214,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -229,20 +243,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 8.0
+"speed": 7.0
 }]
 
 [sub_resource type="GDScript" id="4"]
 script/source = "extends AnimatedSprite2D
-
-
-var front = load(\"res://rogue_front.png\");
-var back = load(\"res://rogue_back.png\");
-var left = load(\"res://rogue_left.png\");
-var right = load(\"res://rogue_right.png\");
-
-
 @export var companionDirection = \"LEFT\";
+var walking = false;
+var prevFrame = 0;
 
 func get_input():
 	var player = get_parent();
@@ -277,7 +285,16 @@ func stop_animation_on_stopped(player_velocity):
 			stop();
 
 func _physics_process(delta):
-	get_input()
+	get_input();
+	
+	if get_parent().get_real_velocity() != Vector2(0,0) && (prevFrame != 0 || prevFrame != 4):
+		if $\"../Timer\".get_time_left() <= 0:
+			$\"../walk_sound\".pitch_scale = randf_range(0.45,0.48);
+			$\"../walk_sound\".play();
+			$\"../Timer\".start(2.0);
+	else:
+		$\"../walk_sound\".stop();
+	prevFrame = frame;
 
 "
 
@@ -313,7 +330,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -342,7 +359,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -371,7 +388,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -400,7 +417,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 8.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah33q"]
@@ -431,6 +448,7 @@ y_sort_enabled = true
 position = Vector2(0, -15)
 sprite_frames = SubResource("3")
 animation = &"walk_down"
+frame_progress = 0.35907
 script = SubResource("4")
 
 [node name="silhouette" type="AnimatedSprite2D" parent="player_animations"]
@@ -446,3 +464,25 @@ script = ExtResource("51_qkpew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_ah33q")
+
+[node name="gameCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("67_c0p7s")
+
+[node name="walk_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("68_pvxfj")
+volume_db = -15.0
+pitch_scale = 0.5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.6
+one_shot = true

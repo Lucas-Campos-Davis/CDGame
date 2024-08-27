@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpk0gtecop6k5"]
+
+[ext_resource type="PackedScene" uid="uid://bwlke7ksltloe" path="res://Scenes/trees/tree.tscn" id="1_ajg18"]
+[ext_resource type="Texture2D" uid="uid://bmrxx1725fog6" path="res://Textures/smallpinkbush.png" id="2_eplsv"]
+[ext_resource type="Texture2D" uid="uid://bx3bpc7e1g06d" path="res://Textures/small_shadow.png" id="3_5x1y5"]
+
+[node name="small_bush" instance=ExtResource("1_ajg18")]
+
+[node name="tree" parent="." index="0"]
+position = Vector2(0, -15)
+texture = ExtResource("2_eplsv")
+offset = Vector2(0, 4)
+
+[node name="shadow" parent="tree" index="0"]
+position = Vector2(0, 7)
+texture = ExtResource("3_5x1y5")

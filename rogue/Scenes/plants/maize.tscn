@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://6e6sf7nfqgst"]
+
+[ext_resource type="PackedScene" uid="uid://dwc7h7ap7b7p3" path="res://Scenes/plants/plant.tscn" id="1_83tto"]
+[ext_resource type="Texture2D" uid="uid://b55hym2c65p5f" path="res://Textures/plants/maize.png" id="2_bitx4"]
+
+[node name="Plant" instance=ExtResource("1_83tto")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_bitx4")
+offset = Vector2(0, 0)

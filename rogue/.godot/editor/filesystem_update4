@@ -1,4 +1,4 @@
-res://Scenes/town_parts/basic_town_room.tscn
+res://Scenes/menu.tscn
 res://Scenes/daynightCycle.gd
 res://CharacterBody2D.gd
 res://companionFollow.gd
@@ -6,3 +6,12 @@ res://Scenes/testingGrounds.gdshader
 res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
+res://Scenes/forest_parts/forest_start.tscn
+res://forestScene.tscn
+res://Scenes/town_parts/basic_town_room.tscn
+res://player-test.tscn
+res://Scenes/colorful_forest.tscn
+res://Scenes/plants/grass_tall.tscn
+res://Scenes/plants/plant.tscn
+res://Scenes/plants/maize.tscn
+res://pillar.tscn
