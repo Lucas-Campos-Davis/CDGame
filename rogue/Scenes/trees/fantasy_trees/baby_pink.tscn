@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk0cngm1nn3qc"]
+
+[ext_resource type="PackedScene" uid="uid://bwlke7ksltloe" path="res://Scenes/trees/tree.tscn" id="1_3tgmh"]
+[ext_resource type="Texture2D" uid="uid://xlksn56cmvxk" path="res://Textures/trees/fantasy trees/smallpinkbush.png" id="2_22ymf"]
+[ext_resource type="Texture2D" uid="uid://dkv142dnfbeot" path="res://Textures/trees/fantasy trees/small_shadow.png" id="3_eafii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvjpu"]
+size = Vector2(8, 4)
+
+[node name="baby_pink" instance=ExtResource("1_3tgmh")]
+
+[node name="tree" parent="." index="0"]
+texture = ExtResource("2_22ymf")
+offset = Vector2(0, 4)
+
+[node name="shadow" parent="tree" index="0"]
+position = Vector2(0, 6)
+texture = ExtResource("3_eafii")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_pvjpu")

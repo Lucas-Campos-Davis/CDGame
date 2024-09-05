@@ -15,3 +15,14 @@ res://Scenes/plants/grass_tall.tscn
 res://Scenes/plants/plant.tscn
 res://Scenes/plants/maize.tscn
 res://pillar.tscn
+res://Scenes/daynightcycle_ui.tscn
+res://Scenes/trees/fantasy_trees/baby_pink.tscn
+res://Scenes/trees/fantasy_trees/purple_large.tscn
+res://Scenes/trees/fantasy_trees/baby_purple.tscn
+res://Scenes/trees/fantasy_trees/pink_tree.tscn
+res://Scenes/trees/fantasy_trees/smaller_pink.tscn
+res://Scenes/plants/crop.tscn
+res://Scenes/plants/crop_script.gd
+res://Scenes/trees/fantasy_trees/big_pink.tscn
+res://Scenes/plants/maize_crop.tscn
+res://Scenes/plants/crop.gd

@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://dtt23mp7mkoct"]
+
+[ext_resource type="PackedScene" uid="uid://bpqdflw44tpib" path="res://Scenes/plants/crop.tscn" id="1_f745m"]
+[ext_resource type="Texture2D" uid="uid://ctqocnyy1l0h7" path="res://Textures/plants/maize/maize-1.png" id="2_34jqt"]
+[ext_resource type="Texture2D" uid="uid://0rq4ciupxd6r" path="res://Textures/plants/maize/maize-2.png" id="3_efou5"]
+[ext_resource type="Texture2D" uid="uid://b4mdbusxg4qgm" path="res://Textures/plants/maize/maize-3.png" id="4_bt1cv"]
+[ext_resource type="Texture2D" uid="uid://cjlv22vbcc4s5" path="res://Textures/plants/maize/maize-3-5.png" id="5_ynieh"]
+[ext_resource type="Texture2D" uid="uid://dnpw2oj72j3rf" path="res://Textures/plants/maize/maize-4.png" id="6_sta4f"]
+[ext_resource type="Texture2D" uid="uid://dle3yjjqq13hr" path="res://Textures/plants/maize/maize-5.png" id="7_y5ak5"]
+[ext_resource type="Texture2D" uid="uid://cj6edpam5p0px" path="res://Textures/plants/maize/maize-6.png" id="8_icfmw"]
+[ext_resource type="Texture2D" uid="uid://cisns8nag7ta7" path="res://Textures/plants/maize/maize-6-empty.png" id="9_a12fs"]
+[ext_resource type="Texture2D" uid="uid://dgey0wv3jypn4" path="res://Textures/plants/maize/maize-7-pre.png" id="10_fbym2"]
+[ext_resource type="Texture2D" uid="uid://b7k63sjqdprve" path="res://Textures/plants/maize/maize-7.png" id="10_sxcej"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afnlk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_34jqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_efou5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bt1cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ynieh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sta4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y5ak5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_icfmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a12fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fbym2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sxcej")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="maize_crop" instance=ExtResource("1_f745m")]
+stage_length = 0.2
+max_random_length = 0.35
+ripe_frame = 6
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_afnlk")

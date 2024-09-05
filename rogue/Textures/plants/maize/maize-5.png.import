@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b55hym2c65p5f"
-path="res://.godot/imported/maize.png-c5516b390cbd551efcb22773531651b4.ctex"
+uid="uid://dle3yjjqq13hr"
+path="res://.godot/imported/maize-5.png-659e8187c0673dc498c37093f5d1d207.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/plants/maize.png"
-dest_files=["res://.godot/imported/maize.png-c5516b390cbd551efcb22773531651b4.ctex"]
+source_file="res://Textures/plants/maize/maize-5.png"
+dest_files=["res://.godot/imported/maize-5.png-659e8187c0673dc498c37093f5d1d207.ctex"]
 
 [params]
 

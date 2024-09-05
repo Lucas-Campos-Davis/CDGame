@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpqdflw44tpib"]
+
+[ext_resource type="Script" path="res://Scenes/plants/crop.gd" id="1_nyf3w"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_nyf3w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true

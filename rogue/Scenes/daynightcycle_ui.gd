@@ -15,9 +15,9 @@ func set_daytime(day: int, hour: int, minute: int) -> void:
 	time_label_background.text = time_label.text
 	
 	if hour <= 12:
-		arrow.rotation_degrees = _remap_rangef(hour, 0, 12, -90, 90)
+		arrow.rotation_degrees = _remap_rangef(hour, 0, 12, -180, 0)
 	else:
-		arrow.rotation_degrees = _remap_rangef(hour, 13, 23, 90, -90)
+		arrow.rotation_degrees = _remap_rangef(hour, 13, 23, 0, -180)
 
 
 func _amfm_hour(hour:int) -> String:

@@ -67,7 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://dwles8tm5ommv" path="res://Textures/redesign/redesign_walking_up8.png" id="34_dqs3u"]
 [ext_resource type="Script" path="res://silhouette.gd" id="51_qkpew"]
 [ext_resource type="Script" path="res://Scenes/forest_parts/gameCamera.gd" id="67_c0p7s"]
-[ext_resource type="AudioStream" uid="uid://bcmhwuuqfgeu5" path="res://Sounds/Retro FootStep Grass 01.wav" id="68_pvxfj"]
+[ext_resource type="AudioStream" uid="uid://d13dvuu6ois7b" path="res://Sounds/GRASS - Walk short 8.wav" id="68_ino0b"]
 
 [sub_resource type="GDScript" id="1"]
 script/source = "extends CharacterBody2D
@@ -90,7 +90,12 @@ func get_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 		
-	velocity = velocity.normalized() * speed
+		
+	velocity = velocity.normalized() * speed;
+	
+	if Input.is_action_pressed('interact'):
+		var corn = load(\"res://Scenes/plants/maize_crop.tscn\")
+		add_child(corn.instantiate());
 
 #func _unhandled_input(event):
 func _physics_process(delta):
@@ -250,7 +255,7 @@ animations = [{
 script/source = "extends AnimatedSprite2D
 @export var companionDirection = \"LEFT\";
 var walking = false;
-var prevFrame = 0;
+var prevFrame = 3;
 
 func get_input():
 	var player = get_parent();
@@ -287,11 +292,11 @@ func stop_animation_on_stopped(player_velocity):
 func _physics_process(delta):
 	get_input();
 	
-	if get_parent().get_real_velocity() != Vector2(0,0) && (prevFrame != 0 || prevFrame != 4):
+	if get_parent().get_real_velocity() != Vector2(0,0) && (prevFrame != 3 || prevFrame != 7):
 		if $\"../Timer\".get_time_left() <= 0:
-			$\"../walk_sound\".pitch_scale = randf_range(0.45,0.48);
+			$\"../walk_sound\".pitch_scale = randf_range(0.75,1.25);
 			$\"../walk_sound\".play();
-			$\"../Timer\".start(2.0);
+			$\"../Timer\".start(0.6);
 	else:
 		$\"../walk_sound\".stop();
 	prevFrame = frame;
@@ -453,7 +458,7 @@ script = SubResource("4")
 
 [node name="silhouette" type="AnimatedSprite2D" parent="player_animations"]
 modulate = Color(0.898039, 0.898039, 0.898039, 0.588235)
-self_modulate = Color(0.898039, 0.898039, 0.898039, 0.588235)
+self_modulate = Color(1.1, 1.1, 1.1, 0.518)
 z_index = 10
 material = SubResource("CanvasItemMaterial_b2xik")
 sprite_frames = SubResource("SpriteFrames_a1xjr")
@@ -479,9 +484,8 @@ editor_draw_drag_margin = true
 script = ExtResource("67_c0p7s")
 
 [node name="walk_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("68_pvxfj")
+stream = ExtResource("68_ino0b")
 volume_db = -15.0
-pitch_scale = 0.5
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.6

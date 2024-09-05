@@ -11,12 +11,12 @@ size = Vector2(11, 6)
 
 [node name="tree" parent="." index="0"]
 texture = ExtResource("2_p6f44")
-offset = Vector2(0, -32)
+offset = Vector2(0, -25)
 
 [node name="shadow" parent="tree" index="0"]
-position = Vector2(0, 0)
+position = Vector2(0, 5)
 texture = ExtResource("3_5dygo")
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
-position = Vector2(3, 5)
+position = Vector2(3, 12)
 shape = SubResource("RectangleShape2D_1nnnx")
