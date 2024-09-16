@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl0tu0ch6d2rx"]
+
+[ext_resource type="Texture2D" uid="uid://dsjmlmqnviobm" path="res://Textures/ui/HOTBAR.png" id="1_boked"]
+[ext_resource type="Texture2D" uid="uid://dhrqjj1hfwcte" path="res://Textures/ui/HOTBAR_OUTLINE.png" id="2_dshve"]
+[ext_resource type="Texture2D" uid="uid://3n7l862jo1kf" path="res://Textures/items/hoe.png" id="3_gm7mk"]
+[ext_resource type="Texture2D" uid="uid://bgxkcktm2orw4" path="res://Textures/items/corn_seeds.png" id="4_ihv2n"]
+
+[node name="HotbarUI" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -55.0
+offset_right = 129.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+self_modulate = Color(1, 1, 1, 0.678431)
+layout_mode = 2
+texture = ExtResource("1_boked")
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/TextureRect"]
+modulate = Color(1.102, 1.502, 2, 0.573)
+layout_mode = 2
+offset_right = 260.0
+offset_bottom = 55.0
+texture = ExtResource("2_dshve")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(99, 29)
+texture = ExtResource("3_gm7mk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(79, 29)
+texture = ExtResource("4_ihv2n")

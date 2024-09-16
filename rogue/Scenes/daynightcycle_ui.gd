@@ -9,15 +9,15 @@ extends Control
 
 func set_daytime(day: int, hour: int, minute: int) -> void:
 	day_label.text = "Day " + str(day + 1)
-	day_label_background.text = day_label.text
+	#day_label_background.text = day_label.text
 	
 	time_label.text = _amfm_hour(hour) + ":" + _minute(minute) + " " + _am_pm(hour)
-	time_label_background.text = time_label.text
+	#time_label_background.text = time_label.text
 	
 	if hour <= 12:
-		arrow.rotation_degrees = _remap_rangef(hour, 0, 12, -180, 0)
+		arrow.rotation_degrees = _remap_rangef(hour, 0, 12, 180, 0)
 	else:
-		arrow.rotation_degrees = _remap_rangef(hour, 13, 23, 0, -180)
+		arrow.rotation_degrees = _remap_rangef(hour, 13, 23, 0, 180)
 
 
 func _amfm_hour(hour:int) -> String:

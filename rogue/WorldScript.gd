@@ -13,6 +13,6 @@ func _ready() -> void:
 	if PlayerVariables.is_scene_change:
 		var player = load("res://player-test.tscn")
 		var instance = player.instantiate()
-		add_child(instance)
+		add_child(instance);
 		instance.global_position = PlayerVariables.player_pos;
 		PlayerVariables.is_scene_change = false;
