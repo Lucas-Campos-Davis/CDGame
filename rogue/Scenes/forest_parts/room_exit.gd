@@ -8,8 +8,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if has_overlapping_bodies():
+		PlayerVariables.player_position = new_player_pos;
+		get_tree().change_scene_to_file(go_to_room);
 
-
-func _on_body_entered(body):
-	pass # Replace with function body.
+#func _on_body_entered(body):
+	#get_tree().change_scene_to_file(go_to_room);

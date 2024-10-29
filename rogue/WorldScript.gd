@@ -8,7 +8,7 @@ extends Node2D
 
 func _ready() -> void:
 	canvas_layer.visible = true
-	canvas_modulate.time_tick.connect(ui.set_daytime)
+	canvas_modulate.TimeTick.connect(ui.SetDaytime)
 	#canvas_modulate.time_tick.connect(sound_machine.set_daytime)
 	if PlayerVariables.is_scene_change:
 		var player = load("res://player-test.tscn")

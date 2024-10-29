@@ -12,13 +12,15 @@ config_version=5
 
 config/name="rogue"
 run/main_scene="res://Scenes/forest_parts/forest_start.tscn"
-config/features=PackedStringArray("4.2")
+config/features=PackedStringArray("4.2", "C#")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Textures/ui/spalsh.png"
 
 [autoload]
 
-PlayerVariables="*res://player_variables.gd"
-WorldVariables="*res://world_variables.gd"
+PlayerVariables="*res://PlayerVariables.cs"
+WorldVariables="*res://WorldVariables.cs"
+TransitionScene="*res://TransitionScene.tscn"
 
 [display]
 

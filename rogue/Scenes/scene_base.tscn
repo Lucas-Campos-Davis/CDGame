@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://c6h7n7014lgi7"]
+
+[ext_resource type="Script" path="res://SceneController.cs" id="1_x4xag"]
+[ext_resource type="PackedScene" uid="uid://b2muwyvvkvt0o" path="res://player-test.tscn" id="2_6v1ud"]
+[ext_resource type="PackedScene" uid="uid://dsb1wquko776f" path="res://Scenes/daynightcycle_ui.tscn" id="3_cqb51"]
+[ext_resource type="PackedScene" uid="uid://dl0tu0ch6d2rx" path="res://HotBarUI.tscn" id="4_fq1c4"]
+[ext_resource type="PackedScene" uid="uid://cl6buqn74fcvh" path="res://TransitionScene.tscn" id="5_0oyli"]
+[ext_resource type="Script" path="res://Scenes/DayNightController.cs" id="5_w267o"]
+[ext_resource type="TileSet" uid="uid://causj33akac5i" path="res://Scenes/tilesets/tall_foliage.tres" id="6_xgwjs"]
+[ext_resource type="TileSet" uid="uid://ru7dd3mn4a11" path="res://Scenes/tilesets/rocks.tres" id="7_ou5pa"]
+[ext_resource type="TileSet" uid="uid://4jad1lumvctj" path="res://Scenes/tilesets/ground.tres" id="8_x7a6v"]
+[ext_resource type="TileSet" uid="uid://dneqv5bikpevb" path="res://Scenes/tilesets/fences.tres" id="9_kh6o2"]
+[ext_resource type="TileSet" uid="uid://kcimj6qqf8ej" path="res://Scenes/tilesets/paths.tres" id="10_2gha3"]
+[ext_resource type="TileSet" uid="uid://dy4oxjn5iornk" path="res://Scenes/tilesets/ground_foliage.tres" id="11_mipaj"]
+
+[sub_resource type="Environment" id="Environment_3vivn"]
+background_mode = 3
+tonemap_white = 9.52
+ssil_radius = 5.95
+glow_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_mb5vo"]
+offsets = PackedFloat32Array(0, 0.132353, 0.25, 0.338235, 0.441176, 1)
+colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.24385, 0.111125, 0.306731, 1, 0.434533, 0.129292, 0.324987, 1, 0.913552, 0.268237, 0.40042, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
+gradient = SubResource("Gradient_mb5vo")
+use_hdr = true
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_3vivn")
+
+[node name="GameNode" type="Node2D" parent="."]
+y_sort_enabled = true
+script = ExtResource("1_x4xag")
+
+[node name="player" parent="GameNode" instance=ExtResource("2_6v1ud")]
+position = Vector2(240, 133)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameNode"]
+
+[node name="DayNightCycleUI" parent="GameNode/CanvasLayer" instance=ExtResource("3_cqb51")]
+modulate = Color(1, 1, 1, 1)
+
+[node name="HotbarUI" parent="GameNode/CanvasLayer" instance=ExtResource("4_fq1c4")]
+visible = false
+offset_bottom = -3.05176e-05
+
+[node name="ColorRect" parent="GameNode/CanvasLayer" instance=ExtResource("5_0oyli")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="GameNode"]
+z_index = 4096
+script = ExtResource("5_w267o")
+_gradientTexture = SubResource("GradientTexture1D_cevbu")
+
+[node name="ground_tilemap" type="TileMap" parent="GameNode"]
+z_index = -1
+tile_set = ExtResource("8_x7a6v")
+format = 2
+
+[node name="ground_foliage_tilemap" type="TileMap" parent="GameNode"]
+tile_set = ExtResource("11_mipaj")
+format = 2
+
+[node name="path_tilemap" type="TileMap" parent="GameNode"]
+tile_set = ExtResource("10_2gha3")
+format = 2
+
+[node name="tall_foliage_tilemap" type="TileMap" parent="GameNode"]
+y_sort_enabled = true
+tile_set = ExtResource("6_xgwjs")
+rendering_quadrant_size = 8
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true
+layer_0/y_sort_origin = -8
+layer_0/z_index = 4
+
+[node name="rocks_tilemap" type="TileMap" parent="GameNode"]
+y_sort_enabled = true
+tile_set = ExtResource("7_ou5pa")
+format = 2
+layer_0/name = "rocks"
+layer_0/y_sort_enabled = true
+layer_0/y_sort_origin = -8
+layer_0/z_index = 4
+
+[node name="fence_tilemap" type="TileMap" parent="GameNode"]
+y_sort_enabled = true
+tile_set = ExtResource("9_kh6o2")
+format = 2
+layer_0/name = "fences"
+layer_0/y_sort_enabled = true
+layer_0/y_sort_origin = -8
+layer_0/z_index = 4
+
+[node name="lights_n_shadows" type="Node2D" parent="GameNode"]
+
+[node name="trees" type="Node2D" parent="GameNode"]
+y_sort_enabled = true
+
+[node name="plants" type="Node2D" parent="GameNode"]
+y_sort_enabled = true
+
+[node name="points_of_interest" type="Node2D" parent="GameNode"]
+
+[node name="environment_sprites" type="Node2D" parent="GameNode"]
+y_sort_enabled = true
+
+[node name="characters" type="Node2D" parent="GameNode"]
+y_sort_enabled = true
+
+[node name="room_exits" type="Node2D" parent="GameNode"]

@@ -49,8 +49,8 @@ background_mode = 3
 glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_mb5vo"]
-offsets = PackedFloat32Array(0, 0.157407, 0.212963, 0.277778, 0.384259, 1)
-colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.24385, 0.111125, 0.306731, 1, 0.434533, 0.129292, 0.324987, 1, 0.99972, 0.0924413, 0.060662, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.132353, 0.25, 0.338235, 0.441176, 1)
+colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.24385, 0.111125, 0.306731, 1, 0.434533, 0.129292, 0.324987, 1, 0.913552, 0.268237, 0.40042, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
 gradient = SubResource("Gradient_mb5vo")
@@ -63,14 +63,14 @@ shader = ExtResource("33_ujvhu")
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.344262, 0.681319), 0.0, 0.0, 0, 0, Vector2(0.934426, 0.307692), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="CurveTexture" id="CurveTexture_3qegr"]
+[sub_resource type="CurveTexture" id="CurveTexture_ry62j"]
 curve = SubResource("Curve_2tin7")
 
 [sub_resource type="Gradient" id="Gradient_w5mab"]
 offsets = PackedFloat32Array(0, 0.592593, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.631373, 0.882353, 0.984314, 1, 0.0352941, 0.772549, 0.721569, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0mo72"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nnuyg"]
 gradient = SubResource("Gradient_w5mab")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v3bs3"]
@@ -89,8 +89,8 @@ gravity = Vector3(0, -1, 0)
 damping_max = 0.1
 scale_min = 0.5
 scale_max = 1.5
-color_ramp = SubResource("GradientTexture1D_0mo72")
-alpha_curve = SubResource("CurveTexture_3qegr")
+color_ramp = SubResource("GradientTexture1D_nnuyg")
+alpha_curve = SubResource("CurveTexture_ry62j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_br2dg"]
 texture = ExtResource("50_32l0n")
@@ -855,6 +855,7 @@ position = Vector2(-1723, 64)
 position = Vector2(-149, 722)
 
 [node name="lights_n_shadows" type="Node2D" parent="GameNode"]
+visible = false
 position = Vector2(1567, 797)
 
 [node name="ambientLight" parent="GameNode/lights_n_shadows" instance=ExtResource("48_kbcjx")]

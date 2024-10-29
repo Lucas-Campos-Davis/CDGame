@@ -1,5 +1,6 @@
-[gd_scene load_steps=76 format=3 uid="uid://b2muwyvvkvt0o"]
+[gd_scene load_steps=72 format=3 uid="uid://b2muwyvvkvt0o"]
 
+[ext_resource type="Script" path="res://PlayerController.cs" id="1_cyvdp"]
 [ext_resource type="Texture2D" uid="uid://c41uyuyft00s8" path="res://Textures/Player/playerShadow1.png" id="1_k0sx0"]
 [ext_resource type="Texture2D" uid="uid://b0e6aylgwvo8r" path="res://Textures/redesign/redesign_walking_animation1.png" id="2_wjp2l"]
 [ext_resource type="Texture2D" uid="uid://bi2uorkkw5cqd" path="res://Textures/redesign/redesign_walking_animation_silhouette1.png" id="3_un44r"]
@@ -65,69 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://dp6o28h4qr3ic" path="res://Textures/redesign/redesign_walking_up_silhouette7.png" id="33_oqjnh"]
 [ext_resource type="Texture2D" uid="uid://dv12tm8kbka4c" path="res://Textures/redesign/redesign_walking_up_silhouette8.png" id="34_7ervr"]
 [ext_resource type="Texture2D" uid="uid://dwles8tm5ommv" path="res://Textures/redesign/redesign_walking_up8.png" id="34_dqs3u"]
-[ext_resource type="Script" path="res://silhouette.gd" id="51_qkpew"]
-[ext_resource type="Script" path="res://Scenes/forest_parts/gameCamera.gd" id="67_c0p7s"]
 [ext_resource type="AudioStream" uid="uid://d13dvuu6ois7b" path="res://Sounds/GRASS - Walk short 8.wav" id="68_ino0b"]
-
-[sub_resource type="GDScript" id="1"]
-script/source = "extends CharacterBody2D
-
-var speed = 40
-var foliageTileMap;
-
-func get_input():
-	velocity = Vector2()
-	
-	if Input.is_action_pressed('right'):
-		velocity.x += 1
-		
-	if Input.is_action_pressed('left'):
-		velocity.x -= 1
-		
-	if Input.is_action_pressed('down'):
-		velocity.y += 1
-		
-	if Input.is_action_pressed('up'):
-		velocity.y -= 1
-		
-		
-	velocity = velocity.normalized() * speed;
-	
-	if Input.is_action_pressed('interact'):
-		var corn = load(\"res://Scenes/plants/maize_crop.tscn\")
-		add_child(corn.instantiate());
-
-#func _unhandled_input(event):
-func _physics_process(delta):
-	get_input()
-	set_velocity(velocity)
-	move_and_slide()
-	velocity = velocity
-	if PlayerVariables.is_scene_change == true:
-		isSceneChange();
-	
-func isSceneChange():
-	global_position = PlayerVariables.player_pos;
-	PlayerVariables.is_scene_change = false;
-
-func _on_room_exit_body_entered(body):
-	for n in get_tree().get_nodes_in_group(\"room_exits\"):
-		if(n.global_position.distance_to(global_position) < 50):
-			PlayerVariables.is_scene_change = true;
-			PlayerVariables.player_pos = n.new_player_pos;
-			get_tree().change_scene_to_file(n.go_to_room);
-			
-
-
-func _on_room_exit_2_body_entered(body):
-		for n in get_tree().get_nodes_in_group(\"room_exits\"):
-			if(n.global_position.distance_to(global_position) < 50):
-				PlayerVariables.is_scene_change = true;
-				PlayerVariables.player_pos = n.new_player_pos;
-				get_tree().change_scene_to_file(n.go_to_room);
-			
-
-"
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(4.64023, 5.0552)
@@ -251,58 +190,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="GDScript" id="4"]
-script/source = "extends AnimatedSprite2D
-@export var companionDirection = \"LEFT\";
-var walking = false;
-var prevFrame = 3;
-
-func get_input():
-	var player = get_parent();
-	if Input.is_action_pressed('up'):
-		play(\"walk_up\");
-		stop_animation_on_stopped(player.get_real_velocity());
-
-		
-	if Input.is_action_pressed('down'):
-		play(\"walk_down\");
-		stop_animation_on_stopped(player.get_real_velocity());
-
-	if Input.is_action_pressed('right') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
-		play(\"walk_right\");
-		companionDirection = \"RIGHT\";
-		stop_animation_on_stopped(player.get_real_velocity());
-
-		
-	if Input.is_action_pressed('left') && !Input.is_action_pressed('up') && !Input.is_action_pressed('down'):
-		play(\"walk_left\")
-		companionDirection = \"LEFT\";
-		stop_animation_on_stopped(player.get_real_velocity());
-
-		
-	if !Input.is_action_pressed('right') && !Input.is_action_pressed('left') && !Input.is_action_pressed('down') && !Input.is_action_pressed('up'): 
-		if frame == 0 || frame == 4:
-			stop()
-		
-func stop_animation_on_stopped(player_velocity):
-	if player_velocity.y == 0 && player_velocity.x == 0:
-		if frame == 0 || frame == 4:
-			stop();
-
-func _physics_process(delta):
-	get_input();
-	
-	if get_parent().get_real_velocity() != Vector2(0,0) && (prevFrame != 3 || prevFrame != 7):
-		if $\"../Timer\".get_time_left() <= 0:
-			$\"../walk_sound\".pitch_scale = randf_range(0.75,1.25);
-			$\"../walk_sound\".play();
-			$\"../Timer\".start(0.6);
-	else:
-		$\"../walk_sound\".stop();
-	prevFrame = frame;
-
-"
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b2xik"]
 blend_mode = 1
 
@@ -425,13 +312,10 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah33q"]
-size = Vector2(34, 20)
-
 [node name="player" type="CharacterBody2D"]
 z_index = 4
 y_sort_enabled = true
-script = SubResource("1")
+script = ExtResource("1_cyvdp")
 
 [node name="hitBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
@@ -454,7 +338,6 @@ position = Vector2(0, -15)
 sprite_frames = SubResource("3")
 animation = &"walk_down"
 frame_progress = 0.35907
-script = SubResource("4")
 
 [node name="silhouette" type="AnimatedSprite2D" parent="player_animations"]
 modulate = Color(0.898039, 0.898039, 0.898039, 0.588235)
@@ -463,15 +346,8 @@ z_index = 10
 material = SubResource("CanvasItemMaterial_b2xik")
 sprite_frames = SubResource("SpriteFrames_a1xjr")
 animation = &"walk_down"
-script = ExtResource("51_qkpew")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_ah33q")
 
 [node name="gameCamera" type="Camera2D" parent="."]
-unique_name_in_owner = true
 limit_left = 0
 limit_top = 0
 limit_right = 1920
@@ -481,7 +357,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
-script = ExtResource("67_c0p7s")
 
 [node name="walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("68_ino0b")
