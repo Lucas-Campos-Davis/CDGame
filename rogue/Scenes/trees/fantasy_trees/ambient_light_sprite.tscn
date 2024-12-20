@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds7tu4b6h0qkg"]
+
+[ext_resource type="Texture2D" uid="uid://cal02xwgitnya" path="res://Textures/new_light.png" id="1_3nvdy"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fbef4"]
+blend_mode = 1
+
+[node name="ambient_shadow_sprite" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.435294)
+self_modulate = Color(1, 1, 1, 0.435294)
+z_index = 1000
+material = SubResource("CanvasItemMaterial_fbef4")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3nvdy")

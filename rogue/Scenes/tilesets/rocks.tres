@@ -1,6 +1,24 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ru7dd3mn4a11"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://ru7dd3mn4a11"]
 
 [ext_resource type="Texture2D" uid="uid://c68r5b3g5tkuy" path="res://Textures/rocks_tileset.png" id="1_t2plt"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mv3c3"]
+tile_data = PackedInt32Array(0, 196608, 4, 262146, 262144, 2, 131075, 131072, 2, 196612, 131072, 0, 393221, 131072, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_j6i1y"]
+tile_data = PackedInt32Array(65536, 131072, 4, 3, 262144, 2, 262148, 196608, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_x60bu"]
+tile_data = PackedInt32Array(262144, 196608, 4, 327681, 131072, 0, 5, 131072, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_am8ft"]
+tile_data = PackedInt32Array(393216, 131072, 4, 5, 131072, 4, 65542, 262144, 2, 196616, 196608, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_fr2ww"]
+tile_data = PackedInt32Array(131072, 131072, 4, 1, 0, 0, 458753, 131072, 4, 3, 131072, 0, 65541, 262144, 2, 196614, 196608, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_sa236"]
+tile_data = PackedInt32Array(0, 196608, 268435460, 458753, 262144, 268435458, 589826, 131072, 4, 458755, 131072, 2, 655367, 196608, 4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_160p4"]
 resource_name = "rocks"
@@ -8,34 +26,22 @@ texture = ExtResource("1_t2plt")
 0:0/size_in_atlas = Vector2i(2, 5)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 24)
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -2.25, -12, 13.5, 15, 13.5, 15, -2.25)
 2:0/size_in_atlas = Vector2i(2, 2)
 2:0/0 = 0
 2:0/0/texture_origin = Vector2i(0, 8)
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.75, -2.25, -12.75, 5.25, 15, 5.25, 15, -2.25)
 2:2/size_in_atlas = Vector2i(2, 2)
 2:2/0 = 0
 2:2/0/texture_origin = Vector2i(0, 8)
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -2.25, -9, 5.25, 12, 6, 12, -2.25)
 4:2/size_in_atlas = Vector2i(2, 2)
 4:2/0 = 0
 4:2/0/texture_origin = Vector2i(0, 8)
-4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.75, -2.25, -12.75, 5.25, 15, 5.25, 15, -2.25)
 2:4/0 = 0
-2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:4/0/physics_layer_0/angular_velocity = 0.0
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.75, 0.75, -6.75, 6.75, 6.75, 6.75, 6.75, 0.75)
 3:4/0 = 0
-3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:4/0/physics_layer_0/angular_velocity = 0.0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.75, 0.75, -6.75, 6.75, 6.75, 6.75, 6.75, 0.75)
 
 [resource]
@@ -43,3 +49,9 @@ tile_shape = 1
 tile_size = Vector2i(12, 12)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_160p4")
+pattern_0 = SubResource("TileMapPattern_mv3c3")
+pattern_1 = SubResource("TileMapPattern_j6i1y")
+pattern_2 = SubResource("TileMapPattern_x60bu")
+pattern_3 = SubResource("TileMapPattern_am8ft")
+pattern_4 = SubResource("TileMapPattern_fr2ww")
+pattern_5 = SubResource("TileMapPattern_sa236")

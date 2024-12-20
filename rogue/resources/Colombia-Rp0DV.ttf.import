@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/Colombia-Rp0DV.ttf-e8a4a503c42b06cd7f24b8c71a
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

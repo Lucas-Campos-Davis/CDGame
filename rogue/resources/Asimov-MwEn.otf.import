@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/Asimov-MwEn.otf-ac43cc9c29cf840f78e32a6297c23
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

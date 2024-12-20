@@ -27,5 +27,3 @@ public partial class SceneController : Node2D
 		_sceneTransitionPlayer.Play("fade_to_normal");
 	}
 }
-
-

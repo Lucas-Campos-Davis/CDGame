@@ -20,8 +20,8 @@ ssil_radius = 5.95
 glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_mb5vo"]
-offsets = PackedFloat32Array(0, 0.132353, 0.25, 0.338235, 0.441176, 1)
-colors = PackedColorArray(0, 0.0284376, 0.0947383, 1, 0.24385, 0.111125, 0.306731, 1, 0.434533, 0.129292, 0.324987, 1, 0.913552, 0.268237, 0.40042, 1, 0.974876, 0.513261, 0.274915, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.125, 0.264706, 0.338235, 0.441176, 1)
+colors = PackedColorArray(0, 0.189102, 0.256539, 1, 0.348515, 0.171123, 0.432779, 1, 0.555837, 0.179669, 0.420045, 1, 0.815754, 0.365003, 0.540402, 1, 0.910658, 0.550098, 0.437152, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cevbu"]
 gradient = SubResource("Gradient_mb5vo")
@@ -53,46 +53,39 @@ z_index = 4096
 script = ExtResource("5_w267o")
 _gradientTexture = SubResource("GradientTexture1D_cevbu")
 
-[node name="ground_tilemap" type="TileMap" parent="GameNode"]
-z_index = -1
+[node name="ground_tilemap" type="TileMapLayer" parent="GameNode"]
+use_parent_material = true
 tile_set = ExtResource("8_x7a6v")
-format = 2
 
-[node name="ground_foliage_tilemap" type="TileMap" parent="GameNode"]
+[node name="ground_foliage_tilemap" type="TileMapLayer" parent="GameNode"]
+use_parent_material = true
 tile_set = ExtResource("11_mipaj")
-format = 2
 
-[node name="path_tilemap" type="TileMap" parent="GameNode"]
+[node name="path_tilemap" type="TileMapLayer" parent="GameNode"]
+use_parent_material = true
 tile_set = ExtResource("10_2gha3")
-format = 2
 
-[node name="tall_foliage_tilemap" type="TileMap" parent="GameNode"]
+[node name="tall_foliage_tilemap" type="TileMapLayer" parent="GameNode"]
+z_index = 4
 y_sort_enabled = true
+use_parent_material = true
 tile_set = ExtResource("6_xgwjs")
+y_sort_origin = -8
 rendering_quadrant_size = 8
-format = 2
-layer_0/name = "base"
-layer_0/y_sort_enabled = true
-layer_0/y_sort_origin = -8
-layer_0/z_index = 4
 
-[node name="rocks_tilemap" type="TileMap" parent="GameNode"]
+[node name="rock_tilemap" type="TileMapLayer" parent="GameNode"]
+z_index = 4
 y_sort_enabled = true
+use_parent_material = true
 tile_set = ExtResource("7_ou5pa")
-format = 2
-layer_0/name = "rocks"
-layer_0/y_sort_enabled = true
-layer_0/y_sort_origin = -8
-layer_0/z_index = 4
+y_sort_origin = -8
 
-[node name="fence_tilemap" type="TileMap" parent="GameNode"]
+[node name="fence_tilemap" type="TileMapLayer" parent="GameNode"]
+z_index = 4
 y_sort_enabled = true
+use_parent_material = true
 tile_set = ExtResource("9_kh6o2")
-format = 2
-layer_0/name = "fences"
-layer_0/y_sort_enabled = true
-layer_0/y_sort_origin = -8
-layer_0/z_index = 4
+y_sort_origin = -8
 
 [node name="lights_n_shadows" type="Node2D" parent="GameNode"]
 

@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://d4kwl64uddrsg" path="res://Textures/tall_cliff_stairs.png" id="17_nt7jc"]
 [ext_resource type="PackedScene" uid="uid://dtt23mp7mkoct" path="res://Scenes/plants/maize_crop.tscn" id="18_msyu1"]
 [ext_resource type="Texture2D" uid="uid://bqujm7flure2h" path="res://Textures/long_cliff_no_grass.png" id="18_pp8f7"]
-[ext_resource type="PackedScene" uid="uid://btnul281nqwtf" path="res://purple_smaller.tscn" id="19_17psb"]
+[ext_resource type="PackedScene" uid="uid://btnul281nqwtf" path="res://Scenes/trees/fantasy_trees/purple_smaller.tscn" id="19_17psb"]
 [ext_resource type="AudioStream" uid="uid://c0ekunoffqwge" path="res://Sounds/Stream Loops 2024-06-26.ogg" id="19_mkao6"]
 [ext_resource type="PackedScene" uid="uid://dsc2up4bieuc0" path="res://pillar.tscn" id="19_v3irn"]
 [ext_resource type="Texture2D" uid="uid://bs4ho57nau7vs" path="res://Textures/new_character/tiefling_lesbians.png" id="25_qqo0o"]

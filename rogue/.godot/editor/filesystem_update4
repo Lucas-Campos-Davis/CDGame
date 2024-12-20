@@ -1,7 +1,4 @@
-res://Scenes/scene_test_2.tscn
-res://Scenes/daynightCycle.gd
-res://CharacterBody2D.gd
-res://companionFollow.gd
+res://campfire_tutorial.tscn
 res://Scenes/tilesets/tall_foliage.tres
 res://Scenes/tilesets/rocks.tres
 res://Scenes/tilesets/ground.tres
@@ -12,18 +9,3 @@ res://Scenes/testingGrounds.gdshader
 res://Scenes/silhouette_shader.gdshader
 res://player-test-mask.gdshader
 res://player-test-sprite.gdshader
-res://SceneController.cs
-res://Scenes/scene_test.tscn
-res://room_exit.tscn
-res://RoomExit.cs
-res://PlayerController.cs
-res://PlayerVariables.cs
-res://Scenes/DayNightController.cs
-res://TimeDisplayUI.cs
-res://Scenes/faiths_house.tscn
-res://Scenes/scene_base.tscn
-res://player-test.tscn
-res://WorldVariables.cs
-res://transition_scene.tscn
-res://TransitionScreen.gd
-res://TransitionScene.tscn

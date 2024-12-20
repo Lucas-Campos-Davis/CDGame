@@ -11,6 +11,6 @@ public partial class WorldVariables : Node
 	public override void _Ready()
 	{
 		Instance = this;
-        Time = 0f;
+		Time = 0f;
 	}
 }

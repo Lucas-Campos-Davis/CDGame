@@ -87,8 +87,8 @@ public partial class PlayerController : CharacterBody2D
 		StopAnimationOnStopped();
 		if(Input.IsActionJustPressed("interact"))
 		{
-			FoliageTileNode = GetParent().FindChild("tall-foliage",false, false);
-			TileMap foliageTileMap = (TileMap)FoliageTileNode;
+			FoliageTileNode = GetParent().FindChild("tall_foliage_tilemap",false, false);
+			TileMapLayer foliageTileMap = (TileMapLayer)FoliageTileNode;
 			TileSet.CellNeighbor[] tileMapDirections = {TileSet.CellNeighbor.RightCorner, // array of possible neighbors for the isometric foliage grid
 														TileSet.CellNeighbor.BottomRightSide,
 														TileSet.CellNeighbor.BottomCorner,
@@ -117,9 +117,9 @@ public partial class PlayerController : CharacterBody2D
 			}
 			for(int i = 0; i < tileMapDirections.Length; i++)
 			{
-				foliageTileMap.SetCell(0, (foliageTileMap.GetNeighborCell(_harvestMapPosition, tileMapDirections[i])), 0, new Vector2I(0,0), 15);
+				foliageTileMap.SetCell((foliageTileMap.GetNeighborCell(_harvestMapPosition, tileMapDirections[i])), -1, new Vector2I(-1,-1), -1);
 			}
-			foliageTileMap.SetCell(0, _harvestMapPosition, 0, new Vector2I(0,0), 15);
+			foliageTileMap.SetCell(_harvestMapPosition, -1, new Vector2I(-1,-1), -1);
 		}
 	}
 	public override void _PhysicsProcess(double delta)

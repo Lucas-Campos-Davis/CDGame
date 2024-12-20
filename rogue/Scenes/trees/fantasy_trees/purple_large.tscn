@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0iav38biqj0e"]
+[gd_scene load_steps=6 format=3 uid="uid://0iav38biqj0e"]
 
 [ext_resource type="PackedScene" uid="uid://bwlke7ksltloe" path="res://Scenes/trees/tree.tscn" id="1_287kg"]
 [ext_resource type="Texture2D" uid="uid://eo8qegc1t8q5" path="res://Textures/tree_test.png" id="2_80r6h"]
 [ext_resource type="Texture2D" uid="uid://djq3dbbexhpq7" path="res://Textures/tree_test_shadow.png" id="3_ny27u"]
+[ext_resource type="PackedScene" uid="uid://2h0rbvycit7f" path="res://ambient_light_sprite.tscn" id="4_3meie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u351a"]
 size = Vector2(56, 16)
@@ -20,3 +21,5 @@ texture = ExtResource("3_ny27u")
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(-5, 8)
 shape = SubResource("RectangleShape2D_u351a")
+
+[node name="ambient_shadow_sprite" parent="." index="2" instance=ExtResource("4_3meie")]
